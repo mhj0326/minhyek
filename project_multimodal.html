@@ -1,0 +1,646 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <!-- Document Title -->      
+        <title>Minhyek Jeon | Minimal Portfolio HTML Template</title>
+
+        <!-- Metas -->      
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="author" content="CaliberThemes" />
+
+        <!-- Favicon -->      
+        <link rel="icon" type="image/png" href="assets\I made it\logo_mj.png" />
+
+        <!-- Links -->      
+        <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700&subset=latin,latin-ext" rel="stylesheet" type="text/css" />
+        <link rel='stylesheet' id='bootstrap-css'  href='assets/lib/bootstrap/css/bootstrap.min.css' type='text/css' media='all' />
+        <link rel='stylesheet' id='font-awesome-css'  href='assets/css/icons/font-awesome.min.css' type='text/css' media='all' />       
+        <link rel='stylesheet' id='swiper-css' href='assets/lib/swiper/css/swiper.min.css' type='text/css' media='all' />
+        <link rel='stylesheet' id='cubeportfolio-css'  href='assets/lib/cubeportfolio/css/cubeportfolio.min.css' type='text/css' media='all' /> 
+
+        <link rel='stylesheet' id='main-css'  href='style.css' type='text/css' media='all' />
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+        <script id="MathJax-script" async
+        src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+        <style>
+            table {
+                width: 100%;
+                border-collapse: collapse;
+            }
+            th, td {
+                border: 1px solid black;
+                padding: 8px;
+                text-align: center;
+            }
+            th {
+                background-color: #f2f2f2;
+            }
+            caption {
+                font-weight: bold;
+                margin: 10px 0;
+            }
+        </style>
+
+        <style>
+            .image-container {
+                text-align: left;
+                margin: 20px;
+            }
+            .caption {
+                font-size: 16px;
+                color: #555;
+            }
+        </style>
+        
+
+    </head>
+    <body class="single single-portfolio portfolio-details-top">
+
+       <!-- Page Wrapper -->
+       <div id="page" class="site">
+        <header id="masthead" class="site-header standard sticky" role="banner">		
+            <div class="container">
+                <div id="site-branding">			
+                    <a class="logo-brand" href="index.html">
+                        <img class="logo" src="assets\I made it\logo_mj.png" alt="Logo">					                            
+                        <img class="retina-logo" src="assets\I made it\logo_mj.png" alt="Retina Logo">					                            
+                    </a>	
+                </div><!-- .site-branding -->
+                <span id="ham-trigger-wrap">
+                    <span class="ham-trigger">
+                        <span></span>                            
+                    </span>                            
+                </span>
+                <nav id="site-navigation" class="main-navigation" role="navigation" aria-label="Top Menu">
+                    <ul id="top-menu" class="menu">
+                        <li class="has-children"><a href="index.html">Home</a>
+                            
+                        </li>
+                        <li class="has-children"><a href="project.html">Project</a>
+                            
+                        </li>
+                        <li class="has-children"><a href="experience.html">Experience</a>
+                            
+                            
+                        </li>
+                        <li class="has-children"><a href="publication.html">Publication</a>
+                            
+                            
+                        </li>
+                        <li class="has-children"><a href="awards.html">Others</a>
+                            
+                        </li>
+                        
+                    </ul>	
+                </nav>
+                                         
+            </div><!-- .wrap -->
+
+                
+	
+            </header><!-- #masthead -->
+
+            <div class="site-content-contain">
+                <div id="content" class="site-content">                 
+                    <div id="primary" class="content-area">
+                        <!-- Portfolio Filter -->
+                        
+                        <main id="main" class="site-main" role="main">        
+                            <div class="container t-offset-20">
+                                <div class="row">
+                                    <div class="col-sm-12">
+
+                                        <article class="portfolio">
+
+                                            <header class="entry-header">
+                                                
+
+                                                <h2>Multimodal Integration of Neuroimaging and Genetic Data for the Diagnosis of Mood Disorders based on Computer Vision Models</h2>
+                                                
+
+                                    
+                                                
+
+            
+                                             
+
+                                                <p>This work was supported by the National Research Foundation of Korea (NRF) grant funded by the Korean Government (MSIT), the Ministry of Education, South Korea, and the New Faculty Startup Fund from Sungkyunkwan University</p>
+                                                <h4>Summary</h4>
+                                                <img src="assets/I made it/multimodal_architecture.png" style =  "width: 90%" alt="ROC Curve OvR: Control vs. Rest">
+                                                        
+                                                        <div class="figure-caption">
+                                                            Fig. 1. Architecture of the fusion model based on deep-learning and machine-learning, integrating T1-weighted structural MRI sequence, genomic SNPs, and corresponding unweighted polygenic risk score (PRS) to classify three classes of mood disorder outcomes, including MDD, Bipolar disease, and healthy controls.  
+                                                        </div>
+                                                <p>
+                                                    Mood disorders, particularly major depressive disorder (MDD) and bipolar disorder (BD), are often under-diagnosed, leading to substantial morbidity. Harnessing the potential of emerging methodologies, we propose a novel multimodal fusion approach that integrates patient-oriented brain structural magnetic resonance imaging (sMRI) scans with DNA whole-exome sequencing (WES) data. Multimodal data fusion aims to improve the detection of mood disorders by employing established deep-learning architectures for computer vision and machine-learning strategies. We analyzed brain imaging genetic data of 321 East Asian individuals, including 147 patients with MDD, 78 patients with BD, and 96 healthy controls. We developed and evaluated six fusion models by leveraging common computer vision models in image classification: Vision Transformer (ViT), Inception-V3, and ResNet50, in conjunction with advanced machine-learning techniques (XGBoost and LightGBM) known for high-dimensional data analysis. Model validation was performed using a 10-fold cross-validation. Our ViT ⊕ XGBoost fusion model with MRI scans, genomic Single Nucleotide Polymorphism (SNP) data, and unweighted polygenic risk score (PRS) outperformed baseline models, achieving an incremental area under the curve (AUC) of 0.2162 (32.03% increase) and 0.0675 (+8.19%) and incremental accuracy of 0.1455 (+25.14%) and 0.0849 (+13.28%) compared to SNP-only and image-only baseline models, respectively. Our findings highlight the opportunity to refine mood disorder diagnostics by demonstrating the transformative potential of integrating diverse, yet complementary, data modalities and methodologies.
+                                                </p>
+                                                
+                                                <h4>1. Introduction</h4>
+                                                <p>
+                                                    Mental disorders, notably mood disorders, such as major depressive disorder (MDD) and bipolar disorder (BD), are significant global health concerns. 
+                                                    They rank among the top 25 leading causes of global burden and incur substantial costs exceeding $317 billion in the US by 2020 alone. 
+                                                    Mood disorders, characterized by emotional and affective disturbances, lead to substantial distress, functional impairment, 
+                                                    and significant difficulties in interpersonal relationships. 
+                                                    In particular, MDD is a leading cause of disability worldwide, affecting 246 million people globally in 2020, 
+                                                    including a surge of 53.2 million cases due to the COVID-19 pandemic. 
+                                                    Individuals with mood disorders face a high risk of comorbidities such as anxiety, diabetes, hypertension, coronary artery diseases, and substance use disorders, significantly increasing suicide risk; 
+                                                    approximately 66% of individuals with MDD contemplate suicide, and 10–15% follow through. 
+                                                    Despite their high prevalence and detrimental effects, mood disorders often remain underdiagnosed and untreated. 
+                                                    In the US, for instance, two-thirds of all cases of depression are unrecognized. 
+                                                    Several factors contribute to the difficulty and delay in the diagnosis of mood disorders. 
+                                                    First, the heterogeneity of mood disorders complicates their diagnosis as they encompass a wide range of mental conditions 
+                                                    The diagnostic constructs rely on indirect measures and observations, leading to extremely disparate rates for mood disorders. 
+                                                    In addition, MDD is a syndromic diagnosis based primarily on patient medical history, self-reported symptoms, or behavioral signs; there are no radiologic or laboratory-based biomarkers for the condition. 
+                                                    The current nosological system for the diagnosis of mood disorders fails to adequately identify high-risk patients,  
+                                                    with about half of the adults with significant depressive symptoms not fitting into any official diagnostic nosology at the time of evaluation.
+                                                    <table>
+                                                        <caption>Table 1<br>Demographic and clinical characteristics of patients with mood disorders and healthy controls.</caption>
+                                                        <tr>
+                                                            <th></th>
+                                                            <th>MDD (n = 147)</th>
+                                                            <th>BD (n = 78)</th>
+                                                            <th>HC (n = 96)</th>
+                                                            <th>P-value (F, t, χ<sup>2</sup>)</th>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Age</td>
+                                                            <td>39.78 &plusmn; 14.92</td>
+                                                            <td>32.72 &plusmn; 10.76</td>
+                                                            <td>32.95 &plusmn; 12.75</td>
+                                                            <td>&lt; 0.001 (F = 1.709)</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Sex (female/male)</td>
+                                                            <td>100/47</td>
+                                                            <td>50/28</td>
+                                                            <td>57/39</td>
+                                                            <td>0.326 (χ<sup>2</sup> = 0.255)</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>HDRS-17 score</td>
+                                                            <td>16.03 &plusmn; 5.51</td>
+                                                            <td>7.60 &plusmn; 5.42</td>
+                                                            <td>1.23 &plusmn; 1.96</td>
+                                                            <td>&lt; 0.001 (F = 294.740)</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>BD I/BD II</td>
+                                                            <td>NA</td>
+                                                            <td>27/51</td>
+                                                            <td>NA</td>
+                                                            <td>NA</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Duration of illness (months)</td>
+                                                            <td>44.76 &plusmn; 42.20</td>
+                                                            <td>45.29 &plusmn; 64.38</td>
+                                                            <td>NA</td>
+                                                            <td>0.951 (t = -0.062)</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Drug-treated patients (n)</td>
+                                                            <td>115</td>
+                                                            <td>68</td>
+                                                            <td>NA</td>
+                                                            <td>NA</td>
+                                                        </tr>
+                                                    </table>
+                                                    <div class="note">
+                                                        ● Data are mean &plusmn; standard deviation for age, HDRS-17 scores, and duration of illness.<br>
+                                                        ● P-values for age comparisons obtained using analyses of variance.<br>
+                                                        ● P-values for distribution of sex and education level were obtained using a chi-squared test.<br>
+                                                        ● P-values for comparisons with HDRS-17 scores were obtained using independent t-tests.<br>
+                                                        ● MDD, major depressive disorder; BD, bipolar disorder; HC, healthy controls; HDRS-17, 17-item Hamilton Depression Rating Scale; BD I, bipolar I disorder; BD II, bipolar II disorder.
+                                                    </div> <br>
+
+                                                    Furthermore, patient’s symptoms may evolve to align with different constructs of mood disorders over time, 
+                                                    with up to 5–10% of patients with MDD developing BD over time, complicating the pinpointing of the onset and cessation of disease episodes. 
+                                                    Accurate and precise identification of individuals at risk of mood disorders is necessary. Leveraging multimodal data from electronic health records (EHRs) is a potential strategy for achieving this objective. 
+                                                    While some computational studies using medical imaging data, either alone or in combination with a few manually selected clinical features, have shown potential in psychiatric diagnosis, 
+                                                     mood disorders such as MDD and BD are multifaceted and influenced by significant genetic factors and environmental elements, 
+                                                    such as the rise in MDD prevalence during COVID-19. 
+                                                    Thus, exploring how multimodal fusion techniques encompass diverse factors from EHRs is crucial for enhancing the detection and diagnosis of mood disorders. 
+                                                    The genetic architecture of MDD and BD has been extensively investigated. Twin studies have suggested the genetic heritability of MDD and BD to be 37–50% and 60–80%, 
+                                                    respectively. Recent large-scale genome-wide association studies (GWAS) have identified 178 genome-wide significant loci and more than 200 candidate genes associated with MDD. 
+                                                    These findings underscore the polygenic nature of these disorders, with over 50% of their heritability attributed to both common and rare variants with modest effects (odds ratios &lt; 1.2). 
+                                                    Therefore, genetic factors are integral to mood disorder diagnosis, 
+                                                    necessitating a comprehensive representation beyond a few significant variables. 
+                                                    The substantial associations between the brain and genetic components underscore the necessity of a multimodal imaging-genetic approach for diagnosing MDD and BD.
+                                                    
+                                                    For instance, HOMER1 is a synaptic plasticity protein that is expressed in the brain in correlation with several psychiatric disorders and depression-like behaviors, 
+                                                    and various antidepressant medications act by inducing this protein. Single nucleotide polymorphisms (SNPs) in HOMER1’s regulatory region significantly affect prefrontal activity, 
+                                                    correlating with MDD risk and suicide attempts. 
+                                                    Previous studies revealed that MDD individuals with HOMER1 alleles exhibit reduced prefrontal activation, 
+                                                    and those with a brain-derived neurotrophic factor (BDNF) Met allele had much less caudal middle frontal thickness, indicating increased disorder susceptibility. 
+                                                    These results collectively suggest that the genetic architecture of MDD have significant associations with brain shape or function via molecular, epigenetic, or cellular mechanisms, suggesting the initiation of new neuroimaging phenotypes in MDD. 
+                                                    Multimodal machine learning is an interdisciplinary approach that integrates heterogeneous datasets for complex predictions in fields like visual perception, human-computer interaction, and biomedical informatics. 
+                                                    In the mental health context, this fusion of disparate medical data sources may aid clinical decision-making and improve psychiatric diagnosis. 
+                                                    Genomic and neuroimaging data are among the biomedical data types most readily available from EHRs, 
+                                                    with neuroimaging data being one of the most commonly collected formats of EHRs because of their ease of collection, routine use for neurological disorder screening, and genotype data.
+                                                </p>
+
+                                                <h4>2.Materials and methods </h4>
+                                                <h5>2.1. Participants</h5>
+                                                <p>Between November 2014 and December 2020, patients with MDD and BD were recruited from the outpatient psychiatry clinic of Korea University Anam Hospital in Seoul, Republic of Korea. Adults (aged 19–64 years) with MDD, BD I, or BD II diagnosed by board-certified psychiatrists using a structured clinical interview based on the Diagnostic and Statistical Manual of Mental Disorders, Fourth Edition (DSM-IV) Axis I disorders (SCID-I) were included in the study (Table 1). 
+                                                    Among the patients with BD, our study included only those who were in an ongoing euthymic or depressed condition. 
+                                                    The exclusion criteria were as follows: 1) any other significant psychiatric comorbidity, such as personality or substance use disorders; 
+                                                    2) current psychotic symptoms (e.g., delusions or hallucinations) in patients with MDD or BD, or a history of psychotic symptoms in patients with MDD; 
+                                                    3) history of a life-threatening and unstable medical condition; 
+                                                    4) primary neurological illness, including head trauma with residual effects; and 5) any contraindication to MRI, such as metal implants or claustrophobia.</p>
+                                                <p>In conjunction with patient recruitment, healthy controls (HCs) (aged 19–64) were recruited from the local community through advertisements. 
+                                                    Board-certified psychiatrists conducted comprehensive psychiatric evaluations of the HCs to ensure that none of them had a current or prior history of psychopathology. 
+                                                    HCs were subjected to the same exclusion criteria as the patient group. 
+                                                    When MRI scans were performed, the severity of depressive symptoms in patients and HCs was analyzed using the 17-item Hamilton Depression Rating Scale (HDRS). 
+                                                    The Institutional Review Board (IRB) of the Korea University Anam Hospital (IRB No. 2009AN0105, 2015AN0009, 2017AN0185) approved this study. 
+                                                    Each participant provided written consent to participate in the study, in accordance with the Declaration of Helsinki (revised 2008). 
+                                                    For the final assessment, we randomly split the total imaging and genetic datasets into training (n = 259), valid (n = 29), and test (n = 33) sets with 10-fold cross-validation.</p>
+
+                                                <h5>2.2. Data processing</h5>
+                                                <p>Genomic DNA was isolated from the peripheral blood of participants. 
+                                                    Whole-exome sequencing (WES) was performed using the Agilent SureSelect Human All Exome V5 kit for exome capture and either the HiSeq2000, HiSeq2500, or HiSeq4000 platform (Illumina, San Diego, CA, USA) for sequencing as paired-end 101bp reads. 
+                                                    All sequence reads were aligned to the human reference genome (Human GRCh37/hg19) using Burrows-Wheeler aligner software (BWA, v0.7.12) and the quality of the mappings was assessed using Qualimap (García-Alcalde et al., 2012). 
+                                                    Duplicates were marked using Picard v.1.130 , GATK v3.8  and Samtools v.1.6  to perform local realignment of indels, score recalibration, and variant evaluation.</p>
+                                                <p>We converted the resulting vcf files into PLINK binary files,  and removed inferior SNPs with a sample call rate &lt; 0.95, genotype call rate &lt; 0.95, and HWE &lt; 1E-05. 
+                                                    We also removed rare genetic variants with a minor allele frequency (MAF) &lt; 0.5%. To retrieve informative SNPs for psychiatric diagnoses, 
+                                                    we used the UCSC Table Browser to acquire a list of SNPs significantly linked to depression and BD. We selected SNPs identified by GWAS, 
+                                                    mandated by an initial GWAS discovery sample size exceeding 10,000, predominantly of East Asian ancestry or inclusive of Asian participants, 
+                                                    to enhance the relevance and robustness of the genetic association.</p>
+                                                <p>We conducted a thorough duplication check based on the rs numbers (Reference SNP cluster IDs) to ascertain the uniqueness of each SNP, 
+                                                    resulting in a curated list of non-duplicate SNPs. We further expanded the list of SNPs using the R LDlinkR package, 
+                                                    identifying any genetic variants exhibiting an r<sup>2</sup> value above 0.7 within the East Asian (EAS) population reference. 
+                                                    This was a pivotal step in identifying SNPs with high linkage disequilibrium (LD) in our exome sequencing data from EAS populations. 
+                                                    We then selected SNPs with a population MAF > 0.5%, ensuring the statistical significance of these common variants. 
+                                                    The final step involved extracting these identified SNPs from our exome sequencing data files and aligning our research focus with the genetic variants most pertinent to depression and BD within the specified EAS populations.</p>
+                                                <p>The analysis was performed manually in the R environment and using PLINK 1.9 software. 
+                                                    All participants underwent T1-weighted structural magnetic resonance imaging (sMRI) with a 3.0-T Trio™ whole-body MR scanner. 
+                                                    The neuroimaging dataset was preprocessed and used for algorithm training as described below.</p>
+                                                    <table>
+                                                        <caption>Table 2<br>Classification performances of the multimodal fusion models for MDD/BD prediction on internal test datasets. (mean &plusmn; standard deviation for ten-fold cross-validation).</caption>
+                                                        <tr>
+                                                            <th>Model</th>
+                                                            <th>Model</th>
+
+                                                            <th>AUC</th>
+                                                            <th>Accuracy</th>
+                                                            <th>Sensitivity</th>
+                                                            <th>Specificity</th>
+                                                        </tr>
+                                                        <tr>
+                                                            <td rowspan="9">Fusion model (MRI & SNP & Unweighted PRS)</td>
+                                                            <td>ViT</td>
+                                                            <td>0.8912 &plusmn; 0.0163</td>
+                                                            <td>0.7243 &plusmn; 0.0316</td>
+                                                            <td>0.8512 &plusmn; 0.0264</td>
+                                                            <td>0.6966 &plusmn; 0.0740</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>XGBoost</td>
+                                                            <td>0.8497 &plusmn; 0.0184</td>
+                                                            <td>0.7485 &plusmn; 0.0360</td>
+                                                            <td>0.8569 &plusmn; 0.0349</td>
+                                                            <td>0.7588 &plusmn; 0.0577</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Inception-V3</td>
+                                                            <td>0.7899 &plusmn; 0.0172</td>
+                                                            <td>0.6061 &plusmn; 0.0303</td>
+                                                            <td>0.7803 &plusmn; 0.0307</td>
+                                                            <td>0.5558 &plusmn; 0.0830</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>XGBoost</td>
+                                                            <td>0.8355 &plusmn; 0.0134</td>
+                                                            <td>0.6788 &plusmn; 0.0242</td>
+                                                            <td>0.8241 &plusmn; 0.0199</td>
+                                                            <td>0.6660 &plusmn; 0.0279</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>ViT</td>
+                                                            <td>0.7896 &plusmn; 0.0098</td>
+                                                            <td>0.6152 &plusmn; 0.0273</td>
+                                                            <td>0.7795 &plusmn; 0.0222</td>
+                                                            <td>0.6038 &plusmn; 0.0473</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>LightGBM</td>
+                                                            <td>0.7485 &plusmn; 0.0073</td>
+                                                            <td>0.5667 &plusmn; 0.0139</td>
+                                                            <td>0.7622 &plusmn; 0.0069</td>
+                                                            <td>0.5151 &plusmn; 0.0306</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>ResNet50</td>
+                                                            <td>0.8904 &plusmn; 0.0130</td>
+                                                            <td>0.7091 &plusmn; 0.0242</td>
+                                                            <td>0.8427 &plusmn; 0.0197</td>
+                                                            <td>0.6732 &plusmn; 0.0544</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>XGBoost</td>
+                                                            <td>0.8497 &plusmn; 0.0162</td>
+                                                            <td>0.7243 &plusmn; 0.0286</td>
+                                                            <td>0.8426 &plusmn; 0.0319</td>
+                                                            <td>0.7366 &plusmn; 0.0576</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>ResNet50</td>
+                                                            <td>0.7884 &plusmn; 0.0151</td>
+                                                            <td>0.6000 &plusmn; 0.0539</td>
+                                                            <td>0.7774 &plusmn; 0.0414</td>
+                                                            <td>0.5544 &plusmn; 0.1133</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td rowspan="8">Fusion model (MRI & SNP)</td>
+                                                            <td>XGBoost</td>
+                                                            <td>0.8332 &plusmn; 0.0123</td>
+                                                            <td>0.6788 &plusmn; 0.0201</td>
+                                                            <td>0.8236 &plusmn; 0.0150</td>
+                                                            <td>0.6649 &plusmn; 0.0210</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>ViT</td>
+                                                            <td>0.7881 &plusmn; 0.0103</td>
+                                                            <td>0.6152 &plusmn; 0.0273</td>
+                                                            <td>0.7795 &plusmn; 0.0222</td>
+                                                            <td>0.6038 &plusmn; 0.0473</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>LightGBM</td>
+                                                            <td>0.7483 &plusmn; 0.0074</td>
+                                                            <td>0.5697 &plusmn; 0.0121</td>
+                                                            <td>0.7637 &plusmn; 0.0061</td>
+                                                            <td>0.5219 &plusmn; 0.0267</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>ResNet50</td>
+                                                            <td>0.8396 &plusmn; 0.0098</td>
+                                                            <td>0.6909 &plusmn; 0.2969</td>
+                                                            <td>0.8331 &plusmn; 0.0258</td>
+                                                            <td>0.7251 &plusmn; 0.0306</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>LightGBM</td>
+                                                            <td>0.7790 &plusmn; 0.0138</td>
+                                                            <td>0.5879 &plusmn; 0.0337</td>
+                                                            <td>0.7684 &plusmn; 0.0475</td>
+                                                            <td>0.6198 &plusmn; 0.0738</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>XGBoost</td>
+                                                            <td>0.7490 &plusmn; 0.0092</td>
+                                                            <td>0.5546 &plusmn; 0.0237</td>
+                                                            <td>0.7538 &plusmn; 0.0312</td>
+                                                            <td>0.5229 &plusmn; 0.0470</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>ViT</td>
+                                                            <td>0.8262 &plusmn; 0.0101</td>
+                                                            <td>0.6819 &plusmn; 0.0244</td>
+                                                            <td>0.8253 &plusmn; 0.0248</td>
+                                                            <td>0.6778 &plusmn; 0.0427</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>LightGBM</td>
+                                                            <td>0.7829 &plusmn; 0.0057</td>
+                                                            <td>0.5879 &plusmn; 0.0201</td>
+                                                            <td>0.7680 &plusmn; 0.0291</td>
+                                                            <td>0.5909 &plusmn; 0.0563</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td rowspan="8">Fusion model (MRI & Unweighted PRS)</td>
+                                                            <td>XGBoost</td>
+                                                            <td>0.7401 &plusmn; 0.0083</td>
+                                                            <td>0.5697 &plusmn; 0.0121</td>
+                                                            <td>0.7637 &plusmn; 0.0061</td>
+                                                            <td>0.5312 &plusmn; 0.0078</td>
+                                                        </tr>
+                                                    </table>
+                                                    <div class="note">
+                                                        Note: The fusion model uses MRI images and genomic datasets corresponding to the unweighted polygenic risk score (PRS).
+                                                    </div>
+
+                                                <br><h5>2.3. Model training</h5>
+                                                <p>We aimed to train a high-performance multimodal architecture that outperforms single-modality approaches in weakly supervised learning. 
+                                                    Previous studies in this area only used convolutional neural networks (CNNs) to extract representative features from medical datasets, 
+                                                    and fusion or ensemble methods were subsequently applied to combine imaging and genomic features. 
+                                                    In this study, we propose leveraging a Vision Transformer (ViT) and other pre-trained CNN architectures that have recently exhibited state-of-the-art performance in computer vision tasks. 
+                                                    Specifically, we used ViT-L/32, a large variant of ViT with a patch size of 32 × 32. The ViT is designed to utilize patches from images with multiheaded self-attention architectures and functions as a global feature extractor. Inception-V3 is a deep CNN designed for image analysis based on the third edition of GoogleNet (Szegedy et al., 2015). Its architecture allows deep networks while reducing the number of parameters. The ResNet50 architecture in the ILSVRC was designed with residual blocks for skipping connections or jumping over some layers.</p>
+                                                    <p>In this study, we employed a two-step multimodal architecture to effectively integrate neuroimaging and genomic datasets to predict mood disorders. First, generic image features were extracted from T1-weighted sMRI sequences using three distinct computer vision architectures: ViT, Inception-V3, and ResNet50. The extracted features were dimensioned as 1 × 3 for each sample, corresponding to the final log softmax values from each vision model. Second, we calculated the unweighted polygenic risk score (PRS) by summing the number of risk alleles carried by each variant (0, 1, or 2) in the SNP data for each individual. Genomic features were then extracted from the concatenated SNP data and unweighted PRS using extreme gradient boosting (XGBoost) and light gradient boosting machine (LightGBM) approaches. We combined the final log softmax values from the vision model with the predictions of the machine-learning model through element-wise summation. The resulting sum was subjected to a softmax operation to produce the ultimate predicted outcome. Our study examined six fusion models derived from a combination of the aforementioned computer vision models and machine-learning techniques. Ten-fold cross-validation was used to evaluate the classification performance of each model, and the results were compared with the corresponding unimodal baseline models and fusion models using MRI scans with data from only one SNP or unweighted PRS. The baseline models were constructed exclusively from either imaging or genetic SNP datasets using either computer vision or machine-learning techniques in isolation. We employed the same neural network architectures (ViT, Inception-V3, and ResNet50) for the image-only modality and fusion models. The machine-learning methods (XGBoost and LightGBM) were used to create the SNP-only modality models. For the fusion baseline models, experiments were conducted under the same settings.</p>
+    
+                                                    <p>In constructing our integrated computer vision models, we primarily used transfer learning taking advantage of the pre-trained ImageNet dataset. For training, we resized the sMRI T1 sequence volume dataset to 384 × 384 (Vision Transformer) or 512 × 512 (Inception-V3, ResNet50) pixels and removed background noise. We used several augmentation techniques, such as zooming, rotation, and shifting, to optimize the model against additional variability. The sMRI T1 sequence data were matched to a standard image using z-score normalization and provided as input to a ViT or pre-trained CNN architecture.</p>
+                                                    
+                                                    <p>Analyses were performed on graphic processing unit (GPU) servers featuring CUDA 11.2, four 48 GB Titan RTX graphics cards, and the CUDA Deep Neural Network library (cuDNN) 10.2, with the Pytorch framework in Ubuntu 20.04. We selected the ADAM optimizer for classification. Binary classification using the cross-entropy loss function (1) is as follows:</p>
+                                                    
+                                                    <p>L (y, f) = -y log f – (1 – y) log (1 – f)</p>
+                                                    
+                                                    <p>where y and f define the inferred probability and corresponding desired output, respectively. 
+                                                        The learning process reduced the tuning errors by optimizing the models over 100 epochs with a batch size of 32. using the back-propagation algorithm. 
+                                                        Subsequently, we performed an ablation study to predict MDD, BD, and control status for comparison with other unimodal and fusion baselines. </p>
+                                                
+                                                <h5>2.4. Performance evaluation</h5>
+                                                <p>The performance of the six possible combinations of the proposed models in classifying MDD, BD, and control status was evaluated through ten-fold cross-validation. 
+                                                    The area under the receiver operating characteristic curve (AUC) was used to determine the best performing model. 
+                                                    The contingency tables were manually constructed using the Python Scikit-learn package v 1.2.1. to evaluate the classification accuracy, sensitivity, and specificity of each model. </p>
+                                                  
+                                                    
+                                                        
+                                                        <img src="assets/I made it/fusiona.png" style =  "width: 90%" alt="ROC Curve OvR: Control vs. Rest">
+                                                        
+                                                        <div class="figure-caption">
+                                                            Fig. 2. Comparison of receiving operating curves (ROCs) of the two fusion models with T1-weighted MRI scans, genomic SNP data, and unweighted polygenic risk score (PRS) for diagnosis of mood disorders (MDD, bipolar disorder, and healthy controls) using (A) Vision Transformer (ViT) ⊕ XGBoost fusion model and (B) ViT ⊕ LightGBM fusion model. 
+                                                        </div>
+
+                                                     
+
+                                                    
+                                  
+                                                        <img src="assets/I made it/fusionb.png" style =  "width: 90%" alt="ROC Curve OvR: Control vs. Rest">
+                                                        <div class="figure-caption">
+                                                            Fig. 3. Comparison of receiving operating curves (ROCs) of the two fusion models with T1-weighted MRI scans and genomic SNP data for diagnosis of mood disorders (MDD, bipolar disorder, and healthy controls) using (A) Vision Transformer (ViT) ⊕ XGBoost fusion model and (B) ViT ⊕ LightGBM fusion model.
+                                                        </div>
+                                                        
+
+                                                        <img src="assets/I made it/fusionc.png" style =  "width: 90%" alt="ROC Curve OvR: Control vs. Rest">
+                                                        <div class="figure-caption">
+                                                            Fig. 4. Comparison of receiving operating curves (ROCs) of the two fusion models with T1-weighted MRI scans and unweighted polygenic risk score (PRS) for diagnosis of mood disorders (MDD, bipolar disorder, and healthy controls) using (A) Vision Transformer (ViT) ⊕ XGBoost fusion model and (B) ViT ⊕ LightGBM fusion model.
+                                                        </div>
+                                                        
+                                                        <img src="assets/I made it/fusiond.png" style =  "width: 90%" alt="ROC Curve OvR: Control vs. Rest">
+                                                        <div class="figure-caption">
+                                                            Fig. 5. Comparison of receiving operating curves (ROCs) of the unimodal baseline models with T1-weighted MRI scans for diagnosis of mood disorders, including MDD, bipolar disorder, and healthy controls, using (A) Vision Transformer (ViT), (B) Inception-V3, and (C) ResNet50. 
+                                                        </div>
+
+                                                        <img src="assets/I made it/fusione.png" style =  "width: 90%" alt="ROC Curve OvR: Control vs. Rest">
+                                                        <div class="figure-caption">
+                                                            Fig. 6. Comparison of receiving operating curves (ROCs) of the unimodal baseline models with genomic SNP data for diagnosis of mood disorders, including MDD, bipolar disorder, and healthy controls, using (A) XGBoost algorithm and (B) LightGBM algorithm. 
+                                                        </div>
+                                
+                                                
+
+                                                <h4>3. Results</h4>
+                                                <p>This study included multimodal patient-oriented datasets from 321 EAS participants comprising 147 individuals with MDD, 
+                                                    78 individuals with BD, and 96 HCs. 
+                                                    We aimed to improve the identification of mood disorders, particularly MDD and BD, 
+                                                    using multimodal fusion approaches that combine brain imaging (sMRI) and genomic (WES) data. 
+                                                    We trained and assessed the performances of six multimodal fusion models. 
+                                                    These models embody distinct combinations of computer vision techniques, including ViT, Inception-V3, ResNet50, and advanced machine-learning methods such as XGBoost and LightGBM. 
+                                                    Ten-fold cross-validation was used for model validation (Fig. 7). 
+                                                    The performances of the tested models are presented in Table 2 and Figs. 2–4. 
+                                                    The fusion model incorporating ViT and XGBoost (ViT ⊕ XGBoost) using MRI scans, SNP data, and unweighted PRS demonstrated the most robust classification performance, 
+                                                    achieving an AUC of 0.8912, sensitivity of 0.8512, specificity of 0.6966, and accuracy of 0.7243. 
+                                                    A similarly robust performance was noted with the Inception-V3 ⊕ XGBoost model, which obtained an AUC of 0.8497, sensitivity of 0.8569, specif icity of 0.7588, and accuracy of 0.7485. 
+                                                    Overall, the fusion models that incorporated LightGBM exhibited comparatively lower optimal performances than those using XGBoost.
+                                                    Notably, the unimodal baseline models, whether constructed solely with imaging or genomic data, consistently demonstrated inferior performance compared to multimodal fusion models. 
+                                                    Among the image- only baseline models (Table 3 and Fig. 5), the ViT model scored the best, achieving an AUC of 0.8237, sensitivity of 0.8100, specificity of 0.6447, and accuracy of 0.6394, 
+                                                    which did not surpass the performances of the multimodal fusion models. 
+                                                    The baseline Inception-V3 model recorded an AUC of 0.7875, sensitivity of 0.7665, specificity of 0.5909, and accuracy of 0.5879, 
+                                                    whereas the baseline ResNet50 model obtained an AUC of 0.7356, sensitivity of 0.7658, specificity of 0.5295, and accuracy of 0.5727. Similarly, the SNP-only baseline models (Table 3 and Fig. 6) 
+                                                    fell short of the performance metrics demonstrated by the multimodal models. The XGBoost baseline model obtained an AUC of 0.6750, sensitivity of 0.7693, specificity of 0.4682, and accuracy of 0.5788. The LightGBM baseline model achieved an AUC of 0.5752, sensitivity of 0.6944, specificity of 0.3672, and accuracy of 0.5394. 
+                                                    In comparison, the fusion baseline models (Table 2 and Figs. 3 and 4) exhibited slightly inferior results compared to the multimodal fusion models. 
+                                                    The ViT ⊕ XGBoost model using only MRI scans and SNP data obtained an AUC of 0.8904, sensitivity of 0.8427, specificity of 0.6732, and accuracy of 0.7091, 
+                                                    while the same model using only MRI scans and unweighted PRS recorded an AUC of 0.8396, sensitivity of 0.8331, specificity of 0.7251, and accuracy of 0.6909. </p>
+                                                    <table>
+                                                        <caption>Table 3<br>Classification performances of the unimodal fusion models for MDD/BD prediction on test datasets. (mean ± standard deviation for ten-fold cross- validation).  </caption>
+                                                        <tr>
+                                                            <th rowspan="2">Modality</th>
+                                                            <th rowspan="2">Model</th>
+                                                            <th colspan="4">Metrics</th>
+                                                        </tr>
+                                                        <tr>
+                                                            <th>AUC</th>
+                                                            <th>Accuracy</th>
+                                                            <th>Sensitivity</th>
+                                                            <th>Specificity</th>
+                                                        </tr>
+                                                        <tr>
+                                                            <td rowspan="2">SNP-only modality</td>
+                                                            <td>XGBoost</td>
+                                                            <td>0.6750 ± 0.0785</td>
+                                                            <td>0.5788 ± 0.0613</td>
+                                                            <td>0.7693 ± 0.0480</td>
+                                                            <td>0.4682 ± 0.0929</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>LightGBM</td>
+                                                            <td>0.5752 ± 0.0974</td>
+                                                            <td>0.5394 ± 0.0379</td>
+                                                            <td>0.6944 ± 0.0884</td>
+                                                            <td>0.3672 ± 0.0744</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td rowspan="3">Image-only modality</td>
+                                                            <td>ViT</td>
+                                                            <td>0.8237 ± 0.0004</td>
+                                                            <td>0.6394 ± 0.0091</td>
+                                                            <td>0.8100 ± 0.0045</td>
+                                                            <td>0.6447 ± 0.0059</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Inception-V3</td>
+                                                            <td>0.7875 ± 0.0045</td>
+                                                            <td>0.5879 ± 0.0148</td>
+                                                            <td>0.7665 ± 0.0108</td>
+                                                            <td>0.5909 ± 0.0388</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>ResNet50</td>
+                                                            <td>0.7356 ± 0.0066</td>
+                                                            <td>0.5727 ± 0.0091</td>
+                                                            <td>0.7658 ± 0.0153</td>
+                                                            <td>0.5295 ± 0.0350</td>
+                                                        </tr>
+                                                    </table>
+                                                <h4>4. Discussion </h4>
+                                                <p>In this study, we designed and evaluated several multimodal fusion models that integrated neuroimaging data from T1-weighted sMRI sequences and genomic SNP datasets to predict mood disorders, specifically MDD and BD. Our approach combined deep-learning techniques, including ViT, Inception-V3, and ResNet50, with machine-learning algorithms such as XGBoost and LightGBM. These models aimed to leverage the depth and complexity of multimodal datasets to enhance diagnostic precision. Notably, transformer-based models like ViT showed remarkable efficacy in intricate pattern-recognition tasks.
+
+                                                    Our results demonstrated that the ViT ⊕ XGBoost fusion model achieved the highest performance, with an accuracy of 0.7091 and an AUC of 0.8904, significantly outperforming models using only imaging or SNP data. The fusion model's performance improvements were substantial in terms of AUC, sensitivity, specificity, and accuracy compared to single-baseline models.
+                                                    
+                                                    While prior studies on multimodal prediction leveraging deep learning have shown potential, our approach is novel in combining imaging and genomic features for mood disorder classification. We emphasize the importance of integrating genetic information into the diagnostic process due to the high heritability of mood disorders. However, our study faced limitations such as sample size and ethnic diversity, suggesting the need for further validation in larger and more diverse populations. Future research should incorporate whole-genome sequencing and additional clinical data modalities for comprehensive patient assessments.
+                                                    
+                                                    In conclusion, our study highlights the promise of deep-learning and machine-learning-based multimodal fusion for improving the accuracy of mood disorder diagnosis. The integration of genomic and neuroimaging data holds potential for developing early and accurate diagnostic tools, offering effective preventive strategies to reduce the global burden of mood disorders.
+                                                </p>
+
+                                                <h4>5. Conclusions </h4>
+                                                <p>In terms of public health, fusion models can be used to diagnose and predict patients with MDD or BD. This integrative multimodal strategy, which leverages computer vision and machine-learning-based classification models in a two-step manner, effectively merges various clinical data modalities to yield more reproducible results across disorders. We anticipate that this model will aid in the diagnostic identification of psychiatric patients by incorporating other neuroimaging modalities and genomic datasets into clinical practice. 
+                                                </p>
+
+                                                <img src="assets/I made it/multimodal_features.png" style =  "width: 90%" alt="ROC Curve OvR: Control vs. Rest">
+                                                        <div class="figure-caption">
+                                                            Fig. 7. Comparison of 20 important features of the unimodal baseline models with genomic SNP data for diagnosis of mood disorders, including MDD, bipolar disorder, and healthy controls, using (A) XGBoost algorithm and (B) LightGBM algorithm. 
+                                                        </div>
+
+
+
+
+                                                
+
+
+                                                
+                                                
+                                                
+
+                        
+                                                    
+                    
+                                                <div class="entry-meta">
+
+                                                    <div class="meta-desc">
+                                                        <p>
+                                                            
+    
+
+</div>
+
+
+
+
+
+
+                                                  
+
+
+                           
+
+
+                                
+
+ 
+        <!-- Page Wrapper Ends -->
+
+        <!--  Scripts -->
+        <script type='text/javascript' src='assets/js/vendor/jquery-1.12.4.min.js'></script>
+        <script type='text/javascript' src='assets/js/vendor/TweenMax.min.js'></script>        
+        <script type='text/javascript' src='assets/js/vendor/headsup.min.js'></script>        
+        <script type='text/javascript' src='assets/js/vendor/jquery.easing.min.1.3.js'></script>      
+        <script type='text/javascript' src='assets/lib/cubeportfolio/js/jquery.cubeportfolio.min.js'></script>
+        <script type='text/javascript' src='assets/lib/swiper/js/swiper.min.js'></script>        
+
+        <script type='text/javascript' src='assets/js/main.js'></script>       
+        <!--  Scripts Ends -->
+    </body>
+</html>
+
+                        </main><!-- #main -->
+                    </div><!-- #primary -->  
+                </div><!-- .site-content-contain -->  
+            </div><!-- .site-content-contain -->  
+            <footer id="footer" class="site-footer standard" role="contentinfo">
+                <div class="container">
+                    <div class="site-info">			
+                        <p class="copyright">
+                            © 2024 Minhyek Jeon	
+                        </p>
+                    </div>    
+                    <nav class="footer-socials" role="navigation" aria-label="Footer Social Links Menu">                           
+                        <ul id="social-media-footer" class="social-links-menu">
+                            
+                            <li><a href="https://www.linkedin.com/in/minhyekjeon"><i class="fab fa-linkedin"></i></a></li>
+                            <li><a href="https://github.com/mhj0326"><i class="fab fa-github"></i></a></li>                               
+                        </ul>
+                    </nav>                        
+                </div>            
+            </footer>
+        </div><!-- #page -->
+    </body>
+</html>

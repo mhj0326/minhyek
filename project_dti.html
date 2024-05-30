@@ -1,0 +1,562 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <!-- Document Title -->      
+        <title>Minhyek Jeon | Cross Fusion After Alignment
+            Drug-Target Affinity Prediction</title>
+
+        <!-- Metas -->      
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="author" content="CaliberThemes" />
+
+        <!-- Favicon -->      
+        <link rel="icon" type="image/png" href="assets\I made it\logo_mj.png" />
+
+        <!-- Links -->      
+        <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700&subset=latin,latin-ext" rel="stylesheet" type="text/css" />
+        <link rel='stylesheet' id='bootstrap-css'  href='assets/lib/bootstrap/css/bootstrap.min.css' type='text/css' media='all' />
+        <link rel='stylesheet' id='font-awesome-css'  href='assets/css/icons/font-awesome.min.css' type='text/css' media='all' />       
+        <link rel='stylesheet' id='swiper-css' href='assets/lib/swiper/css/swiper.min.css' type='text/css' media='all' />
+        <link rel='stylesheet' id='cubeportfolio-css'  href='assets/lib/cubeportfolio/css/cubeportfolio.min.css' type='text/css' media='all' /> 
+
+        <link rel='stylesheet' id='main-css'  href='style.css' type='text/css' media='all' />
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+        <script id="MathJax-script" async
+        src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+        <style>
+            table {
+                width: 100%;
+                border-collapse: collapse;
+            }
+            th, td {
+                border: 1px solid black;
+                padding: 8px;
+                text-align: center;
+            }
+            th {
+                background-color: #f2f2f2;
+            }
+            caption {
+                font-weight: bold;
+                margin: 10px 0;
+            }
+        </style>
+
+        <style>
+            .image-container {
+                text-align: left;
+                margin: 20px;
+            }
+            .caption {
+                font-size: 16px;
+                color: #555;
+            }
+        </style>
+
+    </head>
+    <body class="single single-portfolio portfolio-details-top">
+
+        <!-- Page Wrapper -->
+        <div id="page" class="site">
+            <header id="masthead" class="site-header standard sticky" role="banner">		
+                <div class="container">
+                    <div id="site-branding">			
+                        <a class="logo-brand" href="index.html">
+                            <img class="logo" src="assets\I made it\logo_mj.png" alt="Logo">					                            
+                            <img class="retina-logo" src="assets\I made it\logo_mj.png" alt="Retina Logo">					                            
+                        </a>	
+                    </div><!-- .site-branding -->
+                    <span id="ham-trigger-wrap">
+                        <span class="ham-trigger">
+                            <span></span>                            
+                        </span>                            
+                    </span>
+                    <nav id="site-navigation" class="main-navigation" role="navigation" aria-label="Top Menu">
+                        <ul id="top-menu" class="menu">
+                            <li class="has-children"><a href="index.html">Home</a>
+                                
+                            </li>
+                            <li class="has-children"><a href="project.html">Project</a>
+                                
+                            </li>
+                            <li class="has-children"><a href="experience.html">Experience</a>
+                                
+                                
+                            </li>
+                            <li class="has-children"><a href="publication.html">Publication</a>
+                                
+                                
+                            </li>
+                            <li class="has-children"><a href="awards.html">Others</a>
+                                
+                            </li>
+                            
+                        </ul>	
+                    </nav>
+                                             
+                </div><!-- .wrap -->
+
+                
+	
+            </header><!-- #masthead -->
+
+            <div class="site-content-contain">
+                <div id="content" class="site-content">                 
+                    <div id="primary" class="content-area">
+                        <!-- Portfolio Filter -->
+                        
+                        <main id="main" class="site-main" role="main">        
+                            <div class="container t-offset-20">
+                                <div class="row">
+                                    <div class="col-sm-12">
+
+                                        <article class="portfolio">
+
+                                            <header class="entry-header">
+                                                
+
+                                                <h2>CFAAL-DTI : Cross Fusion After Alignment
+                                                    Drug-Target Affinity Prediction</h2>
+                                                
+
+                                    
+                                                
+
+            
+                                             
+
+                                                
+                                                <h4>Summary</h4>
+                                                
+                                                <p>
+                                                    Predicting drug-target interactions (DTIs) is a crucial step in the process of drug
+                                                    repurposing, as it can significantly reduce the workload of experimental verification
+                                                    for potential drug properties. Numerous machine learning-based methods have
+                                                    been proposed in recent studies to discover unknown interactions between drugs
+                                                    and protein targets. One promising approach is large-scale representation learning
+                                                    for natural language, which has shown significant improvements in various DTI
+                                                    tasks. Most existing methods utilize a multimodal encoder to jointly model different
+                                                    modes of word tokens. Because the different modes of word tokens are unaligned,
+                                                    it is challenging for the multimodal encoder to learn text-text interactions.
+                                                    In this paper, we propose a DTI prediction method CFAAL-DTI(Cross Fusion
+                                                    After ALignment Drug-Target Interaction) which applies a contrastive loss to
+                                                    two different modes (1D amino acid sequence and SMILES code) before fusing
+                                                    them through cross-modal attention, which enables more grounded representation
+                                                    learning. In order to improve learning, we applied momentum distillation, a
+                                                    self-training method that learns from pseudo-targets produced by a momentum
+                                                    model. We provide a theoretical analysis of CFAAL-DTI from the perspective of
+                                                    maximizing mutual information. This analysis demonstrates that different training
+                                                    tasks can be interpreted as various ways of generating views for an amino acid
+                                                    sequence-SMILES code pair. CFAAL-DTI achieves high quality performance on
+                                                    multiple downstream DTI tasks.    
+                                                </p>
+                                                <div class="image-container">
+                                                    <img src="assets/I made it/project_dti_architecture.png" alt="Description of the image" width="700" >
+                                                    <div class="caption">Figure 1: Architecture of CFAAL-DTI</div>
+                                                </div>
+
+
+                                                
+                                                <h4>1. Introduction</h4>
+                                                <p>The successful calculation of drug-target interactions (DTI) is considered a crucial subject in drug discovery. As new drugs continue to be discovered, the scope of drug discovery expands. Consequently, researchers have shown interest in identifying new partners that interact with approved drugs. Up until recently, researchers primarily focused on addressing the DTI challenge using binary classification techniques.</p>
+                                                <p>Recently, the integration of deep learning methodologies in fields such as bioinformatics and genomics has demonstrated the capacity to represent raw data through non-linear transformations. In a similar vein, proposed an approach to predict the binding strength between proteins and ligands using their respective one-dimensional (1D) sequences.  opted for a 1D representation by employing convolutional neural network (CNN) blocks.</p>
+                                                <p>Furthermore, there existed a task aimed at representing large-scale pairs of images and texts as inputs for deep learning, commonly referred to as Vision and Language Pre-training (VLP). While this approach proved to be effective, it had certain limitations. First, the word token embeddings and image features were not defined within the same space, posing a challenge for the multimodal encoder to capture their interactions. Second, datasets utilized in VLP often exhibited initial noise, as the prevalent image-text datasets were predominantly sourced from the web. Consequently, the overfitting existed in the existing pre-training objectives, such as Masked Language Modeling (MLM).</p>
+                                                <p>To address these limitations, a framework called ALBEF (Adaptive Language-Image Encoding with Bounding Box-Free framework) was proposed for VLP. In VLP, the image and text inputs are initially encoded separately using detector-free image and text encoders. Subsequently, a multimodal encoder is employed to fuse the extracted features from both modalities through cross-modal attention mechanisms. Furthermore, to capture the losses incurred by the unimodal encoders, an intermediate image-text contrastive (ITC) loss is introduced.</p>
+                                                <p>Our objective is to devise a model that enhances the prediction of binding affinity by modifying the ALBEF approach. While the original model primarily relies on image and text data, our proposed model takes a distinct approach by utilizing one-dimensional (1D) sequences of drugs and proteins as input and generates predicted binding affinity as the output. By leveraging input representation, we aim to improve the binding affinity prediction accuracy.</p>
+                                                <p>As the foundation for our DTI prediction task, we adopt the ALBEF model, which is a VL approach that leverages multimodal learning. The underlying concept of ALBEF is rooted in the notion that when multiple sensory modalities are engaged during the learning process, the learning capacity is enhanced. In the case of VL, the incorporation of both image and text inputs constitutes a form of multimodal learning.</p>
+                                                <p>Similarly, in the context of drug-target interactions, different types of similarity measures exist for drugs and target proteins. It has been demonstrated that drugs exhibiting similar expression patterns are likely to have similar target proteins. To capture this notion, we employed the VL approach, which allows us to explore the relationships between images or SMILES tokens with similar patterns and their corresponding target texts or protein sequences. By employing the VL approach, we can leverage the inherent multimodal nature of the data to uncover insights into the associations between drug molecules and target proteins, thus enhancing our DTI prediction capabilities.</p>
+                                                <p>For comparative analysis, we utilized the KIBA large-scale kinase inhibitors bioactivity dataset and the Davis Kinase binding affinity dataset. Our model’s results were compared with other models using concordance index (CI) and mean squared error (MSE) as the evaluation metrics.</p>
+                                                <h5>Contributions</h5>
+                                                <ul>
+                                                    <li>Incorporated the architecture of vision-language model into the field of proteins and chemicals by employing the ALBEF model.</li>
+                                                    <li>Designed cross-shaped fusion encoder in order to take advantage of the cross-attention layer for both domains.</li>
+                                                    <li>Incorporated additional similarity scores calculated within the domain for robust representation.</li>
+                                                    <li>Designed pre-trained model that can be utilized for other protein-based tasks other than DTI.</li>
+                                                </ul>
+                                                <h4>2. Related Work</h4>
+                                                <h5>Momentum Distillation</h5>
+                                                <p>A fundamental principle within the ALBEF framework is the incorporation of momentum distillation, which can be viewed as a variant of online self-distillation. Self-distillation refers to the process of extracting knowledge from a teacher model and leveraging it for learning purposes. Typically, teacher models are pre-trained; however, in online distillation, researchers simultaneously train multiple models and employ the ensemble of these models as the teacher model. In a similar vein, momentum distillation harnesses the power of an ensemble of student models, temporarily utilizing it as the teacher model. In the context of ALBEF models, the momentum distillation has been demonstrated to enhance performance across various Vision and Language (V+L) tasks, showcasing an approach that diverges from prior research in the field.</p>
+
+                                                <h5>Structure-Based Approach</h5>
+                                                <p>The structure-based approach in drug design revolves around the investigation of the three-dimensional (3D) structure of the target protein. Researchers employ techniques such as X-ray crystallography to elucidate the structures and functions of the target protein. Through this analysis, they can identify the binding site, the location where small molecule ligands can interact with the protein and modulate its activity. The primary objective of this approach is to identify ligands that exhibit strong binding affinity to the target protein. To achieve this, scientists employ techniques like virtual screening or molecular docking to screen a library of potential drugs and determine which ones have the potential to interact favorably with the target protein. The structure-based approach allows researchers to specifically target proteins that are associated with particular diseases. This approach has already yielded successful outcomes and continues to be a valuable methodology in the realm of drug discovery.</p>
+
+                                                <h5>Ligand-Based Approach</h5>
+                                                <p>The ligand-based approach represents an alternative strategy for designing new drug candidates by estimating molecule-ligand interactions based on the responses from similar target proteins. The ligand-based approach involves the identification of shared structural properties among ligands that exhibit activity against a specific target protein. These structural features play a crucial role in the interaction between the target protein and ligands. Once these properties have been identified, researchers employ various techniques to search databases and compound libraries in order to discover molecules that possess similar properties. Methods such as quantitative structure-activity relationship (QSAR) modeling are employed to facilitate this process. It is important to note that the ligand-based approach does have certain limitations, as it relies on the structural properties of ligands that specifically respond to a particular target protein. However, it can leverage existing active ligands to generate new drug candidates, offering another avenue in the drug discovery process.</p>
+
+
+                                                <h4>3. Approach</h4>
+    
+                                                <h5>3.1 Model Architecture</h5>
+                                                <div class="image-container">
+                                                    <img src="assets/I made it/project_dti_albef.png" alt="Description of the image" width="700" >
+                                                    <div class="caption">Figure 2: Architecture of ALBEF</div>
+                                                </div>
+                                                <p>As illustrated in Figure 1, CFAAL-DTI contains a protein sequence encoder, a SMILES code encoder, and a fusion encoder. We employed the ESM-2 model which consists of 6 BERT-like layers for the protein sequence encoder, and 4 BERT layers for SMILES code encoder. For the fusion encoder with cross-attention, 4 BERT layers were employed with the parameters shared. In order to enable the computation between two domains, we reduced the SMILES encoder hidden size to 320 which matches the ESM-2 encoder size. We programmed the entire model from scratch referring to the basic structure of ALBEF (<a href="https://github.com/salesforce/ALBEF.git">https://github.com/salesforce/ALBEF.git</a>). We imported pre-existing BERT structure and modified the model configuration so that it can take SMILES code as input. As we apply a whole new language domain, we built our own SMILES tokenizer and trained the model from scratch. We then joined our model with pre-trained ESM-2 model as an encoder for protein sequence. Also, dataloader, training, and evaluation scripts were all programmed on our own.</p>
+                                                <p>ESM-2 aims to predict structure, function and other protein properties directly from individual sequences. The input sequence undergoes processing through the forward-propagation layers of the language model, and the internal states or representations of the model are then transmitted to the folding head. The folding head initiates its operations with a series of folding blocks. Each folding block takes turns in updating a representation of the sequence and a representation of pairwise interactions. The outputs of these blocks are subsequently fed into an equivariant transformer structure module. Prior to producing the final atomic-level structure and predicted confidences, three recycling steps are executed.</p>
+                                                <p>BERT is specifically designed to learn deep bidirectional representations from unannotated text by considering both left and right context in all layers. This allows the pre-trained BERT model to be easily adapted for various tasks, such as the DTI task. The BERT architecture consists of two main stages: pre-training and fine-tuning. During pre-training, the model is trained on unlabeled data using various pre-training tasks. In our task the input SMILES code is processed through the encoder of BERT model for pre-training.</p>
+
+                                                <h5>3.2 Pre-training Objectives</h5>
+    
+                                                <h5>Protein-SMILES Contrastive Learning</h5>
+                                                <p>Protein-SMILES Contrastive Learning allows better unimodal representations prior to fusion. The model is trained to learn a similarity function, denoted as \( s = t_v(v_{cls})^T t_u(u_{cls}) \), which assigns higher similarity scores to parallel protein-SMILES pairs. \( t_v \) and \( t_u \) are linear transformations that are applied to map the embeddings from the tokens to normalized lower-dimensional representations. The model maintains two queues that store representations of \( N \) protein-SMILES pairs from the momentum-based unimodal encoders. These momentum encoders generate normalized features denoted as \( t_v'(v_{cls}) \), \( t_u'(u_{cls}) \). We define</p>
+                                                <p>\( s(P, S) = t_v(v_{cls})^T t_u'(u'_{cls}) \), \( s(S, P) = t_u(u_{cls})^T t_v'(v'_{cls}) \),</p>
+                                                <p>\( s(P, P) = t_v(v_{cls})^T t_v'(v'_{cls}) \), \( s(S, S) = t_u(u_{cls})^T t_u'(u'_{cls}) \),</p>
+                                                <p>where \( P \) represents protein sequence and \( S \) represents SMILES code. For each protein and SMILES code, we calculate the softmax-normalized protein-to-SMILES, SMILES-to-protein, protein-to-protein, and SMILES-to-SMILES similarity as:</p>
+                                                <p>\[
+                                                Z_{n}^{P2S}(P) = \frac{\exp(s(P, S_n)/\tau)}{\sum_{n=1}^{N} \exp(s(P, S_n)/\tau)}, \quad Z_{n}^{S2P}(S) = \frac{\exp(s(S, P_n)/\tau)}{\sum_{n=1}^{N} \exp(s(S, P_n)/\tau)}
+                                                \]</p>
+                                                <p>\[
+                                                Z_{n}^{P2P}(P) = \frac{\exp(s(P, P_n)/\tau)}{\sum_{n=1}^{N} \exp(s(P, P_n)/\tau)}, \quad Z_{n}^{S2S}(S) = \frac{\exp(s(S, S_n)/\tau)}{\sum_{n=1}^{N} \exp(s(S, S_n)/\tau)}
+                                                \]</p>
+                                                <p>where \( \tau \) is a learnable temperature parameter. Let \( y^{P2S}(P) \), \( y^{S2P}(S) \), \( y^{P2P}(P) \), \( y^{S2S}(S) \) denote the ground-truth one-hot similarity, where negative pairs have a probability of 0 and the positive pair has a probability of 1. The Protein-SMILES contrastive loss is defined as the cross-entropy \( H \) between \( Z \) and \( y \):</p>
+                                                <p>\[
+                                                L_{psc} = \frac{1}{2} E_{(P,S)} D [ H ( y^{P2S}(P), Z^{P2S}(P) ) + H ( y^{S2P}(S), Z^{S2P}(S) ) + H ( y^{P2P}(P), Z^{P2P}(P) ) + H ( y^{S2S}(S), Z^{S2S}(S) ) ]
+                                                \]</p>
+                                                
+                                                <h5>Protein-SMILES Affinity Learning</h5>
+                                                <p>Protein-SMILES Affinity Learning is used to predict the strength of the interaction between a protein and a ligand molecule. It quantifies how tightly the ligand binds to the protein and represents the effectiveness of a drug or the biological activity of a ligand. The end goal of our model is to predict the affinity between two factors. We applied a regression model for Protein-SMILES Affinity Learning and used mean squared error as our loss function. Therefore, Protein-SMILES Affinity learning loss function can be defined as:</p>
+                                                <p>\[
+                                                L_{reg} = \left( \frac{1}{n} \sum_{i} (y_i - \overline{y})^2 \right)
+                                                \]</p>
+                                                <p>By applying Protein-SMILES contrastive learning and affinity learning, the full pre-training objective of CFAAL-DTI can be represented as:</p>
+                                                <p>\[
+                                                L = L_{psc} + L_{reg}
+                                                \]</p>
+                                                <h4>4. Experiments</h4>
+    
+    <h5>4.1 Data</h5>
+    <p>The datasets utilized in our model include the DAVIS and KIBA datasets. The DAVIS dataset contains comprehensive information regarding the interactions between 72 kinase inhibitors and 442 kinases. Notably, the kinases encompass over 80 percent of the human catalytic protein kinome. This dataset encompasses data on 68 distinct chemical compounds and 442 target proteins, providing a rich and diverse collection of interactions for analysis.</p>
+    <p>On the other hand, the KIBA dataset represents an integrated drug-target bioactivity matrix that incorporates information pertaining to various types of bioactivity. It consists of an extensive compilation of data, comprising 52,498 chemical compounds and 467 target proteins. This dataset serves as a valuable resource for exploring the relationships and activities between drugs and their corresponding targets, facilitating comprehensive investigations in the field of drug-target interactions.</p>
+    
+    <h3>4.2 Evaluation method</h3>
+    <p>Along with the mean square error (MSE), we employed the concordance index (CI) in order to assess and compare the performance of our model against other existing models. Following the methodology employed by previous studies, CI represents a measure of whether the predicted binding affinity values of two random drug–target pairs were predicted in the same order as their true values were:</p>
+    <p>\[
+    CI = \frac{1}{Z} \sum_{\delta_i > \delta_j} h(b_i - b_j)
+    \]</p>
+    <p>where \( b_i \) represents prediction value with larger affinity \( \delta_i \), \( b_j \) represents prediction value with smaller affinity \( \delta_j \), \( Z \) is a constant for normalization and \( h(x) \) is the step function:</p>
+    <p>\[
+    h(x) = 
+    \begin{cases} 
+    1, & \text{for } 0 > x \\ 
+    0.5, & \text{for } 0 = x \\ 
+    0, & \text{for } 0 < x 
+    \end{cases}
+    \]</p>
+    
+    <h5>4.3 Experimental details</h5>
+    <p>The training process was divided into two stages, based on the dataset of positive and negative. Considering that the input for the original model ALBEF was always a positive set, a different approach was implemented for our negative pairs to compute the contrastive loss. Inspired by the early stopping in multi-task learning, we trained the first half with the positive pairs computing contrastive loss as intended. However, at the point where training seemed to converge, we turned off the contrastive loss and moved on to the negative pairs. For the KIBA dataset, the conversion to negative pairs occurred after epoch 1 with a total of 4, while for the DAVIS set, it was at epoch 2 with a total of 4.</p>
+    <p>We pre-trained the model until convergence using a batch size of 4 and the AdamW optimizer with a weight decay of 0.02. The learning rate was warmed up to 1e-4 and decreased to 1e-5 with a cosine scheduler. We used the adjusting hyperparameter \( \alpha \) of 0.4. Since the pseudo-label from the momentum teacher is not useful in the early stages of the training, we linearly increased \( \alpha \) from 0 to 0.4 during the first epoch. The momentum hyperparameter \( \lambda \) was fixed to 0.995, and the protein and SMILES queue size of 2048.</p>
+    <div class="image-container">
+        <img src="assets/I made it/project_dti_distribution.png" alt="Description of the image" width="600" height="600">
+        <div class="caption">Figure 3: Summary of the Davis (left panel) and KIBA (right panel) datasets. (A) Distribution of
+            binding affinity values. (B) Distribution of the lengths of the SMILES strings. (C) Distribution of the
+            lengths of the protein sequences</div>
+    </div>
+    <h5>4.4 Results</h5>
+    <p>First, we evaluate the effectiveness of the proposed methods on DAVIS dataset. Table 1 shows the performance of the downstream tasks with different architectures. The state-of-the-art model on this benchmark data set showed 0.893 for CI and 0.229 for MSE. Our model showed 0.883 for CI and 0.230 for MSE, showing a 0.01 improvement in both MSE and CI values. Comparing our model to DeepDTA which uses 1D sequence for both protein and compound, our model showed 0.005 higher CI value and 0.03 lower MSE. Therefore, compared to the baseline pre-training tasks, fusing the two domain data substantially improves the pre-trained model’s performance on DAVIS dataset.</p>
+    <p>We then evaluate the effectiveness of our model on KIBA dataset. Table 2 shows the performance of the downstream tasks with different architectures. The state-of-the-art model on this benchmark data set showed 0.891 for CI and 0.139 for MSE. Our model showed 0.876 for CI and 0.141 for MSE, showing a 0.15 and 0.02 lower CI value and MSE. Comparing our model to DeepDTA, our model showed 0.013 improved CI value and 0.05 improved MSE. Compared to the baseline pre-training tasks, fusing the two domain data substantially improves the pre-trained model’s performance on KIBA dataset. Overall MSE score showed enhanced performance than most of the baseline models.</p>
+    
+    <table>
+        <caption>Table 1: The CI and MSE scores of the test set of training sets for the DAVIS dataset</caption>
+        <thead>
+            <tr>
+                <th>Method</th>
+                <th>Proteins</th>
+                <th>Compounds</th>
+                <th>CI(std)</th>
+                <th>MSE</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>DeepDTA</td>
+                <td>1D</td>
+                <td>Pubchem-Sim</td>
+                <td>0.790</td>
+                <td>0.608</td>
+            </tr>
+            <tr>
+                <td>DeepDTA</td>
+                <td>Smith-Waterman</td>
+                <td>Pubchem-Sim</td>
+                <td>0.886</td>
+                <td>0.420</td>
+            </tr>
+            <tr>
+                <td>KronRLS</td>
+                <td>Smith-Waterman</td>
+                <td>Pubchem-Sim</td>
+                <td>0.835</td>
+                <td>0.419</td>
+            </tr>
+            <tr>
+                <td>SimBoost</td>
+                <td>Smith-Waterman</td>
+                <td>Pubchem-Sim</td>
+                <td>0.871</td>
+                <td>0.379</td>
+            </tr>
+            <tr>
+                <td>DeepDTA</td>
+                <td>Smith-Waterman</td>
+                <td>1D</td>
+                <td>0.872</td>
+                <td>0.282</td>
+            </tr>
+            <tr>
+                <td>DeepDTA</td>
+                <td>1D</td>
+                <td>1D</td>
+                <td>0.878</td>
+                <td>0.261</td>
+            </tr>
+            <tr>
+                <td>WideDTA</td>
+                <td>1D+PDM</td>
+                <td>1D+LMCS</td>
+                <td>0.886</td>
+                <td>0.262</td>
+            </tr>
+            <tr>
+                <td>GAT</td>
+                <td>1D</td>
+                <td>Graph</td>
+                <td>0.880</td>
+                <td>0.254</td>
+            </tr>
+            <tr>
+                <td>GIN</td>
+                <td>1D</td>
+                <td>Graph</td>
+                <td>0.881</td>
+                <td>0.245</td>
+            </tr>
+            <tr>
+                <td>GCN</td>
+                <td>1D</td>
+                <td>Graph</td>
+                <td>0.892</td>
+                <td>0.232</td>
+            </tr>
+            <tr>
+                <td>GAT_GCN</td>
+                <td>1D</td>
+                <td>Graph</td>
+                <td>0.893</td>
+                <td>0.229</td>
+            </tr>
+            <tr>
+                <td>Ours</td>
+                <td>1D</td>
+                <td>1D</td>
+                <td>0.883</td>
+                <td>0.230</td>
+            </tr>
+        </tbody>
+    </table>
+    
+    <table>
+        <caption>Table 2: The CI and MSE scores of the test set of training sets for the KIBA dataset</caption>
+        <thead>
+            <tr>
+                <th>Method</th>
+                <th>Proteins</th>
+                <th>Compounds</th>
+                <th>CI(std)</th>
+                <th>MSE</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>DeepDTA</td>
+                <td>1D</td>
+                <td>Pubchem-Sim</td>
+                <td>0.718</td>
+                <td>0.571</td>
+            </tr>
+            <tr>
+                <td>DeepDTA</td>
+                <td>Smith-Waterman</td>
+                <td>Pubchem-Sim</td>
+                <td>0.710</td>
+                <td>0.502</td>
+            </tr>
+            <tr>
+                <td>KronRLS</td>
+                <td>Smith-Waterman</td>
+                <td>Pubchem-Sim</td>
+                <td>0.782</td>
+                <td>0.411</td>
+            </tr>
+            <tr>
+                <td>SimBoost</td>
+                <td>Smith-Waterman</td>
+                <td>Pubchem-Sim</td>
+                <td>0.836</td>
+                <td>0.222</td>
+            </tr>
+            <tr>
+                <td>DeepDTA</td>
+                <td>Smith-Waterman</td>
+                <td>1D</td>
+                <td>0.854</td>
+                <td>0.204</td>
+            </tr>
+            <tr>
+                <td>DeepDTA</td>
+                <td>1D</td>
+                <td>1D</td>
+                <td>0.863</td>
+                <td>0.194</td>
+            </tr>
+            <tr>
+                <td>WideDTA</td>
+                <td>1D+PDM</td>
+                <td>1D+LMCS</td>
+                <td>0.875</td>
+                <td>0.179</td>
+            </tr>
+            <tr>
+                <td>GAT</td>
+                <td>1D</td>
+                <td>Graph</td>
+                <td>0.866</td>
+                <td>0.179</td>
+            </tr>
+            <tr>
+                <td>GIN</td>
+                <td>1D</td>
+                <td>Graph</td>
+                <td>0.882</td>
+                <td>0.147</td>
+            </tr>
+            <tr>
+                <td>GCN</td>
+                <td>1D</td>
+                <td>Graph</td>
+                <td>0.889</td>
+                <td>0.109</td>
+            </tr>
+            <tr>
+                <td>GAT_GCN</td>
+                <td>1D</td>
+                <td>Graph</td>
+                <td>0.891</td>
+                <td>0.139</td>
+            </tr>
+            <tr>
+                <td>Ours</td>
+                <td>1D</td>
+                <td>1D</td>
+                <td>0.876</td>
+                <td>0.141</td>
+            </tr>
+        </tbody>
+    </table>
+    <p>while CI value is lower than the general. CI value was lower than we expected and We find the cause
+        in our contrastive loss function, which will be further discussed in the analysis section.</p>
+    
+    <h4>5. Analysis</h4>
+    <p>Since Protein and SMILES have successfully been represented with encoders, our pretrained model
+        can be applied effectively to other tasks. Due to the nature of the DTI task, the model needs to collect
+        structural information throughout the whole sequence instead of focusing only on the local range of
+        protein and chemical structure. Therefore our transformer-based model, which is somewhat lacking
+        in the inductive bias, is specialized in generalization and performs better than existing CNN-based
+        models. Its performance is enhanced through the calculation of bidirectional cross-attention. Also,
+        there is a potential possibility to improve robustness by using larger Esm models as there was a
+        limitation in the GPU sources.
+        Regardless of the decent MSE score, a low CI value was formed. The reason can be inferred in the
+        process of calculating the contrastive loss of our model. During the calculation process, it creates a
+        matrix with a size of (Batch size) x (Batch size) and fills in a target of 1 for positive pairs and 0 for
+        the remaining pairs. Likewise, in the existing ALBEF model, since the input image-text pair was
+        always a positive pair, only the diagonal elements of the matrix was set to 1 and the rest was set to
+        0. The loss has been calculated with pseudo-target using the momentum model in case there is a
+        similar (or better) text for the input image in the same batch. However, unlike image-text pairs, a
+        single protein has a high probability of being combined with several different types of drugs. In the
+        end, this is likely to cause confusion in calculating contrastive loss. In other words, there may be a
+        non-diagonal element that should have been 1 in the target matrix. This problem gives us a task to
+        study further in the future.</p>
+    
+        <h4>6. Conclusion</h4>
+        <p>We have made significant advancements in the integration of vision-language models into the realm
+            of proteins and chemicals through the utilization of the ALBEF model. In our research, we developed
+            a unique fusion encoder in a cross-shaped configuration to leverage the benefits of the cross-attention
+            layer in both domains (protein sequence and SMILES code). Furthermore, we introduced additional
+            measures of similarity within each domain to enhance the reliability of the representations. Our
+            pre-trained model has been specifically designed to be applicable not only to drug-target interaction
+            (DTI) tasks but also to various other protein-related tasks, broadening its potential applications.
+            Although our model showed good performance on benchmark data sets, it has limitations due to the
+            fact that its pretrained models are limited to 1D sequence data(amino acid sequence and SMILES
+            code). However, 1D sequence information can be inadequate for predicting other various proteinrelated
+            tasks. Additional research and modification of architecture are required to input protein and
+            compound data that contains more information(3D structure data, Pubchem-sim, etc). For seek to
+            research for our model architecture to develop adaptability to various forms of data.</p>
+                                                
+                                                
+                                                
+
+                        
+                                                    
+                    
+                                                <div class="entry-meta">
+
+                                                    <div class="meta-desc">
+                                                        <p>
+                                                            
+    
+
+</div>
+
+
+
+
+
+
+                                                  
+
+
+                           
+
+
+                                
+
+ 
+        <!-- Page Wrapper Ends -->
+
+        <!--  Scripts -->
+        <script type='text/javascript' src='assets/js/vendor/jquery-1.12.4.min.js'></script>
+        <script type='text/javascript' src='assets/js/vendor/TweenMax.min.js'></script>        
+        <script type='text/javascript' src='assets/js/vendor/headsup.min.js'></script>        
+        <script type='text/javascript' src='assets/js/vendor/jquery.easing.min.1.3.js'></script>      
+        <script type='text/javascript' src='assets/lib/cubeportfolio/js/jquery.cubeportfolio.min.js'></script>
+        <script type='text/javascript' src='assets/lib/swiper/js/swiper.min.js'></script>        
+
+        <script type='text/javascript' src='assets/js/main.js'></script>       
+        <!--  Scripts Ends -->
+    </body>
+</html>
+
+                        </main><!-- #main -->
+                    </div><!-- #primary -->  
+                </div><!-- .site-content-contain -->  
+            </div><!-- .site-content-contain -->  
+            <footer id="footer" class="site-footer standard" role="contentinfo">
+                <div class="container">
+                    <div class="site-info">			
+                        <p class="copyright">
+                            © 2024 Minhyek Jeon	
+                        </p>
+                    </div>    
+                    <nav class="footer-socials" role="navigation" aria-label="Footer Social Links Menu">                           
+                        <ul id="social-media-footer" class="social-links-menu">
+                            
+                            <li><a href="https://www.linkedin.com/in/minhyekjeon"><i class="fab fa-linkedin"></i></a></li>
+                            <li><a href="https://github.com/mhj0326"><i class="fab fa-github"></i></a></li>                               
+                        </ul>
+                    </nav>                        
+                </div>            
+            </footer>
+        </div><!-- #page -->
+    </body>
+</html>

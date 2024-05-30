@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <!-- Document Title -->      
+        <title>Minhyek Jeon | Minimal Portfolio HTML Template</title>
+
+        <!-- Metas -->      
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="author" content="CaliberThemes" />
+
+        <!-- Favicon -->      
+        <link rel="icon" type="image/png" href="assets\I made it\logo_mj.png" />
+
+        <!-- Links -->      
+        <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700&subset=latin,latin-ext" rel="stylesheet" type="text/css" />
+        <link rel='stylesheet' id='bootstrap-css'  href='assets/lib/bootstrap/css/bootstrap.min.css' type='text/css' media='all' />
+        <link rel='stylesheet' id='font-awesome-css'  href='assets/css/icons/font-awesome.min.css' type='text/css' media='all' />       
+        <link rel='stylesheet' id='swiper-css' href='assets/lib/swiper/css/swiper.min.css' type='text/css' media='all' />
+        <link rel='stylesheet' id='cubeportfolio-css'  href='assets/lib/cubeportfolio/css/cubeportfolio.min.css' type='text/css' media='all' /> 
+
+        <link rel='stylesheet' id='main-css'  href='style.css' type='text/css' media='all' />
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+        <script id="MathJax-script" async
+        src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+        <style>
+            table {
+                width: 100%;
+                border-collapse: collapse;
+            }
+            th, td {
+                border: 1px solid black;
+                padding: 8px;
+                text-align: center;
+            }
+            th {
+                background-color: #f2f2f2;
+            }
+            caption {
+                font-weight: bold;
+                margin: 10px 0;
+            }
+        </style>
+
+    </head>
+    <body class="single single-portfolio portfolio-details-top">
+
+        <!-- Page Wrapper -->
+        <div id="page" class="site">
+            <header id="masthead" class="site-header standard sticky" role="banner">		
+                <div class="container">
+                    <div id="site-branding">			
+                        <a class="logo-brand" href="index.html">
+                            <img class="logo" src="assets\I made it\logo_mj.png" alt="Logo">					                            
+                            <img class="retina-logo" src="assets\I made it\logo_mj.png" alt="Retina Logo">					                            
+                        </a>	
+                    </div><!-- .site-branding -->
+                    <span id="ham-trigger-wrap">
+                        <span class="ham-trigger">
+                            <span></span>                            
+                        </span>                            
+                    </span>
+                    <nav id="site-navigation" class="main-navigation" role="navigation" aria-label="Top Menu">
+                        <ul id="top-menu" class="menu">
+                            <li class="has-children"><a href="index.html">Home</a>
+                                
+                            </li>
+                            <li class="has-children"><a href="project.html">Project</a>
+                                
+                            </li>
+                            <li class="has-children"><a href="experience.html">Experience</a>
+                                
+                                
+                            </li>
+                            <li class="has-children"><a href="publication.html">Publication</a>
+                                
+                                
+                            </li>
+                            <li class="has-children"><a href="awards.html">Others</a>
+                                
+                            </li>
+                            
+                        </ul>	
+                    </nav>
+                                             
+                </div><!-- .wrap -->
+
+                
+	
+            </header><!-- #masthead -->
+
+            <div class="site-content-contain">
+                <div id="content" class="site-content">                 
+                    <div id="primary" class="content-area">
+                        <!-- Portfolio Filter -->
+                        
+                        <main id="main" class="site-main" role="main">        
+                            <div class="container t-offset-20">
+                                <div class="row">
+                                    <div class="col-sm-12">
+
+                                        <article class="portfolio">
+
+                                            <header class="entry-header">
+                                                
+
+                                                <h2>Pulmonary Disease Classification from Chest X-ray Images using Learning Algorithms </h2>
+                                                
+
+                                    
+                                                
+
+            
+                                             
+
+                                                
+                                                <h4>Problem</h4>
+                                                <p>In 2019, the American Lung Association estimated more than 2 million people were affected by lung disease in Pennsylvania alone. Healthcare spending related to lung disease represents a significant amount of money each year, along with being a significant cause of death. Variation also exists in the diagnostic conclusions drawn from different radiologists examining the same scan. We would like to apply classical and deep learning algorithms to identify positive and negative disease classifications given a large dataset of manually annotated chest x-ray images. </p>
+                                                <h4>Motivation</h4>
+                                                <p>Being able to train a model to perform this task would eliminate the need for a radiologist or a technician to physically examine the x-ray images and would present preliminary findings for chest radiographs. This model could also serve as validation for a given technician’s findings, could serve as training for new technicians/radiologists, and could potentially address the inconsistency in conclusions drawn from multiple radiologists. This could also service communities where educated health professionals are not immediately available to the general public, and would only require a chest x-ray scan. Lastly the low-cost of the model, besides the chest x-ray, would allow for earlier diagnostics on disease phenotypes in the populace as it lowers the barrier of entry into chest x-rays and improves healthcare outcomes</p>
+                                                <h4>Methods Summary</h4>
+                                                <img src="assets\I made it\workflow.png" alt="Description of the image" width="700" height="600">
+                                                <p>The three primary classical learning methods that were implemented were principal component analysis and lasso linear regression (for feature selection) and logistic regression. PCA is a dimensionality reduction technique that can be utilized to find the features projected onto principal components that explain the largest variability of the data. Lasso linear regression allows for selection of the embedding features that are most correlated with labeled outcomes. Lastly, logistic regression enables for probabilistic classification of samples in a computationally inexpensive manner relative to other methods (SVM). Additionally, one deep learning method that was implemented using TensorFlow Keras was ResNet50, which contains a significant number of convolutional layers to help reduce the overall complexity of the images to simplify classification.</p>
+                                                <h4>Dataset</h4>
+                                                <img src="C:\Users\OCEAN\Desktop\study\personal website\HTML\assets\I made it\class_distribution.png" alt="Description of the image" width="500" height="600">
+                                                <p>The dataset used is a publicly available collection of chest x-rays ( ~ 100,000) labeled by several radiologists in an independent manner collected from patients at the NIHCC. 
+                                                    The chest x-rays were labeled in such a way that each sample can contain up to ~ 14 classifications.</p>
+                                                
+                                                    
+                                                
+                                                <h4>Data</h4>
+                                                
+                                                <p>The data was used to curate two datasets that we used to perform classification, 
+                                                    embedding and x-rays. The exploratory data analysis was performed primarily on the 
+                                                    embedding dataset. 
+                                                    Both of these datasets contain 9600 samples (reduced down from the original ~ 100000 images). 
+                                                    A sample from the x-rays dataset is a 1024 by 1024 .png chest x-ray labeled by its phenotype, i.e. "No Finding", "Pneumonia", etc. A sample from the embeddings dataset is a 
+                                                    <math xmlns="http://www.w3.org/1998/Math/MathML">
+                                                        <msup>
+                                                          <mi>&#x211D;</mi>
+                                                          <mrow>
+                                                            <mn>512</mn>
+                                                            <mo>&#xD7;</mo>
+                                                            <mn>1</mn>
+                                                          </mrow>
+                                                        </msup>
+                                                      </math> 
+                                                      vector generated from its respective chest-xray sample. 
+                                                      The samples from the embeddings were generated using the CLIP Image Encoder, later described in methods. 
+                                                      The features for both of these datasets are real valued, for the chest x-ray's they are pixel intensity, 
+                                                      and for the embeddings the features appear to be normally distributed small values close to zero. 
+                                                      Upon examination of the class labels in the image above, we can see that the classification of the labels are quite imbalanced, 
+                                                      that is there are significantly greater proportion of the "No Finding" label than any other morbidity. 
+                                                      In order to properly train our models, we created 14 separate datasets for embeddings and for chest x-rays, 
+                                                      one for each class, such that the healthy samples were undersampled to ensure a balanced amount of healthy and disease samples. 
+                                                      These datasets were each randomly split in a ratio of 8:2 to create train and test splits for each label. 
+                                                      The label for each of these datasets were encoded into 0 or 1 such that the label was 0 if "No Finding" and 1 otherwise.</p>
+                                                    <img src="C:\Users\OCEAN\Desktop\study\personal website\HTML\assets\I made it\FeatDistr.png" alt="Description of the image" width="500" height="600">
+
+                                         
+                                                    
+                                                <h5>CLIP Image Encoder</h5>
+                                                
+                                                <p>The CLIP (Contrastive Language–Image Pre-training) image encoder was utilized to reduce the dimensionality of the image dataset by generating an embedding for each image,\( v \in \mathbb{R}^{512 \times 1} \). 
+                                                    Among various types of CLIP model, CXR-CLIP which is vision-language pre-training (VLP) model specifically tailored for the medical field, 
+                                                    particularly focusing on chest X-rays was used. </p>
+                                                
+                                                    This model addresses the issue of data scarcity by expanding image-text pairings through general prompts and using multiple images alongside radiologic reports. 
+                                                <p>The model incorporates two contrastive losses, named ICL and TCL, which are designed to learn the characteristics of medical studies and reports, respectively.</p> 
+                                                <img src="C:\Users\OCEAN\Desktop\study\personal website\HTML\assets\I made it\dataset.png" alt="Description of the image" width="500" height="600"><br>   
+                                                <P>From the architecture, an image encoder was used to generate embeddings from X-ray images. 
+                                                    We have utilized two image encoders, ResNet-50 and Swin-Tiny, to extract global visual features from the global average pooled output of the image encoder. 
+                                                    Among these methods, ResNet-50 was selected as it demonstrated superior performance in capturing features relevant for evaluations in the CXR-CLIP model. 
+                                                    A linear layer is adopted to project the embeddings into the size for
+                                                    \( v \in \mathbb{R}^{512 \times 1} \) . The normalized visual embedding v is obtained by the following equation
+                                                    \begin{equation}
+                                                     v = \frac{f_i^1(E_i^1(x))}{\|f_i^1(E_i^1(x))\|} 
+                                                    \end{equation}</P>
+                                                
+                                                
+                                                
+                                                
+                                   
+                                                
+                                                
+                                                <h5>Principal Component Analysis for Visualization & Feature Reduction</h5>
+                                                <p>Principal Component Analysis (PCA) was performed on the embeddings generated from the CLIP image encoder. The motivation behind PCA includes visualizing the data and reducing the dimensionality of the data. 
+                                                    For high-dimensional data, plotting the first two principal components allows for a visual representation of the data for an initial evaluation. 
+                                                    Utilizing this method for feature reduction allows for the use of transformed data that explains some threshold of the variance in the original data for more efficient development of classical models. 
+                                                    The PCA was performed via eigen-decomposition of the covariance matrix of the data. The covariance matrix (S) was calculated as in Equation (2), where X corresponds to the mean-centered embedding data:
+                                                    \begin{equation}
+                                                    S = \frac{1}{N} X^TX
+                                                    \end{equation}
+                                                    
+                                                    For visualization, the eigenvectors corresponding to the largest two eigenvalues were used to transform the data into 2 dimensions. For feature reduction, 
+                                                    the eigenvectors explaining 95% of the variance were used to transform the data from 512 features to 162 features for each image. 
+                                                    The reduced embeddings were then used to train and test a logistic regression model.  
+                                                    </p>
+
+                                                <h5>Lasso Regression for Feature Selection</h5>
+                                                
+                                                <p>Lasso Regression was used to select features given that the Lasso penalty in multivariate regression encourages sparsity in terms of the feature weights. The lasso penalty is an L1 regularization term added to the MLE of multivariate regression, which minimizes the sum of the squared differences between observed and predicted values. Lasso regression was performed by employing coordinate descent to obtain feature weights on the clip embeddings. The weights can thus be defined by the following equation: 
+                                                    \begin{equation}
+                                                    \hat{\beta} = \arg \min_{\beta} \|Y - X\beta\|^2 + \lambda \|\beta\|_1
+                                                    \end{equation}
+                                                    
+                                                    Features were subsequently selected by taking only the features whose weight had an absolute value greater than 1. 
+                                                    This reduced the number of features from 512 to 45. 
+                                                    The reduced embeddings were also used to train and test another logistic regression model. </p>
+
+                                                <h5>Logistic Regression Classification</h5>
+                                                <p>The goal of logistic regression is to learn the set of parameters \( \beta \) by maximizing the following log likelihood function. 
+                                                    In Equation (5), \( \sigma(z_i) \) is defined by Equation (4), \( y_i \) is the label for sample \( x_i \), and \( \lambda \) is the regularization term.
+                                                    The regularization term prevents overfitting of the learned parameters and imposes a penalty on the magnitude of the coefficients. 
+                                                    We maximize the likelihood function via gradient descent to calculate the optimal parameters for binary classification of the embeddings for each label.
+
+                                                    \begin{equation}
+                                                    \begin{split}
+                                                        L(\beta) = \sum_{i=1}^m \left[ y_i \log(\sigma(z_i)) + (1 - y_i) \log(1 - \sigma(z_i)) \right] - \frac{\lambda}{2} \|\beta\|^2 \\
+                                                        z_i = \beta_0 + \beta_1 x_{i,1} + \beta_2 x_{i,2} + \ldots + \beta_n x_{i,n} \\
+                                                    \end{split}
+                                                    \end{equation}
+                                                    
+                                                    Logistic Regression was chosen to perform binary classification among other classical techniques for a plethora of reasons. 
+                                                    First of all, logistic regression provides a probabilistic interpretation to its classification. 
+                                                    Additionally, since we want to different model selection using regularization, other methods that are computationally more expensive (like kNN or SVM), are at a disadvantage. 
+                                                    Although the PCA indicates that the data might not be linearly separable, 
+                                                    the large amount of features of the embeddings provides them a better chance of improving the classification ability. 
+                                                    Lastly, logistic regression can be regularized to prevent overfitting, utilizing L2 regularization for gradient descent. 
+                                                    The choice in performing binary classification was due to a severe class imbalance as revealed by exploratory data analysis. 
+                                                    In addition, we understood that attempting to perform multi-class logistic regression would be significantly more difficult to obtain optimal performance for the model. 
+                                                    After PCA and lasso regression have been performed for feature selection, 
+                                                    we train our logistic regression classifiers with L2 regularized gradient descent utilizing a random sampling of balanced binary classes, as described above. 
+                                                    Of these two feature reductions, we reported the average accuracy and F1 score across the class-specific classifiers.</p>
+
+
+                                                <h5>ResNet50 Classification with Chest X-Rays</h5>
+                                                <img src="assets\I made it\resnet50.png" alt="Description of the image" width="800" height="600">
+                                                <p>In addition to training ResNet50 on the image embeddings, 
+                                                    ResNet50 was also trained on the same raw images that were used to generate the embeddings. 
+                                                    The motivation for doing so was that images in general are very complex, and trying to model important differences between images can be a very complicated task with more traditional machine learning techniques. 
+                                                    Thus, the ResNet50 neural network architecture was used to try and resolve the differences that are found in the raw chest x-ray images in our dataset (Figure 3). </p>
+                                                
+                                                <p>A different kind of deep neural network could have been used, however, 
+                                                    ResNet50 has specific optimizations to prevent the Vanishing Gradient problem, 
+                                                    which causes the gradient to converge towards zero as it is backpropagated through the network. 
+                                                    To address this, ResNet50 implements residual blocks, which allow for skips over layers that are not contributing significantly to the overall accuracy of the model.</p>
+                                                
+                                                <p>14 different ResNet50 models were trained to perform binary classification between one of the 14 possible disease classifications and no disease finding 
+                                                    (e.g. Atelectasis vs. No Finding, Pneumonia vs. No Finding, etc.). 
+                                                    The output layer after the final fully-connected layer consists of one node with a sigmoid activation function for binary classification. 
+                                                    A final probability in the output layer greater than 0.5 represents a 1 for a disease classification, whereas a final probability lower than 0.5 represents a 0 for a no disease classification. 
+                                                    The optimization algorithm used was an ADAM optimizer with an initial learning rate of 0.00001. 
+                                                    The learning rate that was used is low, but helps to prevent ResNet50 from overshooting the local minimum during training. 
+                                                    Additionally, the ADAM optimization algorithm was used over stochastic gradient descent (SGD) because of the built-in adaptations made to the learning rate over consecutive training steps.</p>
+                                                
+                                                <h5>ResNet50 Classification with CXR-CLIP Embeddings</h5>
+                                                <img src="assets\I made it\resnet.png" alt="Description of the image" width="380" height="600"><br><br>
+
+                                                <p>The X-ray images were processed through the CXR-CLIP pipeline with the label as paired text. 
+                                                    CLIP performs zero-shot image classification by leveraging its pre-trained model, which has been trained to predict the alignment between images and corresponding text descriptions. 
+                                                    CLIP computes separate embeddings for both the image in question and a set of textual descriptions representing each class label in the dataset. Then the model calculates the cosine similarity between the image embedding and each of the text embeddings. 
+                                                    This measures how closely the image content aligns with the textual description of each class. 
+                                                    These similarity scores are then scaled by a temperature parameter, and normalized through a softmax function to convert them into a probability distribution across all class labels. 
+                                                    The text encoder essentially acts as a hypernetwork that generates the weights for a linear classifier based on the textual descriptions of visual concepts. 
+                                                    This setup treats the image encoder as a vision backbone that provides a feature representation of the image. Once the zero-shot classifier is generated, it's cached and reused for all subsequent predictions within a dataset, optimizing the computation across multiple classifications. 
+                                                    Overall, CLIP classifies images by matching the visual content of an image to the most similar class description, based on the learned embeddings from its dual encoders, without needing direct training on the specific image classes. In the case of CXR-CLIP, the model with ResNet-50 backbone were trained on CXR dataset and was finetuned on the X-ray images for evaluation.</p>
+                                                <h4>Result</h4>
+                                                <table>
+                                                    <caption>Model Evaluation. Test accuracy/F1 scores for top 7 performing classifiers.</caption>
+                                                    <thead>
+                                                        <tr>
+                                                            <th>Pathology</th>
+                                                            <th colspan="2">Logistic Regression</th>
+                                                            <th colspan="2">Logistic Regression + Feature Selection</th>
+                                                            <th colspan="2">ResNet50 (image embeddings)</th>
+                                                            <th colspan="2">ResNet50 (raw images)</th>
+                                                        </tr>
+                                                        <tr>
+                                                            <th></th>
+                                                            <th>Accuracy</th>
+                                                            <th>F1 Score</th>
+                                                            <th>Accuracy</th>
+                                                            <th>F1 Score</th>
+                                                            <th>Accuracy</th>
+                                                            <th>F1 Score</th>
+                                                            <th>Accuracy</th>
+                                                            <th>F1 Score</th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        <tr>
+                                                            <td>Atelectasis</td>
+                                                            <td>0.51</td>
+                                                            <td>0.68</td>
+                                                            <td>0.48</td>
+                                                            <td>0.65</td>
+                                                            <td>0.92</td>
+                                                            <td>0.20</td>
+                                                            <td>0.51</td>
+                                                            <td>0.68</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Cardiomegaly</td>
+                                                            <td>0.56</td>
+                                                            <td>0.71</td>
+                                                            <td>0.50</td>
+                                                            <td>0.67</td>
+                                                            <td>0.98</td>
+                                                            <td>0.48</td>
+                                                            <td>0.82</td>
+                                                            <td>0.90</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Consolidation</td>
+                                                            <td>0.51</td>
+                                                            <td>0.58</td>
+                                                            <td>0.51</td>
+                                                            <td>0.68</td>
+                                                            <td>0.96</td>
+                                                            <td>0.12</td>
+                                                            <td>0.79</td>
+                                                            <td>0.88</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Edema</td>
+                                                            <td>0.53</td>
+                                                            <td>0.69</td>
+                                                            <td>0.49</td>
+                                                            <td>0.69</td>
+                                                            <td>0.98</td>
+                                                            <td>0.24</td>
+                                                            <td>0.86</td>
+                                                            <td>0.92</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Effusion</td>
+                                                            <td>0.51</td>
+                                                            <td>0.68</td>
+                                                            <td>0.54</td>
+                                                            <td>0.70</td>
+                                                            <td>0.88</td>
+                                                            <td>0.40</td>
+                                                            <td>0.55</td>
+                                                            <td>0.71</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Emphysema</td>
+                                                            <td>0.50</td>
+                                                            <td>0.67</td>
+                                                            <td>0.46</td>
+                                                            <td>0.63</td>
+                                                            <td>0.98</td>
+                                                            <td>0.50</td>
+                                                            <td>0.84</td>
+                                                            <td>0.91</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Fibrosis</td>
+                                                            <td>0.50</td>
+                                                            <td>0.67</td>
+                                                            <td>0.56</td>
+                                                            <td>0.72</td>
+                                                            <td>0.99</td>
+                                                            <td>0.36</td>
+                                                            <td>0.87</td>
+                                                            <td>0.93</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td><b>Average</b></td>
+                                                            <td>0.52</td>
+                                                            <td>0.67</td>
+                                                            <td>0.51</td>
+                                                            <td>0.67</td>
+                                                            <td>0.95</td>
+                                                            <td>0.32</td>
+                                                            <td>0.75</td>
+                                                            <td>0.85</td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                                <p>In Table 1, we have comprehensively assessed binary classification on balanced embedding and chest x-ray datasets for each phenotype. 
+                                                    The average accuracy and F1 score was done by taking the average of the top 7 performing classifiers. 
+                                                    The other classifiers appeared to perform significantly below the threshold of a random binary classifier (accuracy < 0.5).
+                                                </p>
+                                                <p>Principal Component Analysis fails to clearly separate out the embedding features in 2 dimensions, where only $\sim17\%$ of the variance is explained by the first two principal components. 
+                                                    Logistic regression models trained on both the full embeddings and the reduced embeddings also fail to accurately classify samples across each disease state. 
+                                                    No significant improvement was observed after training logistic regression models with the reduced embeddings. 
+                                                    This could be due to the fact that the full embeddings themselves are already a reduced form of the images themselves, causing too much information loss upon further reduction.</p>
+                                                <p>ResNet50 models trained on the full images performed the best relative to the ResNet50 models trained on the image embeddings and other classical learning methods like logistic regression. 
+                                                    ResNet50 models trained on the image embeddings achieved high accuracy scores, but low F1 scores. A possible explanation for this inconsistency could be due to the loss of positional information in the generation of the embeddings. Overall, the ResNet50 models trained on raw images performed the best with an average accuracy of 0.75 and average F1 score of 0.85 across the 7 evaluated lung disease states. 
+                                                    Of the ResNet50 models trained on raw images, the highest performing classifier was for the fibrosis class with an accuracy of 0.87 and an F1 score of 0.93.</p>
+                                                
+                                                <h4>Discussion</h4>
+                                                <p>The classification of chest x-ray embeddings utilizing classical learning methods might not prove as useful as originally hypothesized. 
+                                                    There is little improvement relative to a random binary classifier of our classical models, 
+                                                    even with feature selection. However, it does appear that ResNet50 appears to perform better on this dataset as is evidenced by the table above. 
+                                                    To further improve on the development of machine learning models for the classification of lung disease from chest x-ray image data, future directions
+                                                     could include experimentation with transfer learning and more rigorous hyperparameter tuning of ResNet50. 
+                                                     Although previous work indicated trouble with multi-label classification of chest X-ray images, another 
+                                                     line of potential direction could include training the ResNet50 model for this multi-class capability instead of binary classification individually for each lung disease. 
+                                                     Additionally, our results indicate that a comparison of the CLIP embeddings and embeddings extracted from ResNet50 trained on chest X-ray data could be of interest.
+                                                      To continue addressing the class imbalance problem present in this dataset, 
+                                                      further development of latent diffusion models for data augmentation would be useful given that the results show the benefit of duplicated data, indicating that more realistic generation of synthetic images would similarly improve performance.</p>
+
+
+
+
+                                                
+                                                
+                                                
+
+                        
+                                                    
+                    
+                                                <div class="entry-meta">
+
+                                                    <div class="meta-desc">
+                                                        <p>
+                                                            
+    
+
+</div>
+
+
+
+
+
+
+                                                  
+
+
+                           
+
+
+                                
+
+ 
+        <!-- Page Wrapper Ends -->
+
+        <!--  Scripts -->
+        <script type='text/javascript' src='assets/js/vendor/jquery-1.12.4.min.js'></script>
+        <script type='text/javascript' src='assets/js/vendor/TweenMax.min.js'></script>        
+        <script type='text/javascript' src='assets/js/vendor/headsup.min.js'></script>        
+        <script type='text/javascript' src='assets/js/vendor/jquery.easing.min.1.3.js'></script>      
+        <script type='text/javascript' src='assets/lib/cubeportfolio/js/jquery.cubeportfolio.min.js'></script>
+        <script type='text/javascript' src='assets/lib/swiper/js/swiper.min.js'></script>        
+
+        <script type='text/javascript' src='assets/js/main.js'></script>       
+        <!--  Scripts Ends -->
+    </body>
+</html>
+
+                        </main><!-- #main -->
+                    </div><!-- #primary -->  
+                </div><!-- .site-content-contain -->  
+            </div><!-- .site-content-contain -->  
+            <footer id="footer" class="site-footer standard" role="contentinfo">
+                <div class="container">
+                    <div class="site-info">			
+                        <p class="copyright">
+                            © 2024 Minhyek Jeon	
+                        </p>
+                    </div>    
+                    <nav class="footer-socials" role="navigation" aria-label="Footer Social Links Menu">                           
+                        <ul id="social-media-footer" class="social-links-menu">
+                            
+                            <li><a href="https://www.linkedin.com/in/minhyekjeon"><i class="fab fa-linkedin"></i></a></li>
+                            <li><a href="https://github.com/mhj0326"><i class="fab fa-github"></i></a></li>                               
+                        </ul>
+                    </nav>                        
+                </div>            
+            </footer>
+        </div><!-- #page -->
+    </body>
+</html>

@@ -1,0 +1,946 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <!-- Document Title -->      
+        <title>Minhyek Jeon | Augmenting Chest X-ray Images using Latent Diffusion Model</title>
+
+        <!-- Metas -->      
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="author" content="CaliberThemes" />
+
+        <!-- Favicon -->      
+        <link rel="icon" type="image/png" href="assets\I made it\logo_mj.png" />
+
+        <!-- Links -->      
+        <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700&subset=latin,latin-ext" rel="stylesheet" type="text/css" />
+        <link rel='stylesheet' id='bootstrap-css'  href='assets/lib/bootstrap/css/bootstrap.min.css' type='text/css' media='all' />
+        <link rel='stylesheet' id='font-awesome-css'  href='assets/css/icons/font-awesome.min.css' type='text/css' media='all' />       
+        <link rel='stylesheet' id='swiper-css' href='assets/lib/swiper/css/swiper.min.css' type='text/css' media='all' />
+        <link rel='stylesheet' id='cubeportfolio-css'  href='assets/lib/cubeportfolio/css/cubeportfolio.min.css' type='text/css' media='all' /> 
+
+        <link rel='stylesheet' id='main-css'  href='style.css' type='text/css' media='all' />
+
+    </head>
+    <body class="single single-portfolio portfolio-details-top">
+
+        <!-- Page Wrapper -->
+        <div id="page" class="site">
+            <header id="masthead" class="site-header standard sticky" role="banner">		
+                <div class="container">
+                    <div id="site-branding">			
+                        <a class="logo-brand" href="../index.html">
+                            <img class="logo" src="assets\I made it\logo_mj.png" alt="Logo">					                            
+                            <img class="retina-logo" src="assets\I made it\logo_mj.png" alt="Retina Logo">					                            
+                        </a>	
+                    </div><!-- .site-branding -->
+                    <span id="ham-trigger-wrap">
+                        <span class="ham-trigger">
+                            <span></span>                            
+                        </span>                            
+                    </span>
+                    <nav id="site-navigation" class="main-navigation" role="navigation" aria-label="Top Menu">
+                        <ul id="top-menu" class="menu">
+                            <li class="has-children"><a href="../index.html">Home</a>
+                                
+                            </li>
+                            <li class="has-children"><a href="../project.html">Project</a>
+                                
+                            </li>
+                            <li class="has-children"><a href="../experience.html">Experience</a>
+                                
+                                
+                            </li>
+                            <li class="has-children"><a href="../publication.html">Publication</a>
+                                
+                                
+                            </li>
+                            <li class="has-children"><a href="../awards.html">Others</a>
+                                
+                            </li>
+                            
+                        </ul>	
+                    </nav>
+                                             
+                </div><!-- .wrap -->
+
+                
+	
+            </header><!-- #masthead -->
+
+            <div class="site-content-contain">
+                <div id="content" class="site-content">                 
+                    <div id="primary" class="content-area">
+                        <!-- Portfolio Filter -->
+                        
+                        <main id="main" class="site-main" role="main">        
+                            <div class="container t-offset-20">
+                                <div class="row">
+                                    <div class="col-sm-12">
+
+                                        <article class="portfolio">
+
+                                            <header class="entry-header">
+                                                
+
+                                                <h2>Augmenting Chest X-ray Images using Latent Diffusion Model</h2>
+                                    
+                                                
+
+                                                <h4>Table of Contents</h4>
+                                                        <p>
+
+                                                            1. Introduction & Background<br>
+                                                        
+                                                            2. Method<br>
+
+                                                            3. Result<br>
+
+                                                            4. Discussion<br>
+
+                                                            5. Future works<br>
+
+                                                            6. Reference<br>
+                                                             
+                                                        </p>
+                                             
+
+                                                <h4>Introduction & Background</h4>
+                                                <p>
+                                                    In the medical domain, certain diseases are more prevalent than others, which often results in unbalanced datasets when data is collected without preprocessing. 
+                                                    This imbalance means that some classes (diseases) have significantly more samples than others. 
+                                                    Most traditional machine learning algorithms operate under the assumption that data is evenly distributed across classes. 
+                                                    This assumption can lead to biased models that perform well on majority classes but poorly on minority classes, 
+                                                    which are typically the rarer but often more critical conditions.<br>
+                                                    
+                                                    In order to handle those cases, several techniques can be applied <br>
+                                                    
+                                                    <strong>1. Resampling Techniques</strong><br><br>  
+                                                    <img src="assets\I made it\resampling.png" alt="original image"><br> 
+
+                                                    Adjust the data to have a more balanced class distribution. This can be achieved through undersampling the majority class or oversampling the minority class.
+                                                    Techniques like SMOTE (Synthetic Minority Over-sampling Technique) generate synthetic samples rather than just replicating existing samples.
+                                                    <br>
+                                                    
+                                                    <br><strong>2. Algorithmic Ensemble Techniques</strong><br><br>   
+                                                    <img src="assets/I made it/adaboost.png" alt="original image" width="800"><br> 
+                                                    These involve using ensemble learning methods that can help in dealing with imbalance. 
+                                                    For example, boosting algorithms like AdaBoost can focus more on difficult cases by adjusting the weights of incorrectly classified instances, 
+                                                    thus improving the performance on the minority class. 
+                                                    In the diagram, we see three iterations of weak classifiers that are combined to form a final strong classifier.
+
+                                                    In the first iteration, a weak classifier (a simple rule) is applied to the dataset to classify the data points (represented by squares and triangles). However, some points are misclassified.
+                                                    
+                                                    In the second iteration, AdaBoost adjusts the weights of the misclassified points, making them more significant. Then, a new weak classifier is created, taking into account the adjusted weights, and attempts to classify the data points again. This process is repeated, with the third iteration shown attempting to correct for errors from the previous classifiers.<br>
+                                                    
+                                                    <br><strong>3. Cost-Sensitive Learning</strong><br><br>
+                                                    <img src="assets/I made it/CostSensitive.png" alt="original image" width="500"><br><br> 
+
+                                                    Modify learning algorithms to make them more sensitive to class imbalance by incorporating higher misclassification costs for the minority class.
+                                                    The image depicts a framework for tackling class imbalance in machine learning.
+                                                    It's split into two main strategies: Cost-Free Learning, which treats all errors equally without considering their costs,
+                                                     and Cost-Sensitive Learning, where the costs of misclassification are factored in, often guided by external information or subjective importance. 
+                                                     This reflects different approaches based on whether the specific costs of errors are known and incorporated into the learning process.<br>
+                                                    
+                                                    <br> <strong>4. Data Augmentation</strong><br><br> 
+                                                    <img src="assets/I made it/dataaugmentation.png" alt="original image" width="600"><br> 
+
+                                                    Data Augmentation involves artificially creating new training data from existing data.
+                                                    This is done by applying random, yet realistic, transformations to the training images to simulate different variations that could occur in the real world.
+                                                            Common transformations include:<br>
+                                                            <table border="1">
+                                                                <tr>
+                                                                    
+                                                                    <th><strong>Transformation<br></strong></th>
+                                                                    <th><strong>Description</strong></th>
+                                                                </tr>
+                                                                <tr>
+                                                             
+                                                                    <td><strong>Rotation</strong></td>
+                                                                    <td>Images are rotated by a certain angle to simulate different orientations of the subject.</td>
+                                                                </tr>
+                                                                <tr>
+                                                                 
+                                                                    <td><strong>Translation</strong></td>
+                                                                    <td>Images are shifted horizontally or vertically which helps the model to learn to recognize objects in different positions.</td>
+                                                                </tr>
+                                                                <tr>
+                                                           
+                                                                    <td><strong>Scaling</strong></td>
+                                                                    <td>Images are scaled up or down to simulate the effect of objects being closer or farther away from the camera.</td>
+                                                                </tr>
+                                                                <tr>
+                                                  
+                                                                    <td><strong>Flipping</strong></td>
+                                                                    <td>Images are flipped horizontally or vertically, which is particularly useful in medical images where orientation can vary.</td>
+                                                                </tr>
+                                                                <tr>
+                                                      
+                                                                    <td><strong>Elastic Deformation</strong></td>
+                                                                    <td>This involves stretching or compressing images in ways that mimic natural variations in body tissues.</td>
+                                                                </tr>
+                                                                <tr>
+                                                     
+                                                                    <td><strong>Intensity Variations</strong></td>
+                                                                    <td>Adjusting the brightness, contrast, or color of images to handle different lighting conditions or imaging modalities.</td>
+                                                                </tr>
+                                                            </table><br>
+                                                    These techniques help in creating a more robust dataset by introducing diversity, which allows the model to generalize better. 
+                                                    Particularly for the minority class, augmenting data can effectively increase its representation in the dataset without the need to collect new data. 
+                                                    This enhanced representation helps mitigate the problem of class imbalance, enabling the machine learning model to learn more comprehensive features of the minority class, improving its prediction accuracy on less represented classes.
+                                                    <br>
+                                                    <br><br><strong>5. Simple Solution to the Problem - Augment the Data with Generated Images</strong><br><br>
+                                                    <div class="image-grid">
+                                                        <div class="image-item">
+                                                            <img src="assets\I made it\lung2.png" alt="이미지_설명">
+                                                            <p>Source Image</p>
+                                                        </div>
+                                                        
+                                                        <div class="image-item">
+                                                            <img src="assets\I made it\lung3.png" alt="이미지_설명">
+                                                            <p>Generated Image</p>
+                                                        </div>
+                                        
+                                                    </div>
+                                                    Especially for cases where dataset is unbalanced,simple method to handle the problem is just by more sampling of the data.
+                                                    However, the more rare the disease sample is, the harder and more expensive it is to get. 
+                                                    Also the condition the sample was processed might be different from existing ones. 
+                                                    Therefore it would be ideal if we could generate samples that are similar to existing ones.   
+                                                    Data augmentation is particularly effective in resolving class imbalance issues in image datasets and increases the diversity of the dataset. 
+                                                    This helps the model to learn more evenly across different classes. 
+                                                    By using DreamBooth model, we can increase the sample size of minority classes and balance the overall dataset. 
+                                                    This approach can be efficiently used with any image dataset, enhancing its diversity and improving overall prediction performance 
+                                                    by supplementing the less represented parts of the data.
+
+                                                    
+
+                                                </p>
+
+                                                <h4>Data Analysis</h4>
+                                                <strong>VinDR-CXR EDA & Data Preprocessing</strong><br><br>
+                                                The project will be using benchmark dataset for chest X-ray images called VinDR-CXR data.
+                                                The VinDr-CXR dataset contains 18,000 high-quality labeled chest x-ray images sourced from two major hospitals in Vietnam. 
+                                                These postero-anterior view scans are annotated for 22 critical findings and 6 common thoracic diseases by experienced radiologists. 
+                                                The dataset is split into a training set with 15,000 scans and a test set of 3,000 scans, with consensus-based annotation for the test images. 
+                                                <br><br><strong>Class Distribution</strong>
+                                                <br>First we have to know the distribution of the overall data class. For images, there were multiple annotation, which I made into one hot vector code. 
+                                                Preprocessing was performed to eliminate the outlier images. Using the CXR-Clip model which is composed of Vision Transformer, and Resnet50
+                                                gained the embeddings for the images, in which we can test on basic classification models. 
+                                                <img src="assets\I made it\annotations_by_class_high_res (1).png" alt="이미지_설명"><br>
+                                                The y-axis is on a logarithmic scale, which indicates that the range of values varies greatly, from single digits to thousands. 
+                                                The x-axis lists different classes, which are medical conditions identifiable from chest X-rays.
+                                                Each bar represents a class and is colored differently. 
+                                                Starting from the left, we see bars of varying heights indicating the number of annotations for each condition. 
+                                                Conditions such as Atelectasis, Cardiomegaly, and Consolidation have a relatively high number of samples, possibly in the hundreds, 
+                                                while conditions like Emphysema, Fibrosis, and Hernia have fewer samples, suggesting they are less commonly observed or that the dataset contains fewer examples of these conditions.
+
+                                                In the middle of the chart, the 'No Finding' class has a very tall bar, towering over the others, which suggests that a significant portion of the images in the dataset are healthy patients. 
+                                                Other conditions like Nodule, Pleural Thickening, Pneumonia, and Pneumothorax also have their respective number of samples, with Pneumothorax appearing to have a high number as well, possibly in the thousands.
+                                                
+                                                Many images had multiple symptoms and for those images, additional comorbities were analyzed with using a Gephi software. 
+                                                Gephi is an open-source network analysis software package designed to create visual representations of clustering network datanetwork structures. 
+                                                
+                                                <br><br><strong>Comorbidity Network</strong><br>
+                                                <img src="assets\I made it\image (2).png" alt="이미지_설명" width="800"><br>
+                                                'Infiltration', 'Atelectasis' and 'Effusion' are connected with a thick line and are positioned close to each other in the graph, 
+                                                it would suggest that these two conditions are frequently associated with one another in the dataset as a compobities. 
+                                                The size of the node represents the frequncy while the distance between diseases represents 1/p_value  
+                                                Starting high from Orange colored node, the frequency decrease as the color becomes green and bright blue.
+
+                                                On the other hand, nodes on the periphery with fewer and thinner connections, 
+                                                like 'Hernia', are less integrated into the network, 
+                                                indicating they have fewer or weaker associations with other conditions. 
+
+                                                <br><br><h4>Model for Image Generation & Evaluation</h4>
+
+
+                                                <strong>DreamBooth - Image Generation Model</strong><br>
+                                                Given as input just a few images of a subject, dreambooth can fine-tune a pretrained text-to-image model such that it learns to bind a unique identifier with that specific subject.
+                                                Once the subject is embedded in the output domain of the model, 
+                                                the unique identifier can be used to synthesize novel photorealistic images of the subject contextualized in different scenes. 
+                                                By leveraging the semantic prior embedded in the model with a new autogenous class-specific prior preservation loss, 
+                                                our technique enables synthesizing the subject in diverse scenes, poses, views and lighting conditions that do not appear in the reference images
+
+                                                <img src="assets\I made it\dreambooth.png" alt="이미지_설명" width="800"><br>
+                                                The image showcases an example from "DreamBooth," a tool driven by AI that can generate numerous images of a specific subject, 
+                                                in this case, a dog, placed in various scenarios. 
+                                                Initially, a small number of input images (around three to five) are provided. 
+                                                These images depict the subject in simple settings. 
+                                                Leveraging a text-based prompt, the tool then produces diverse visual representations of the subject in different scenes and activities, 
+                                                such as being at historical sites, engaging in activities like swimming, or resting. 
+                                                These generated images effectively capture the subject’s interactions with their surroundings and show variations in expression and lighting, 
+                                                all while consistently representing the subject’s core visual traits.This can be applied to generating similar X-ray images with certain condition for disease.
+
+
+                                                <img src="assets\I made it\dreambooth_model.png" alt="이미지_설명" width="500"><br>
+                                                Diffusion model for DreamBooth is trained using a squared error loss to denoise a variably-noised image or latent code
+                                                where x is the ground-truth image, c is a conditioning vector (e.g., obtained from a text prompt), and αt,σt,wt are terms that control the noise schedule and sample quality, and are functions of the diffusion process time t ∼ U([0,1]).
+                                                <br><img src="assets\I made it\loss1.png" alt="이미지_설명" width="300"><br>
+                                                Class-specific Prior Preservation Loss is introduce in this model for following problem:
+                                                <br>Language Drift:
+                                                This phenomenon occurs when a model, initially trained on a broad text corpus and later fine-tuned for a specific task, 
+                                                progressively loses its foundational language knowledge. 
+                                                Fine-tuning all layers of the model achieves the best results in maintaining subject fidelity. 
+                                                Language drift is typically observed in language models, 
+                                                but the document notes that diffusion models used for generating specific subjects also exhibit this problem.
+                                                <br>Reduced Output Diversity:
+                                                Text-to-image diffusion models inherently possess high output diversity. 
+                                                However, this capability can decrease when the model is fine-tuned to generate a specific set of images. 
+                                                This often leads to the model favoring certain poses or views of the subject.
+                                                To address these issues, it introduces class-specific preservation loss, 
+                                                which supervises the model with its own generated images to maintain diversity and counteract language drift. 
+                                                Experimentally, about 1000 iterations of fine-tuning with an appropriate learning rate have been shown to effectively handle these challenges.
+
+                                                Adding a class prior, the loss function becomes<br>
+                                                <img src="assets\I made it\loss2.png" alt="이미지_설명" width="350"><br>
+                                                where the second term is the prior-preservation term that supervises the model with its own generated images, and λ controls for the relative weight of this term.
+
+                                                <br><strong>CXR CLIP - Evaluation Model </strong><br>
+                                                CXR CLIP is vision-language pre-training (VLP) model specifically tailored for the medical field, 
+                                                particularly focusing on chest X-rays. 
+                                                This model addresses the issue of data scarcity by expanding image-text pairings through general prompts and using multiple images alongside radiologic reports. 
+                                                The model incorporates two novel contrastive losses, named ICL and TCL, which are designed to learn the characteristics of medical studies and reports, respectively. 
+                                                This approach has led to the model outperforming similar state-of-the-art models trained under the same conditions. <br>
+                                                  
+                                               
+                                                <img src="assets\I made it\cxrclip.png" alt="이미지_설명" width="500"><br>
+                                                The figure illustrates the training approach of the newly developed method, which processes a batch containing multiple studies. Each study includes a duo of images and a corresponding pair of textual descriptions. If a study initially contains only one image or one text, additional data is generated through augmentation to complete the pairs. For training with image data, two unique prompts are crafted based on the labels associated with the images. The training of the encoders incorporates three distinct types of contrastive losses: MVS, ICL, and TCL.
+                                                <br><img src="assets\I made it\image 30.png" alt="이미지_설명" width="500"><br>
+                                                
+                                                
+                                                    <li><strong>MVS:</strong> Uses all possible pairs of augmented views for supervision.</li>
+                                                    <math xmlns="http://www.w3.org/1998/Math/MathML">
+                                                        <mi>L</mi>
+                                                        <sub>
+                                                            <mi>MVS</mi>
+                                                          </sub>
+                                                        
+                                                        <mo>=</mo>
+                                                        <mfrac>
+                                                          <mn>1</mn>
+                                                          <mn>4</mn>
+                                                        </mfrac>
+                                                        <mo stretchy="false">(</mo>
+                                                        <mi>L</mi>
+                                                        <sub>
+                                                          <mi>CLIP</mi>
+                                                        </sub>
+                                                        <mo stretchy="false">(</mo>
+                                                        <mi>U</mi>
+                                                        <sup>
+                                                          <mn>1</mn>
+                                                          <mo>'</mo>
+                                                        </sup>
+                                                        <mo>,</mo>
+                                                        <mi>V</mi>
+                                                        <sup>
+                                                          <mn>1</mn>
+                                                          <mo>'</mo>
+                                                        </sup>
+                                                        <mo stretchy="false">)</mo>
+                                                        <mo>+</mo>
+                                                        <mi>L</mi>
+                                                        <sub>
+                                                          <mi>CLIP</mi>
+                                                        </sub>
+                                                        <mo stretchy="false">(</mo>
+                                                        <mi>U</mi>
+                                                        <sup>
+                                                          <mn>2</mn>
+                                                          <mo>'</mo>
+                                                        </sup>
+                                                        <mo>,</mo>
+                                                        <mi>V</mi>
+                                                        <sup>
+                                                          <mn>1</mn>
+                                                          <mo>'</mo>
+                                                        </sup>
+                                                        <mo stretchy="false">)</mo>
+                                                        <mo>+</mo>
+                                                        <mi>L</mi>
+                                                        <sub>
+                                                          <mi>CLIP</mi>
+                                                        </sub>
+                                                        <mo stretchy="false">(</mo>
+                                                        <mi>U</mi>
+                                                        <sup>
+                                                          <mn>1</mn>
+                                                          <mo>'</mo>
+                                                        </sup>
+                                                        <mo>,</mo>
+                                                        <mi>V</mi>
+                                                        <sup>
+                                                          <mn>2</mn>
+                                                          <mo>'</mo>
+                                                        </sup>
+                                                        <mo stretchy="false">)</mo>
+                                                        <mo>+</mo>
+                                                        <mi>L</mi>
+                                                        <sub>
+                                                          <mi>CLIP</mi>
+                                                        </sub>
+                                                        <mo stretchy="false">(</mo>
+                                                        <mi>U</mi>
+                                                        <sup>
+                                                          <mn>2</mn>
+                                                          <mo>'</mo>
+                                                        </sup>
+                                                        <mo>,</mo>
+                                                        <mi>V</mi>
+                                                        <sup>
+                                                          <mn>2</mn>
+                                                          <mo>'</mo>
+                                                        </sup>
+                                                        <mo stretchy="false">)</mo>
+                                                        <mo stretchy="false">)</mo>
+                                                      </math>
+                                                    <li><strong>ICL:</strong> Focused on image embeddings to learn intra-study variability.</li>
+                                                    <math xmlns="http://www.w3.org/1998/Math/MathML">
+                                                        <mi>L</mi>
+                                                        <sub>
+                                                          <mi>ICL</mi>
+                                                        </sub>
+                                                        <mo>=</mo>
+                                                        <mi>L</mi>
+                                                        <sub>
+                                                          <mi>CLIP</mi>
+                                                        </sub>
+                                                        <mo stretchy="false">(</mo>
+                                                        <mi>V</mi>
+                                                        <mo>','</mo>
+                                                        <mo>,</mo>
+                                                        <mi>V</mi>
+                                                        <mn>1</mn>
+                                                        <mo>,</mo>
+                                                        <mi>V</mi>
+                                                        <mn>2</mn>
+                                                        <mo stretchy="false">)</mo>
+                                                      </math>
+                                                    
+                                                    <li><strong>TCL:</strong> Focused on text embeddings to match varied clinical expressions.</li>
+                                                    <math xmlns="http://www.w3.org/1998/Math/MathML">
+                                                        <mi>L</mi>
+                                                        <sub>
+                                                          <mi>TCL</mi>
+                                                        </sub>
+                                                        <mo>=</mo>
+                                                        <mi>L</mi>
+                                                        <sub>
+                                                          <mi>CLIP</mi>
+                                                        </sub>
+                                                        <mo stretchy="false">(</mo>
+                                                        <mi>U</mi>
+                                                        <sup>
+                                                          <mn>1</mn>
+                                                          <mo>'</mo>
+                                                        </sup>
+                                                        <mo>,</mo>
+                                                        <mi>V</mi>
+                                                        <sup>
+                                                          <mn>2</mn>
+                                                          <mo>'</mo>
+                                                        </sup>
+                                                        <mo stretchy="false">)</mo>
+                                                      </math>
+                                                </ul>
+
+                                                The overall loss is a weighted combination of MVS, ICL, and TCL
+                                                <br><img src="assets\I made it\cxrclip_result.png" alt="이미지_설명" width="500"><br>
+                                                The result of the paper well shows that ResNet-50 embedding works well for classification. From the first, second and fifth row in the evaluation, 
+                                                CXR-CLIP with Resnet-50 shows accuracy in range of 80. The project will be using CXR-CLIP for evaluation. 
+                                                
+                                                
+                                                
+                                                <br><br><h4>Prompt Engineering on Dreambooth</h4>
+                                                <strong>Basic Prompting - How to Generate General Looking X-ray images</strong>
+                                                <br><strong>1.</strong>
+                                                <br><img src="assets\I made it\xrayprompt1.jpg" alt="이미지_설명" width="500"><br>
+                                                <strong>Prompt: “Lung x-ray”</strong>
+                                                <br>Generated unrealistic looking images
+
+
+                                                <br><br><strong>2.</strong><br>
+                                                <img src="assets\I made it\xrayprompt2.jpg" alt="이미지_설명" width="500"><br>
+                                                <strong>Prompt: “A * of a lung”<br> * : chest x-ray, CT image … (Specific Type of Image)
+                                                </strong><br>
+                                                Color Difference: The images produced are grayscale and have a more realistic X-ray appearance than the ones in the first slide.
+
+                                                <br><br><strong>3.</strong>
+                                                <br><img src="assets\I made it\xrayprompt3.jpg" alt="이미지_설명" width="500"><br>
+                                                <strong>Prompt: “A * of lung with ^”<br>
+                                                    *: chest x-ray<br>
+                                                    ^: pleural effusion<br>
+                                                    </strong>
+                                                Structure Difference: more realistic appearance, with variations in shading and bone density that are more characteristic of true X-ray images
+
+                                                <br><br><strong>Disease Specific Prompt</strong><br>
+                                                <div class="image-grid">
+                                                    <div class="image-item">
+                                                        <img src="assets\I made it\xraypromptdisease1.png" alt="이미지_설명" width="500"><br>
+                                                        <p><strong>Real pleural effusion</strong></p>
+                                                    </div>
+                                                    
+                                                    <div class="image-item">
+                                                        <img src="assets\I made it\xraypromptdisease2.png" alt="이미지_설명" width="500"><br>
+                                                        <p><strong>Prompt: “A photo of sks lung x-ray”</strong></p>
+                                                    </div>
+
+                                                    <div class="image-item">
+                                                        <img src="assets\I made it\xraypromptdisease3.png" alt="이미지_설명" width="500"><br>
+                                                        <p><strong>Prompt: “A photo of sks lung X-ray, bilateral sks pleural effusion, sks fluid accumulation, blunting costophrenic angles, sks hazy opacities, sks lungs surrounded, visible sks heart silhouette, normal sks diaphragm contours, visible sks rib cage, realistic sks representation”</strong></p>
+                                                    </div>
+                                                    
+                                                </div>
+                                                The image displayed here contrasts a real X-ray showing pleural effusion with two generated X-ray images created using increasingly detailed prompts. 
+                                                The first generated image results from a generic prompt: "A photo of sks lung x-ray." It somewhat mimics the overall look of a lung X-ray but lacks specific disease markers.
+
+                                                The second generated image comes from a more detailed prompt specifying various characteristics of the disease: 
+                                                This approach yields an image that closely replicates the appearance of the real disease, 
+                                                demonstrating fluid accumulation and other specific signs associated with pleural effusion.
+
+                                                Using detailed, disease-specific prompts significantly enhances the fidelity of the generated images to actual pathological conditions, 
+                                                highlighting the importance of precise language in medical image synthesis for training and diagnostic support.
+
+
+                                                
+                                                    
+
+
+                                                <br><br><strong>Hierarchical-domain multi-token prompt-only guidanance</strong><br>
+                                                Through this process, a probable x-ray image can be generated. Now, we will focus on advanced method for generating realistic medical images, specifically X-rays, 
+                                                using a combination of specific and generic tokens in the prompts for DreamBooth.
+
+                                                <br><strong>- Token Utilization and Image Generation</strong><br>
+                                                We can use a hierarchical-domain multi-token prompt-only guidance mechanism. 
+                                                This means we can employs a base prompt like "A chest x-ray of lung with pleural effusion," 
+                                                where specific tokens such as chest x-ray or pleural effusion are used to generate detailed and focused images. 
+                                                These tokens are placeholders that can be filled with various specific medical conditions or general terms, 
+                                                guiding the model to generate images that align closely with the desired medical scenarios.
+                                                <br><strong>- Special Tokens and Their Impact</strong><br>
+                                                The importance of "special tokens" should be emphasized for generating X-ray images, noting that these tokens should ideally be recognized as a single word by the tokenizer, 
+                                                having a weak prior in both language and diffusion models. 
+                                                This helps in generating more accurate and contextually appropriate images. 
+                                                "sks" and "waj" are examples provided, where "sks" is a commonly used token and "waj" is a rare or unique token. 
+                                                Their usage in prompts like "A photo of a sks lung x-ray with waj" demonstrates how combining common and rare tokens can lead to the generation of highly detailed and specific medical images.
+                                                <br><strong>- Optimization and Variation in Prompts</strong><br>
+                                                The approach includes varying the complexity and specificity of prompts through multiple tokens and optimizing them to improve the quality and relevance of generated images. 
+                                                For example, prompts are alternated between more general descriptions and those that include specific disease conditions, 
+                                                which instructs the model to focus on generating features that are typical of those conditions, such as the fluid accumulation in pleural effusion.
+                                                The manipulation of language in the form of tokens within prompts directly influences the accuracy and specificity of the generated images.<br><br> 
+                                                Images will be generated and will be evaluated using these three types of Hierarchical-domain multi-token prompt-only guidanance<br>  
+                                                
+                                                <strong>Hierarchical-domain multi-token prompt-only guidanance 1</strong><br>
+                                                <div class="image-grid">
+                                                    <div class="image-item">
+                                                        <img src="assets\I made it\source.png" alt="이미지_설명" width="139"><br>
+                                                        <p><strong>Source Image</strong></p>
+                                                    </div>
+                                                    
+                                                    <div class="image-item">
+                                                        <img src="assets\I made it\h1.png" alt="이미지_설명" width="2000"><br>
+                                                        <p><strong>Prompt: “A photo of a sks lung x-ray”</strong></p>
+                                                    </div>
+                                                    
+                                                </div>
+                                                General impression : Some images look as if multiple images are overlaid<br>
+                                                Detailed Observations: The images in this group show a distinct characteristic of seeming overlaid or superimposed. 
+                                                This effect creates a complex visual where elements from potentially different angles or separate images merge, 
+                                                enhancing or distorting anatomical details. <br><br>
+
+                                                <br><strong>Hierarchical-domain multi-token prompt-only guidanance 2</strong><br>
+                                                <div class="image-grid">
+                                                    <div class="image-item">
+                                                        <img src="assets\I made it\source.png" alt="이미지_설명" width="139"><br>
+                                                        <p><strong>Source Image</strong></p>
+                                                    </div>
+                                                    
+                                                    <div class="image-item">
+                                                        <img src="assets\I made it\h2.png" alt="이미지_설명" width="2000"><br>
+                                                        <p><strong>Prompt: “A photo of a sks lung x-ray with waj”</strong></p>
+                                                    </div>
+                                                    
+                                                </div>
+                                                General impression : Artifacts along the ribs<br>
+                                                Detailed Observations: In this set, the generated images are marked by artifacts predominantly along the ribcage. 
+                                                These artifacts manifest as distortions or additional shadows that might mimic or obscure pathological features, 
+                                                potentially simulating conditions like fractures or lesions. <br><br>
+
+                                                <br><strong>Hierarchical-domain multi-token prompt-only guidanance 3</strong><br>
+                                                <div class="image-grid">
+                                                    <div class="image-item">
+                                                        <img src="assets\I made it\source.png" alt="이미지_설명" width="139"><br>
+                                                        <p><strong>Source Image</strong></p>
+                                                    </div>
+                                                    
+                                                    <div class="image-item">
+                                                        <img src="assets\I made it\h3.png" alt="이미지_설명" width="2000"><br>
+                                                        <p><strong>Prompt: “A photo of a waj sks lung x-ray”</strong></p>
+                                                    </div>
+                                                    
+                                                </div>
+                                                General impression : Less artifacts in general; but worst cases are worse<br>
+                                                Detailed Observations: This series generally shows cleaner imagery with fewer artifacts, leading to clearer views of lung structures. 
+                                                However, where artifacts occur, they are significantly more pronounced, creating stark contrasts in the images. 
+                                                This could indicate that the generation process, while improved in some respects, still struggles with consistency and may exaggerate certain features excessively in its worst outputs, 
+                                                potentially affecting the utility of these images for precise diagnostic or educational applications.<br>
+                                                
+
+                                                
+
+
+                                            
+                                                <br><br><h4>Synthetic Images in Binary Classification</h4>  
+                                                <img src="assets\I made it\evaluation.png" alt="이미지_설명" width="600"><br>                                               
+                                                Prior to generating synthesize images to balance the dataset for multiclassification, checking on the binary classification can provide overview of how synthetic images impacts the classification model. 
+                                                For the comparison, binary classification for 16 types of disease was performed. The overall result can be seen below. 
+                                                Although CXR-CLIP seems to work well with binary classification for Hernia it is vunerable in multi classification since their data sample is lower than 30 in total which means that test sample was below 6.
+                                                Therefore, it is not very probable. <br><br>
+
+                                                
+                                                To test cases when there is not enough samples, 400 samples from each "no findings - healthy" and "Consolidation" were sampled. 
+
+                                                <br><strong>- Lower Bound:</strong>
+                                                
+                                                This scenario represents the typical, 
+                                                real-world distribution of data where the number of diseased samples is much lower than healthy ones. 
+                                                In the table, it shows 400 real healthy samples compared to only 20 real disease samples. 
+                                                This often reflects the actual availability or prevalence rates of certain conditions in the population, 
+                                                presenting challenges in training models due to the scarce data on the disease. 
+                                                Such imbalance can affect the model's ability to learn and generalize about the disease effectively.
+                                                
+                                                
+                                                <br><strong>- Upper Bound (Ideal):</strong>
+
+                                                This is the ideal data scenario where there is an equal number of healthy and diseased samples, 
+                                                each category having 400 samples. 
+                                                Such a balance is typically not seen in real-world data but is considered ideal for machine learning models. 
+                                                It allows the model to learn equally from both conditions, 
+                                                preventing any bias towards the more frequently represented class and typically resulting in higher accuracy and better performance metrics across the board.
+                                                
+                                                <br><strong>- Imbalanced:</strong>
+
+                                                This setup reflects a common real-world issue where there is a significant disparity between the number of samples in different classes. 
+                                                In the table, it shows the dataset still contains 400 real healthy samples and 20 real disease samples, 
+                                                with an additional 20 synthetic disease samples added. 
+                                                This slight augmentation with synthetic data attempts to address the imbalance but does not fully correct it, 
+                                                as the diseased class remains underrepresented compared to the healthy class.
+                                                
+                                                
+                                                <br><strong>- Balanced:</strong>
+                                                In this case, synthetic data is used to artificially balance the dataset. 
+                                                The table shows that while there are 400 real healthy samples, synthetic techniques are employed to augment the disease class with 380 additional synthetic disease samples, 
+                                                bringing the total to 400, mirroring the healthy sample count. 
+                                                This method aims to provide a balanced view to the model, thereby enhancing its ability to learn and make predictions about both classes without bias.
+                                                
+                                                <p><strong>Augmenting synthetic data for Consolidation</strong></p>
+                                                <style>
+                                                    table {
+                                                      width: 100%;
+                                                      border-collapse: collapse;
+                                                      border: 2px solid black; /* Adding an outer border to the table */
+                                                    }
+                                                    th, td {
+                                                      border: 2px solid black; /* Setting black borders for all cells */
+                                                      padding: 8px;
+                                                      text-align: center;
+                                                    }
+                                                  </style>
+                                                  </head>
+                                                  <body>
+                                                  
+                                                  <table>
+                                                    <tr>
+                                                      <th></th>
+                                                      <th>Real Healthy</th>
+                                                      <th>Real Disease</th>
+                                                      <th>Duplicated Disease</th>
+                                                      <th>Synthetic Disease</th>
+                                                      <th>Acc</th>
+                                                      <th>Sen/TPR</th>
+                                                      <th>Spe/FNR</th>
+                                                      <th>F1</th>
+                                                    </tr>
+                                                    <tr>
+                                                      <td>Lower Bound (Real)</td>
+                                                      <td>400</td>
+                                                      <td>20</td>
+                                                      <td>0</td>
+                                                      <td>0</td>
+                                                      <td>0.529</td>
+                                                      <td>0.062</td>
+                                                      <td>0.991</td>
+                                                      <td>0.111</td>
+                                                    </tr>
+                                                    <tr>
+                                                      <td>Upper Bound (Ideal)</td>
+                                                      <td>400</td>
+                                                      <td>400</td>
+                                                      <td>0</td>
+                                                      <td>0</td>
+                                                      <td>0.884</td>
+                                                      <td>0.942</td>
+                                                      <td>0.832</td>
+                                                      <td>0.888</td>
+                                                    </tr>
+                                                    <tr>
+                                                      <td>Imbalanced</td>
+                                                      <td>400</td>
+                                                      <td>20</td>
+                                                      <td>0</td>
+                                                      <td>20</td>
+                                                      <td>0.554</td>
+                                                      <td>0.127</td>
+                                                      <td>0.977</td>
+                                                      <td>0.211</td>
+                                                    </tr>
+                                                    <tr>
+                                                      <td>Balanced</td>
+                                                      <td>400</td>
+                                                      <td>20</td>
+                                                      <td>20</td>
+                                                      <td>0</td>
+                                                      <td>0.612</td>
+                                                      <td>0.249</td>
+                                                      <td>0.979</td>
+                                                      <td>0.379</td>
+                                                    </tr>
+                                                    <tr>
+                                                      <td>All Synthetic</td>
+                                                      <td>400</td>
+                                                      <td>0</td>
+                                                      <td>0</td>
+                                                      <td>400</td>
+                                                      <td>0.500</td>
+                                                      <td>0.000</td>
+                                                      <td>1.000</td>
+                                                      <td>0.000</td>
+                                                    </tr>
+                                                  </table>
+
+                                                 
+                                                
+                                                
+                                                <br><strong>Analysis and Conclusion:</strong>
+                                                
+                                                The table shows that balancing the dataset generally improves the Accuracy (e.g., Upper Bound vs. Lower Bound), confirming that balanced data is crucial for training more effective diagnostic models. However, when balancing is achieved through synthetic data (as in the Balanced and All Synthetic scenarios), there can be a notable degradation in model performance if the synthetic data lacks sufficient quality. The low F1 scores in these scenarios suggest that while the models are good at identifying healthy cases, they fail to accurately detect real disease cases when trained mostly on synthetic data.
+
+                                                <p><strong>Fewer Real Disease Image</strong></p>
+                                                
+                                                <style>
+                                                    table {
+                                                      width: 100%;
+                                                      border-collapse: collapse;
+                                                      border: 2px solid black;
+                                                    }
+                                                    th, td {
+                                                      border: 2px solid black;
+                                                      padding: 8px;
+                                                      text-align: center;
+                                                    }
+                                                  </style>
+                                                  </head>
+                                                  <body>
+                                                  
+                                                  <table>
+                                                    <tr>
+                                                      <th></th>
+                                                      <th>Real Healthy</th>
+                                                      <th>Real Disease</th>
+                                                      <th>Duplicated Disease</th>
+                                                      <th>Synthetic Disease</th>
+                                                      <th>Acc</th>
+                                                      <th>Sen/TPR</th>
+                                                      <th>Spe/FNR</th>
+                                                      <th>F1</th>
+                                                    </tr>
+                                                    <tr>
+                                                      <td>Lower Bound (Real)</td>
+                                                      <td>400</td>
+                                                      <td>5</td>
+                                                      <td>0</td>
+                                                      <td>0</td>
+                                                      <td>0.500</td>
+                                                      <td>0.000</td>
+                                                      <td>0.000</td>
+                                                      <td>0.000</td>
+                                                    </tr>
+                                                    <tr>
+                                                      <td>Upper Bound (Ideal)</td>
+                                                      <td>400</td>
+                                                      <td>400</td>
+                                                      <td>0</td>
+                                                      <td>0</td>
+                                                      <td>0.865</td>
+                                                      <td>0.889</td>
+                                                      <td>0.841</td>
+                                                      <td>0.865</td>
+                                                    </tr>
+                                                    <tr>
+                                                      <td>Imbalanced</td>
+                                                      <td>400</td>
+                                                      <td>5</td>
+                                                      <td>0</td>
+                                                      <td>15</td>
+                                                      <td>0.572</td>
+                                                      <td>0.239</td>
+                                                      <td>0.904</td>
+                                                      <td>0.313</td>
+                                                    </tr>
+                                                    <tr>
+                                                      <td>Balanced</td>
+                                                      <td>400</td>
+                                                      <td>5</td>
+                                                      <td>15</td>
+                                                      <td>0</td>
+                                                      <td>0.542</td>
+                                                      <td>0.109</td>
+                                                      <td>0.975</td>
+                                                      <td>0.184</td>
+                                                    </tr>
+                                                    <tr>
+                                                      <td>All Synthetic</td>
+                                                      <td>400</td>
+                                                      <td>5</td>
+                                                      <td>395</td>
+                                                      <td>0</td>
+                                                      <td>0.530</td>
+                                                      <td>0.090</td>
+                                                      <td>0.972</td>
+                                                      <td>0.152</td>
+                                                    </tr>
+                                                    <tr>
+                                                      <td>All Synthetic</td>
+                                                      <td>400</td>
+                                                      <td>0</td>
+                                                      <td>0</td>
+                                                      <td>400</td>
+                                                      <td>0.50</td>
+                                                      <td>0.002</td>
+                                                      <td>0.75</td>
+                                                      <td>0.004</td>
+                                                    </tr>
+                                                  </table>
+                                                  <br><strong>Analysis and Conclusion:</strong>
+                                                  The data clearly shows that a minimum number of real disease images is crucial for effective model training and performance. Although synthetic and duplicated data can supplement the training dataset, they cannot fully substitute the value that real data provides in terms of model accuracy and reliability. Efforts should focus not only on balancing the number of healthy and disease cases but also ensuring the quality and authenticity of the disease samples used in training. Therefore, for health diagnostics using machine learning, substantial investment in acquiring high-quality, real disease samples is indispensable for achieving high accuracy, sensitivity, specificity, and F1 scores. The goal should be to optimize real data collection and enhance synthetic data quality to support effective model training and predictive accuracy.
+                                                <br><br><h4>Synthetic Images in Multiclassification</h4>  
+                                                Instead of doing 16 multiclassification, focused on 4 types of disease (Cardiomegaly, Pleural Effusion, Nodule, Consolidation) for multiclassification. This is because performing multiclassification on 16 types of disease decrease the overall accuracy and makes it harder to quantify the impact of balancing the data. Tested with 400 samples for each class (20 synthetic, 380 generated), using 3 types of prompt method emphasized previously (Hierarchical-domain multi-token prompt-only guidanance).<br>
+                                                <img src="assets\I made it\multi_eval.jpg" alt="이미지_설명" width="1000"><br>
+                                                Model Performance: The DreamBooth and Hierarchical models generally outperform the Vanilla model, indicating the effectiveness of these approaches in leveraging potentially richer or more structured training data or methodologies.
+                                                Consistency vs. Peak Performance: 
+                                                While DreamBooth offers strong performance for more common conditions, 
+                                                the Hierarchical models, particularly Hierarchical (3), provide a more balanced performance across varying conditions with highest F1 score average. From the graph, it is evident that models trained with synthetic images generally demonstrate better performance than a possible baseline (Vanilla model, not shown with synthetic training). This suggests that the addition of synthetic data helps to improve the model's ability to classify conditions accurately across various levels of prevalence—from common conditions like Cardiomegaly to rarer ones like Consolidation.
+                                                
+                                                <br><strong>Analysis and Conclusion:</strong>
+                                                
+                                                The results underscore the effectiveness of incorporating synthetic images into the training process of diagnostic models. By enriching the training data, these models can better generalize across different conditions, which is crucial for medical imaging tasks where some conditions are underrepresented in real datasets. The overall superior performance of the DreamBooth and Hierarchical models compared to a standard approach without synthetic data augmentation highlights the importance of innovative training strategies in improving the accuracy and reliability of medical diagnostics tools.
+                                                
+                                                <br><br><strong>One Line Summary: Balancing the class samples increase the classification model f1 score. However, it requirs higher quality of synthetic images</strong>
+                                                
+                                                <br><br><h4>Futureworks</h4>
+                                                <img src="assets\I made it\image 34.png" alt="이미지_설명" width="1000"><br>
+
+                                                1. Generating higher quality images using SDEdit, which add noise only in the ROI, and edit only in the ROI. Because we edit from real image, the quality of synthetic image will definetly increase, which will enhance model classification F1 score.
+                                                <br>2. Test Controlnet model for generating synthetic images. ControlNet is a neural network structure that allows controlling pre-trained large diffusion models using additional conditions.
+                                                <br>3. Different Prompt can also be experiemented for enhancing the result
+
+                                                <br><br><h4>Reference</h4>
+                                                <span style="font-size:small;">
+                                                    <strong>1.RoentGen: Vision-Language Foundation Model for Chest X-ray Generation</strong><br>
+                                                    <strong>2.UniXGen: A Unified Vision-Language Model for Multi-View Chest X-ray Generation and Report Generation</strong><br>
+                                                    <strong>3.Synthetically Enhanced: Unveiling Synthetic Data's Potential In Medical Imaging Research</strong><br>
+                                                    <strong>4.X-TRA: Improving Chest X-ray Tasks with Cross-Modal Retrieval Augmentation</strong><br>
+                                                    <strong>5.Cascaded Latent Diffusion Models for High-Resolution Chest X-ray Synthesis</strong><br>
+                                                    <strong>6.Adapting Pretrained Vision-Language Foundational Models to Medical Imaging Domains</strong><br>
+                                                    <strong>7.Generation of Anonymous Chest Radiographs Using Latent Diffusion Models for Training Thoracic Abnormality Classification Systems</strong><br>
+                                                    <strong>8.Evaluating the feasibility of using Generative Models to generate Chest X-Ray Data</strong><br>
+                                                    <strong>9.Utilizing Synthetic Data for Medical Vision-Language Pre-training: Bypassing the Need for Real Images</strong><br>
+                                                    <strong>10.Synthetic High-Resolution COVID-19 Chest X-Ray Generation</strong><br>
+                                                    <strong>11.Image Turing test and its applications on synthetic chest radiographs by using the progressive growing generative adversarial network</strong><br>
+                                                    <strong>12.You Don’t Have to Be Perfect to Be Amazing: Unveil the Utility of Synthetic Images</strong><br>
+                                                    <strong>13.Chest x-ray generation and data augmentation for cardiovascular abnormality classification</strong><br>
+                                                    <strong>14.CXR-IRGen: An Integrated Vision and Language Model for the Generation of Clinically Accurate Chest X-Ray Image-Report Pairs</strong><br>
+                                                    <strong>15.2D medical image synthesis using transformer-based denoising diffusion probabilistic model</strong><br>
+                                                    <strong>16.Using Diffusion Models to Generate Synthetic Labelled Data for Medical Image Segmentation</strong><br>
+                                                    <strong>17.Chest X ray image enhancement using deep contrast diffusion learning</strong><br>
+                                                    <strong>18.Beware of Diffusion Models for Synthesizing Medical Images - a Comparison with Gans in Terms of Memorizing Brain MRI and Chest X-Ray Images</strong><br>
+                                                    <strong>19.GH-DDM: the generalized hybrid denoising diffusion model for medical image generation</strong><br>
+
+                                                </span>
+
+
+                                                
+                                                
+
+                      
+
+
+
+
+                                                
+                                                
+                                                
+
+                        
+                                                    
+                    
+                                                <div class="entry-meta">
+
+                                                    <div class="meta-desc">
+                                                        <p>
+                                                            
+    
+
+</div>
+
+
+
+
+
+
+                                                  
+
+
+                           
+
+
+                                
+
+ 
+        <!-- Page Wrapper Ends -->
+
+        <!--  Scripts -->
+        <script type='text/javascript' src='assets/js/vendor/jquery-1.12.4.min.js'></script>
+        <script type='text/javascript' src='assets/js/vendor/TweenMax.min.js'></script>        
+        <script type='text/javascript' src='assets/js/vendor/headsup.min.js'></script>        
+        <script type='text/javascript' src='assets/js/vendor/jquery.easing.min.1.3.js'></script>      
+        <script type='text/javascript' src='assets/lib/cubeportfolio/js/jquery.cubeportfolio.min.js'></script>
+        <script type='text/javascript' src='assets/lib/swiper/js/swiper.min.js'></script>        
+
+        <script type='text/javascript' src='assets/js/main.js'></script>       
+        <!--  Scripts Ends -->
+    </body>
+</html>
+
+                        </main><!-- #main -->
+                    </div><!-- #primary -->  
+                </div><!-- .site-content-contain -->  
+            </div><!-- .site-content-contain -->  
+            <footer id="footer" class="site-footer standard" role="contentinfo">
+                <div class="container">
+                    <div class="site-info">			
+                        <p class="copyright">
+                            © 2024 Minhyek Jeon	
+                        </p>
+                    </div>    
+                    <nav class="footer-socials" role="navigation" aria-label="Footer Social Links Menu">                           
+                        <ul id="social-media-footer" class="social-links-menu">
+                            
+                            <li><a href="https://www.linkedin.com/in/minhyekjeon"><i class="fab fa-linkedin"></i></a></li>
+                            <li><a href="https://github.com/mhj0326"><i class="fab fa-github"></i></a></li>                               
+                        </ul>
+                    </nav>                        
+                </div>            
+            </footer>
+        </div><!-- #page -->
+    </body>
+</html>

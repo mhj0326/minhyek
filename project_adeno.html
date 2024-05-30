@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <!-- Document Title -->      
+        <title>Minhyek Jeon | Minimal Portfolio HTML Template</title>
+
+        <!-- Metas -->      
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="author" content="CaliberThemes" />
+
+        <!-- Favicon -->      
+        <link rel="icon" type="image/png" href="assets\I made it\logo_mj.png" />
+
+        <!-- Links -->      
+        <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700&subset=latin,latin-ext" rel="stylesheet" type="text/css" />
+        <link rel='stylesheet' id='bootstrap-css'  href='assets/lib/bootstrap/css/bootstrap.min.css' type='text/css' media='all' />
+        <link rel='stylesheet' id='font-awesome-css'  href='assets/css/icons/font-awesome.min.css' type='text/css' media='all' />       
+        <link rel='stylesheet' id='swiper-css' href='assets/lib/swiper/css/swiper.min.css' type='text/css' media='all' />
+        <link rel='stylesheet' id='cubeportfolio-css'  href='assets/lib/cubeportfolio/css/cubeportfolio.min.css' type='text/css' media='all' /> 
+
+        <link rel='stylesheet' id='main-css'  href='style.css' type='text/css' media='all' />
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+        <script id="MathJax-script" async
+        src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+        <style>
+            table {
+                width: 100%;
+                border-collapse: collapse;
+            }
+            th, td {
+                border: 1px solid black;
+                padding: 8px;
+                text-align: center;
+            }
+            th {
+                background-color: #f2f2f2;
+            }
+            caption {
+                font-weight: bold;
+                margin: 10px 0;
+            }
+        </style>
+
+        <style>
+            .image-container {
+                text-align: left;
+                margin: 20px;
+            }
+            .caption {
+                font-size: 16px;
+                color: #555;
+            }
+        </style>
+
+    </head>
+    <body class="single single-portfolio portfolio-details-top">
+
+        <!-- Page Wrapper -->
+        <div id="page" class="site">
+            <header id="masthead" class="site-header standard sticky" role="banner">		
+                <div class="container">
+                    <div id="site-branding">			
+                        <a class="logo-brand" href="index.html">
+                            <img class="logo" src="assets\I made it\logo_mj.png" alt="Logo">					                            
+                            <img class="retina-logo" src="assets\I made it\logo_mj.png" alt="Retina Logo">					                            
+                        </a>	
+                    </div><!-- .site-branding -->
+                    <span id="ham-trigger-wrap">
+                        <span class="ham-trigger">
+                            <span></span>                            
+                        </span>                            
+                    </span>
+                    <nav id="site-navigation" class="main-navigation" role="navigation" aria-label="Top Menu">
+                        <ul id="top-menu" class="menu">
+                            <li class="has-children"><a href="index.html">Home</a>
+                                
+                            </li>
+                            <li class="has-children"><a href="project.html">Project</a>
+                                
+                            </li>
+                            <li class="has-children"><a href="experience.html">Experience</a>
+                                
+                                
+                            </li>
+                            <li class="has-children"><a href="publication.html">Publication</a>
+                                
+                                
+                            </li>
+                            <li class="has-children"><a href="awards.html">Others</a>
+                                
+                            </li>
+                            
+                        </ul>	
+                    </nav>
+                                             
+                </div><!-- .wrap -->
+
+                
+	
+            </header><!-- #masthead -->
+
+            <div class="site-content-contain">
+                <div id="content" class="site-content">                 
+                    <div id="primary" class="content-area">
+                        <!-- Portfolio Filter -->
+                        
+                        <main id="main" class="site-main" role="main">        
+                            <div class="container t-offset-20">
+                                <div class="row">
+                                    <div class="col-sm-12">
+
+                                        <article class="portfolio">
+
+                                            <header class="entry-header">
+                                                
+
+                                                <h2>Pulmonary Disease Classification from Chest X-ray Images using Learning Algorithms </h2>
+                                                
+
+                                    
+                                                
+
+            
+                                             
+
+                                                
+                                                <h4>Problem</h4>
+                                                <p>Lung cancer ranks as one of the most lethal forms of cancer globally.
+                                                    Lung adenocarcinoma (LUAD) and lung squamous cell carcinoma (LUSC) represent the two primary forms of lung cancer. Initially, these were grouped together under the umbrella term non-small cell lung cancer (NSCLC) and received similar treatments. Nonetheless, growing research indicates that LUAD and LUSC should be recognized and managed as distinct diseases. Despite this, comprehensive comparisons of their clinical characteristics are still lacking. Recent insights suggest that LUAD and LUSC have unique profiles, underscoring the necessity for differentiated treatment strategies. To diagnose two disease as different disease, there is high demand for classification model. However, further research is required.</p>
+                                                <h4>Motivation</h4>
+                                                <p>The two prevalent types, lung adenocarcinoma (LUAD) and lung squamous cell carcinoma (LUSC), display significantly different biological characteristics. 
+                                                    Despite these differences, they are commonly grouped under non-small cell lung cancer (NSCLC) and receive similar treatment approaches. 
+                                                    The search for specific biomarkers for LUAD and LUSC has been challenging, with their unique biological pathways still largely unexplored.  
+                                                    Machine learning offers a robust framework for identifying latent characteristics in complex datasets, which can be instrumental in medical diagnosis and treatment optimization. 
+                                                    
+                                                    By leveraging algorithms capable of pattern recognition and feature extraction, machine learning models can unearth subtle, non-obvious correlations of LUAD and LUSC that may not be readily apparent through traditional statistical methods. For instance, in oncology, these models can analyze vast arrays of genomic, proteomic, and clinical data to discover biomarkers or prognostic factors that are not directly observable. 
+                                                    Numerous research efforts have focused on refining existing machine learning techniques or creating new ones to find biologically significant markers of these two disease. Yet, the application of machine learning techniques for biomarker detection, or gene expression studies has been limited to a type of a dataset. Furthermore, there was not a prior research on using X-ray images for LUAD and LUSC classification. Therefore, in this paper, we are going to utilize two type of dataset, RNA-seq and X-ray dataset for classification. </p>
+                                                <h4>Methods Summary</h4>
+                                                
+                                                <p>The methodology can be systematically delineated into three distinct phases to address the classification challenges of lung cancer subtypes based on genomic and imaging data. Initially, Principal Component Analysis (PCA) was used to perform feature selection on gene expression data of Lung Adenocarcinoma (LUAD) and Lung Squamous Cell Carcinoma (LUSC) for binary classification tasks, and extended to include Control samples for multi-class classification. This dimensionality reduction technique aids in highlighting the most significant features while minimizing information loss.
+
+                                                    Subsequently, Differential Gene Expression Analysis was conducted to pinpoint genes that exhibit the most significant differences in expression between LUAD and LUSC. This step is crucial for identifying potential biomarkers that are differentially expressed in these cancer subtypes, providing insights into their distinct molecular mechanisms.
+                                                    
+                                                    In the final phase, the refined RNA-seq features were concated with X-ray image embeddings to create a comprehensive feature set. This hybrid dataset was then employed to train and evaluate various machine learning models, including logistic regression, lasso regression, stochastic gradient descent (SGD) classifiers, random forests, support vector machines (SVM), multi-layer perceptrons (MLP), and XGBoost. Each of these models was assessed for its ability to accurately classify the data, taking into account their respective strengths and limitations in handling high-dimensional, heterogeneous data. This integrative approach leverages both genomic and imaging data, potentially enhancing the predictive accuracy and robustness of the classification models..</p>
+                                                
+                                                
+                                                <h4>Dataset</h4>
+                                                <div class="image-container">
+                                                    <img src="assets/I made it/nsclc.png" alt="Description of the image" width="400" height="600">
+                                                    <div class="caption">Radiogenomic Dataset from a Non-Small Cell Lung Cancer (NSCLC) </div>
+                                                </div>
+                                                
+                                                <p>The RNA-seq sample raw data and image data of 504, 490, 112 individuals for each of LUAD, LUSC and healthy patients were obtained from the TCGA and GTEx projects through the Cancer Genomics Hub. 
+                                                    This dataset includes chest X-ray images and Positron Emission Tomography (PET)/CT scans, detailed semantic annotations of tumors using a standardized vocabulary, tumor segmentation maps on CT images, 
+                                                    and quantitative metrics from the PET/CT scans. 
+                                                   The imaging data is matched with genomic data including gene mutations and RNA sequencing from surgically removed tumor samples, 
+                                                   along with clinical information such as patient survival rates. 
+                                                   This dataset is intended to support research into the connections between genomic profiles and imaging characteristics, 
+                                                   and to aid in developing and testing new prognostic imaging-based biomarkers along with genomics sequence. For RNA-seq data, each sample has 19,649 gene expression features.</p>
+                                                
+                                                    
+                                                
+                                                <h4>RNA-seq Data Preprocessing</h4>
+                                                
+                                                <p>We employed various bioinformatics tools for processing and analyzing RNA sequencing data. 
+                                                    Starting with paired-end raw sequencing reads in FASTQ format, we used STAR, a widely-adopted tool, for aligning sequencing reads to the reference genome, 
+                                                    facilitating accurate mapping of RNA sequences. For quantification and normalization of gene expression, 
+                                                    we utilized RSEM, a software tool designed to accurately quantify transcript abundances from RNA-seq data. RSEM calculates normalized gene expression levels in FPKM (Fragments Per Kilobase of transcript per Million mapped reads), 
+                                                    considering read-mapping uncertainty and providing a robust way to compare gene expression across samples. 
+                                                    Additionally, FeatureCounts was used to perform a simpler, faster count of reads aligning to known gene features.
+
+                                                    To assess the integrity of our RNA samples and gauge potential degradation, 
+                                                    we applied mRIN, a tool that provides a measure of RNA integrity numerically. 
+                                                    Quality and strand specificity of our samples were analyzed using RSeQC, 
+                                                    which offers a comprehensive set of modules for evaluating the quality of sequence data and confirming the strandness of libraries. 
+                                                    </p>
+                                                
+                                                <h4>Principal Component Analysis</h4>
+                                                
+                                                <p>Principal component analysis (PCA) is a statistical technique used for dimensionality reduction, 
+                                                    which simplifies the complexity of high-dimensional data while retaining most of the essential information. 
+                                                    This method transforms a large number of variables into a smaller, 
+                                                    more manageable set of new variables known as principal components. 
+                                                    These principal components are linear combinations of the original variables, arranged in a way that the first few retain the majority of the data's variability.<br>
+
+                                                    The aim of PCA is to reduce the overall number of variables in the dataset, 
+                                                    balancing the loss of accuracy with increased simplicity. 
+                                                    This trade-off is beneficial because it makes the dataset easier to handle and visualize, 
+                                                    facilitating faster and more efficient analysis in machine learning algorithms by reducing the noise and redundancy in the data. 
+                                                    The principal components themselves are designed to be uncorrelated, ensuring that each component captures a unique aspect of the data's structure. 
+                                                    In the RNA-seq data, we had 19,649 features. 
+                                                    When dealing with RNA-seq data featuring 19,649 features, employing Principal Component Analysis (PCA) is critical. 
+                                                    First, high-dimensional spaces can make it hard to discern meaningful patterns and lead to overfitting, 
+                                                    where models capture noise rather than underlying trends.
+                                                    Also PCA minimizes noise by eliminating redundant features, focusing on the most significant variations through principal components and speeds up model training by simplifying the data structure, 
+                                                    making it easier for models to learn. 
+                                                </p>
+                                                <div class="image-container">
+                                                    <img src="assets/I made it/pca2.png" alt="Description of the image" width="700" height="600">
+                                                    <div class="caption">Eigenvalues - This graph displays a plot of eigenvalues arranged in descending order, as is typically done in Principal Component Analysis (PCA). Each point on the graph represents an eigenvalue from the PCA, with the horizontal axis indicating the rank of each principal component and the vertical axis showing the magnitude of each eigenvalue.</div>
+                                                </div>
+                                                
+
+
+                                                <p>The PCA was performed via eigen-decomposition of the covariance matrix of the data. 
+                                                    The covariance matrix ($S$) was calculated by the formula below, where X corresponds to the mean-centered embedding data:
+                                                    \begin{equation}
+                                                    S = \frac{1}{N} X^TX.
+                                                    \end{equation}
+                                                    We selected features based on the PCA with variance explained over 95% for three different classification task (binary, multi, binary with RNA+image) 
+                                                    which decreased all three task features from 19,649 to under 500. </p>
+                                                
+                                                <div class="image-container">
+                                                    <img src="assets/I made it/expression.png" alt="Description of the image" width="600" height="600">
+                                                    <div class="caption">2D Projection of Gene Expression Data. - Top plot represents gene expression data of two lung cancer where LUAD is represented as red and LUSC as green. Bottom plot represents gene expression data with healthy patients represented as blue, added</div>
+                                                </div>
+                                                <p>From the top expression plot of figure 2, the overlap between red (LUAD) and green (LUSC) points suggests that the gene expression profiles of LUAD and LUSC have similarities. 
+                                                    However, the distinct clusters indicate that there are also specific differences in gene expression that differentiate these two types of lung cancer.
+                                                    Bottom Graph:
+                                                    From the bottom expression plot of figure 2, the blue points (Healthy), representing healthy individuals, mostly form a distinct cluster away from the red (LUAD) and green points (LUSC), 
+                                                    particularly along Principal Component 1. 
+                                                    This shows a clear distinction in gene expression between healthy individuals and those with lung cancer. 
+                                                    The red and green points again show some overlap, which indicates similarity between the two cancer types but also some unique characteristics for each.</p>
+                       
+
+                                         
+                                                    
+                                                <h5>CLIP Image Encoder for Extracting X-ray Embedding</h5>
+                                                
+                                                <p>The CLIP(Contrastive Language–Image Pre-training) image encoder was utilized to reduce the dimensionality of the image dataset by generating an embedding for each image, 
+                                                    \( v \in \mathbb{R}^{512 \times 1} \). 
+                                                    
+                                                    Among various types of CLIP model, CXR-CLIP which is vision-language pre-training (VLP) model specifically tailored for the medical field, 
+                                                    particularly focusing on chest X-rays was used. 
+                                                    This model addresses the issue of data scarcity by expanding image-text pairings through general prompts and using multiple images alongside radiological reports. 
+                                                    The model incorporates two contrastive losses, named ICL and TCL, which are designed to learn the characteristics of medical studies and reports, respectively. 
+                                                    This model addresses the issue of data scarcity by expanding image-text pairings through general prompts and using multiple images alongside radiologic reports. The model incorporates two contrastive losses, named ICL and TCL, which are designed to learn the characteristics of medical studies and reports, respectively.</p>
+                                                
+                                                    
+                                                <br><img src="C:\Users\OCEAN\Desktop\study\personal website\HTML\assets\I made it\dataset.png" alt="Description of the image" width="500" height="600"><br><br> 
+                                                <P>CXR-CLIP shows high and robust performance in extracting embeddings from X-ray images. We pretrained the image encoder using disease label as text encoder on our dataset using 80 samples for train and 20 samples for test (100 samples are composed of 30 LUAD, 30 LUSC, 40 Healthy patients). Than using the fine-tuned image encoder, it was applied to rest of dataset to generate image embeddings that can be concated to RNA-seq dataset. 
+
+                                                    For CXR-CLIP, there are two image encoders, ResNet-50 and Swin-Tiny, to extract global visual features from the global average pooled output. Among these methods, ResNet-50 was selected as it demonstrated superior performance in capturing features relevant for evaluations in the CXR-CLIP model. A linear layer is adopted to project the embeddings into the size for
+                                                    \( v \in \mathbb{R}^{512 \times 1} \) . The normalized visual embedding v is obtained by 
+                                                    \begin{equation}
+                                                     v = \frac{f_i^1(E_i^1(x))}{\|f_i^1(E_i^1(x))\|} 
+                                                    \end{equation}
+                                                    Where \( E_i \) represents the image encoder, \( f_i \) represents a projection layer that matches the size of the final embedding vectors.
+                                                    The embedding vectors were concated with RNA-seq data and than applied to different types of classification models for evaluation.</P>
+                                                
+                                                
+                                                
+                                                
+                                   
+                                                
+                                                
+                                                <h5>Differential Gene Expression Analysis</h5>
+                                                <p>Gene expression data was scaled using a RobustScaler to minimize the impact of outliers. RobustScaler is a preprocessing tool to standardize data by making it more robust to outliers.
+                                                    RobustScaler operates by removing the median of the data and scaling it according to the Interquartile Range (IQR). The formula used is:
+                                                    \[
+                                                    X_{\text{scaled}} = \frac{X - \text{median}(X)}{\text{IQR}(X)}
+                                                    \]
+                                                    Where \(X\) is the original value, \(\text{median}(X)\) is the median of all values in the feature, and \(\text{IQR}(X)\) is the interquartile range of the feature.
+                                                    
+                                                     Outliers are extreme values that are significantly different from other observations, which can skew the data significantly.Following this, logistic regression is employed to identify genes whose expression levels correlate with disease outcomes. In gene expression analysis, logistic regression can be employed to model the relationship between the expression levels of various genes (as predictors). The analysis specifically focuses on extracting genes with the highest and lowest coefficients from the regression model as these are considered potentially significant in influencing disease mechanisms.
+                                                    
+                                                     The logistic regression model is represented by the equation:
+                                                    
+                                                    \[
+                                                    \log\left(\frac{p}{1-p}\right) = \beta_0 + \beta_1x_1 + \beta_2x_2 + \ldots + \beta_nx_n
+                                                    \]
+                                                    
+                                                    where \( p \) is the probability of the outcome of interest (e.g., having a disease), \( \beta_0, \beta_1, \ldots, \beta_n \) are the coefficients to be estimated, and \( x_1, x_2, \ldots, x_n \) are the predictors (gene expression levels).
+                                                    </p>
+
+                                                <h5>Classification using Various Model</h5>
+                                                
+                                                <p>We choose 6 models(logistic regression, lasso regression, stochastic gradient
+                                                    descent (SGD) classifiers, random forests, support vector machines (SVM), multi-layer perceptrons
+                                                    (MLP), and XGBoost) for classification and each were chosen for the following reasons. The choice of logistic regression classification for binary classification was based on several factors. Firstly, it offers a probabilistic interpretation of classification outcomes, which is valuable for understanding uncertainty. Additionally, logistic regression is computationally efficient compared to other methods like k-Nearest Neighbors, making it advantageous for model selection involving regularization. Despite the data possibly not being entirely linearly separable, the high dimensionality of the embeddings enhances the classification potential. Naive Bayes, with its assumption of feature conditional independence, may not suit well due to the nature of CLIP embeddings derived from dimensionality reduction of chest x-ray images. Moreover, logistic regression's L2 regularization helps prevent overfitting. In the same context,  
+                                                    Lasso regression is well-suited for datasets with many features, Lasso Regression can create sparse models through L1 regularization. Other models that works well with numerous features include SGD, SVM and MLP. Especially MLP is effective at capturing complex non-linear relationship. We also selected random forest since it is robust in handling noise and datasets with many features.</p>
+
+                                                
+                                                <h4>Result</h4>
+                                                <h5>Evaluation Result for Differential Gene Expression Analysis</h5>
+                                                <p>
+                                                    Through differential gene expression analysis, for LUAD, genes named SYS1-DBN2D2, ALPL2, PHACTR3, NR0B1, KRT14 showed the highest gene expression while for LUSC, genes named CELA3A, ZCCHC12, SULT1E1, VCX, AP000758.1 showed the highest gene expression. These genes can be potentially significant genes involved in the disease mechanisms.
+                                                </p>
+                                                <table>
+                                                    <caption>Top 5 Upregulated Genes in LUAD and LUSC. Gene expression values for the most significantly upregulated genes in lung cancer subtypes.</caption>
+                                                    <thead>
+                                                        <tr>
+                                                            <th>Disease</th>
+                                                            <th colspan="5">LUAD</th>
+                                                        </tr>
+                                                        <tr>
+                                                            <th>Gene</th>
+                                                            <th>SYS1-DBN2D2</th>
+                                                            <th>ALPL2</th>
+                                                            <th>PHACTR3</th>
+                                                            <th>NR0B1</th>
+                                                            <th>KRT14</th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        <tr>
+                                                            <td>Expression</td>
+                                                            <td>0.010240</td>
+                                                            <td>0.008292</td>
+                                                            <td>0.007466</td>
+                                                            <td>0.007381</td>
+                                                            <td>0.006747</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <th>Disease</th>
+                                                            <th colspan="5">LUSC</th>
+                                                        </tr>
+                                                        <tr>
+                                                            <th>Gene</th>
+                                                            <th>CELA3A</th>
+                                                            <th>ZCCHC12</th>
+                                                            <th>SULT1E1</th>
+                                                            <th>VCX</th>
+                                                            <th>AP000758.1</th>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Expression</td>
+                                                            <td>0.005711</td>
+                                                            <td>0.005692</td>
+                                                            <td>0.005589</td>
+                                                            <td>0.005288</td>
+                                                            <td>0.005119</td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            
+                                                <p>
+                                                    The genes that show high expression can be related to LUAD for the following reasons:
+                                                </p>
+                                                <ul>
+                                                    <li><strong>PHACTR3:</strong> May contribute to metastasis by regulating tumor cell migration through cytoskeletal control.</li>
+                                                    <li><strong>NR0B1 (DAX1):</strong> Could influence tumor development via modulation of hormone-driven growth pathways.</li>
+                                                    <li><strong>KRT14:</strong> Its role in epithelial integrity might affect epithelial-mesenchymal transition, promoting tumor spread.</li>
+                                                </ul>
+                                                <p>
+                                                    The genes that show high expression can be related to LUSC for the following reasons:
+                                                </p>
+                                                <ul>
+                                                    <li><strong>CELA3A:</strong> Potentially involved in tissue remodeling and extracellular matrix degradation, aiding tumor invasion.</li>
+                                                    <li><strong>ZCCHC12:</strong> Might impact cancer progression through transcriptional regulation of genes linked to cell proliferation and survival.</li>
+                                                    <li><strong>SULT1E1:</strong> Could affect tumor behavior through modulation of estrogen-dependent signaling pathways.</li>
+                                                    <li><strong>VCX:</strong> Its upregulation might suggest roles in cell cycle regulation or chromosomal stability.</li>
+                                                    <li><strong>AP000758.1:</strong> If it influences gene regulation or genomic stability, it could be pivotal in cancer development.</li>
+                                                </ul>
+                                            
+                                                <h5>Evaluation Result for Different Classification Models</h5>
+                                            
+                                                <table>
+                                                    <caption>Model Performance Evaluation. Comparison of different models across various RNA sequencing data scenarios.</caption>
+                                                    <thead>
+                                                        <tr>
+                                                            <th>Model</th>
+                                                            <th>RNA seq binary</th>
+                                                            <th>RNA seq multi-class</th>
+                                                            <th>RNA seq + CT image binary</th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        <tr>
+                                                            <td>Logistic Regression</td>
+                                                            <td>0.9599</td>
+                                                            <td>0.9398</td>
+                                                            <td>0.9431</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Lasso Regression MSE</td>
+                                                            <td>0.5410</td>
+                                                            <td>0.0895</td>
+                                                            <td>0.1124</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>SGD Classifier</td>
+                                                            <td>0.9431</td>
+                                                            <td>0.9277</td>
+                                                            <td>0.9398</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Random Forest</td>
+                                                            <td>0.9264</td>
+                                                            <td>0.9307</td>
+                                                            <td>0.8929</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>SVM</td>
+                                                            <td>0.5117</td>
+                                                            <td>0.4578</td>
+                                                            <td>0.5117</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>MLP</td>
+                                                            <td>0.8997</td>
+                                                            <td>0.9227</td>
+                                                            <td>0.8896</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>XGBoost</td>
+                                                            <td>0.9164</td>
+                                                            <td>0.9247</td>
+                                                            <td>0.9197</td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                                <p>Logistic Regression demonstrates consistently high performance across all three data scenarios (RNA seq binary, RNA seq multi-class, and RNA seq + CT image binary). This suggests it is a robust model for handling both straightforward binary classification and more complex multi-class scenarios, even when combined with imaging data.
+                                                    SGD Classifier, Random Forest, and XGBoost show variable but generally good performance across the different tasks. Their performance might depend significantly on the specific characteristics of the data and the task.\\
+                                                    Lasso Regression and SVM perform poorly in all scenarios compared to the other models. The underperformance of Lasso Regression could be due to its feature selection mechanism, which, while reducing model complexity, might also eliminate features critical for making accurate predictions in these particular tasks. SVM's poor performance might relate to its sensitivity to the choice of kernel and the scale of features, suggesting it may not be well-suited to the complexities or dimensionality of the data used here.
+                                                    Combining RNA sequencing data with CT images tends to maintain or slightly decrease performance compared to using RNA sequencing data alone for binary classification.
+                                                </p>
+                                                
+                                                
+                                                <h4>Discussion</h4>
+                                                <p>Combining RNA sequencing data with CT imaging might result in lower performance in binary classification tasks for Lung Adenocarcinoma (LUAD) and Lung Squamous Cell Carcinoma (LUSC). Following are reasons why:\\
+                                                    First, LUAD and LUSC may share similar characteristics on CT scans, such as the size and shape of nodules or the presence of features like spiculation or cavitation. These overlapping features can make it difficult to distinguish between the two types of lung cancer based solely on CT images, potentially confusing the model when these images are combined with genetic data from RNA sequencing. Second, it can be due to complexity of CT Images. CT scans add a layer of complexity to the data due to the variability in pixel intensity and the spatial relationships depicted in these images. These aspects of CT imaging may not directly relate to or correlate with the genetic information provided by RNA sequencing, potentially introducing noise or irrelevant information that does not aid in the classification process.
+                                                    Third, it can be due to integration of Different Data Modalities. Successfully combining features from different types of data (like genetic data and imaging data) requires careful consideration of how these features interact and influence the classification decision. Simply concatenating these features may not be the most effective method, as it might not account for the complex relationships between the data types or the unique contributions of each to the diagnosis. Lastly, it can be due to tumor Heterogeneity. Both LUAD and LUSC tumors can exhibit significant heterogeneity within the tumor itself, meaning that the tumor may vary greatly in its cellular composition and behavior. This intra-tumor heterogeneity is not always well-captured or represented in CT imaging, which could lead to inconsistencies or inaccuracies when these images are used to inform classification models based on genetic data.</p>
+                                                <h4>Future Direction</h4>
+                                                <p>Instead of simply concating the features, there are algorithms that can more effectively integrate data from genomic data and imaging data. Future research could focus on developing or employing advanced machine learning models such as multi-modal neural networks or fusion techniques that better understand and utilize the relationship between genomic alterations and their radiological expressions.
+                                                    Also we can utilize of diffusion models to create samples that balance the dataset classification. This approach can help in creating balanced datasets where each class has a sufficient number of samples for training. This is particularly useful in scenarios where some classes are underrepresented, potentially leading to biased or inaccurate model predictions.</p>
+                                                
+
+
+
+                                                
+                                                
+                                                
+
+                        
+                                                    
+                    
+                                                <div class="entry-meta">
+
+                                                    <div class="meta-desc">
+                                                        <p>
+                                                            
+    
+
+</div>
+
+
+
+
+
+
+                                                  
+
+
+                           
+
+
+                                
+
+ 
+        <!-- Page Wrapper Ends -->
+
+        <!--  Scripts -->
+        <script type='text/javascript' src='assets/js/vendor/jquery-1.12.4.min.js'></script>
+        <script type='text/javascript' src='assets/js/vendor/TweenMax.min.js'></script>        
+        <script type='text/javascript' src='assets/js/vendor/headsup.min.js'></script>        
+        <script type='text/javascript' src='assets/js/vendor/jquery.easing.min.1.3.js'></script>      
+        <script type='text/javascript' src='assets/lib/cubeportfolio/js/jquery.cubeportfolio.min.js'></script>
+        <script type='text/javascript' src='assets/lib/swiper/js/swiper.min.js'></script>        
+
+        <script type='text/javascript' src='assets/js/main.js'></script>       
+        <!--  Scripts Ends -->
+    </body>
+</html>
+
+                        </main><!-- #main -->
+                    </div><!-- #primary -->  
+                </div><!-- .site-content-contain -->  
+            </div><!-- .site-content-contain -->  
+            <footer id="footer" class="site-footer standard" role="contentinfo">
+                <div class="container">
+                    <div class="site-info">			
+                        <p class="copyright">
+                            © 2024 Minhyek Jeon	
+                        </p>
+                    </div>    
+                    <nav class="footer-socials" role="navigation" aria-label="Footer Social Links Menu">                           
+                        <ul id="social-media-footer" class="social-links-menu">
+                            
+                            <li><a href="https://www.linkedin.com/in/minhyekjeon"><i class="fab fa-linkedin"></i></a></li>
+                            <li><a href="https://github.com/mhj0326"><i class="fab fa-github"></i></a></li>                               
+                        </ul>
+                    </nav>                        
+                </div>            
+            </footer>
+        </div><!-- #page -->
+    </body>
+</html>

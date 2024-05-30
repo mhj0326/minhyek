@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <!-- Document Title -->      
+        <title>Minhyek Jeon | Minimal Portfolio HTML Template</title>
+
+        <!-- Metas -->      
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="author" content="CaliberThemes" />
+
+        <!-- Favicon -->      
+        <link rel="icon" type="image/png" href="assets\I made it\logo_mj.png" />
+
+        <!-- Links -->      
+        <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700&subset=latin,latin-ext" rel="stylesheet" type="text/css" />
+        <link rel='stylesheet' id='bootstrap-css'  href='assets/lib/bootstrap/css/bootstrap.min.css' type='text/css' media='all' />
+        <link rel='stylesheet' id='font-awesome-css'  href='assets/css/icons/font-awesome.min.css' type='text/css' media='all' />       
+        <link rel='stylesheet' id='swiper-css' href='assets/lib/swiper/css/swiper.min.css' type='text/css' media='all' />
+        <link rel='stylesheet' id='cubeportfolio-css'  href='assets/lib/cubeportfolio/css/cubeportfolio.min.css' type='text/css' media='all' /> 
+
+        <link rel='stylesheet' id='main-css'  href='style.css' type='text/css' media='all' />
+
+    </head>
+    <body class="single single-portfolio portfolio-details-top">
+
+        <!-- Page Wrapper -->
+        <div id="page" class="site">
+            <header id="masthead" class="site-header standard sticky" role="banner">		
+                <div class="container">
+                    <div id="site-branding">			
+                        <a class="logo-brand" href="index.html">
+                            <img class="logo" src="assets\I made it\logo_mj.png" alt="Logo">					                            
+                            <img class="retina-logo" src="assets\I made it\logo_mj.png" alt="Retina Logo">					                            
+                        </a>	
+                    </div><!-- .site-branding -->
+                    <span id="ham-trigger-wrap">
+                        <span class="ham-trigger">
+                            <span></span>                            
+                        </span>                            
+                    </span>
+                    <nav id="site-navigation" class="main-navigation" role="navigation" aria-label="Top Menu">
+                        <ul id="top-menu" class="menu">
+                            <li class="has-children"><a href="index.html">Home</a>
+                                
+                            </li>
+                            <li class="has-children"><a href="project.html">Project</a>
+                                
+                            </li>
+                            <li class="has-children"><a href="experience.html">Experience</a>
+                                
+                                
+                            </li>
+                            <li class="has-children"><a href="publication.html">Publication</a>
+                                
+                                
+                            </li>
+                            <li class="has-children"><a href="awards.html">Others</a>
+                                
+                            </li>
+                            
+                        </ul>	
+                    </nav>
+                                             
+                </div><!-- .wrap -->
+
+                
+	
+            </header><!-- #masthead -->
+
+            <div class="site-content-contain">
+                <div id="content" class="site-content">                 
+                    <div id="primary" class="content-area">
+                        <!-- Portfolio Filter -->
+                        
+                        <main id="main" class="site-main" role="main">        
+                            <div class="container t-offset-20">
+                                <div class="row">
+                                    <div class="col-sm-12">
+
+                                        <article class="portfolio">
+
+                                            <header class="entry-header">
+                                                
+
+                                                <h2>Enhancing Satellite Image Object Detectors Using Generative AI </h2>
+                                                
+
+                                    
+                                                
+
+            
+                                             
+
+                                                <p>* The research is currently in process</p>
+                                                <h4>Motivation</h4>
+                                                <img src="assets\I made it\satelliteimage.png" style="width:1200px;" class="portfolio-media-image" alt="Brochure 2" >
+                                                <p>Different scale and diversity of vehicles in satellite image makes hard for detectors to perform well</p>
+
+
+
+                                                <p>Training visual detectors to accurately detect vehicles in aerial images is challenging due to the specificity of this view—objects of interest are tiny and large-scale, 
+                                                  and diverse annotated datasets are scarce. This effort aims to advance the understanding of object detector failure modes by leveraging recent developments in AI, 
+                                                  including latent diffusion text-to-image generative models and adversarial attacks, as well as provide strategies for robustification. For the initial phase of our research, we are concentrating on the detection of automobiles in satellite image.</p>
+                                                
+                                                 
+                                                
+                                                <h4>Progress we achieved</h4>
+                                                
+                                                <p> 
+                                                  Using generative AI, we are conducting an in-depth analysis to enhance the generalization capabilities of object detectors across diverse geographical regions. 
+                                                  The scenario under test involves adapting a detector to a new geographic domain with a minimal number of images. 
+                                                  Our approach focuses on fine-tuning latent diffusion generative models, such as Stable Diffusion or SDXL, using very small, unlabeled datasets derived from the target locations.
+
+                                                  Several methodologies and datasets are being employed for this task. 
+                                                  For example, the models can be fine-tuned using synthetic images generated by Midjourney or real satellite imagery from different locations. 
+                                                  This approach is also applicable to generative models with additional conditioning inputs, such as ControlNet and GLIGEN. 
+                                                  By leveraging these techniques, we aim to improve the adaptability and performance of object detectors in varying geographical contexts.</p>
+                                                  <img src="assets\I made it\seg2img.png" style="width:1200px;" class="portfolio-media-image" alt="Brochure 2" >
+                                                <p>Images generated by ControlNet using Segment Mask</p>
+                                                
+                                          
+                                                <img src="assets\I made it\canny2img.png" style="width:1200px;" class="portfolio-media-image" alt="Brochure 2" >
+                                                <p>Images generated by ControlNet using Canny Image</p>
+
+                                                
+
+                                                <br><h5>- ControlNet</h5>
+                                                Using the Pytorch3D data, in which we generated using landscape images and car shape, we applied ControlNet to it to make it look more realistic. 
+                                                ControlNet is a neural network structure to control diffusion models by adding extra conditions.                                           
+                                                It copys the weights of neural network blocks into a "locked" copy and a "trainable" copy.
+                                                
+                                                The "trainable" one learns our condition. The "locked" one preserves our model.
+                                                In this way, the ControlNet can reuse the SD encoder as a deep, strong, robust, and powerful backbone to learn diverse controls.
+                                                Below are some images we generated using segment mask and canny images of given Pytorch3D data.
+                                                
+
+                                                <img src="assets\I made it\segcanny2img.png" style="width:1200px;" class="portfolio-media-image" alt="Brochure 2" >
+                                                <p>Images generated by ControlNet using Canny Image + Segment Mask</p>
+
+                                                <p>We conducted a series of experiments fine-tuning ControlNet on various datasets, 
+                                                  including Pytorch3D, LINZ, and the Utah dataset. 
+                                                
+
+                                                  Although segment masks produced more realistic images and preserved masked car region better (89.47%) compared to canny images (25.91%), they failed to adequately preserve the surrounding context. As a result, we considered an approach that integrates both methods.
+                                                  Despite our efforts, fine-tuning RetinaNet on the generated images did not result in an overall F1 score exceeding 48%. 
+                                                  Conversely, GLIGEN demonstrated greater stability and higher accuracy. 
+                                                  Therefore, we decided to use GLIGEN for image generation instead of ControlNet.</p> 
+                                                  <img src="assets\I made it\segcannycompare.png" style="width:1200px;" class="portfolio-media-image" alt="Brochure 2" ><br>
+                                                
+
+
+
+                                                <br><h4>- GLIGEN</h4>
+                                                
+                                                <p>GLIGEN builds upon existing pretrained diffusion models by integrating new mechanisms to enhance its functionality. The original weights of the pretrained diffusion models are kept frozen to retain the valuable pre-trained knowledge. To incorporate new grounding inputs, GLIGEN introduces a novel trainable Gated Self-Attention layer at each transformer block. This addition allows the model to effectively absorb and process new information without disrupting the previously learned representations.
+
+                                                  The Gated Self-Attention mechanism is designed to selectively focus on relevant parts of the input, thereby improving the model's ability to generate contextually appropriate outputs. This approach ensures that the model can adapt to new tasks and datasets while maintaining high performance.
+                                                  
+                                                  Below are output images generated by GLIGEN, demonstrating its capability to produce high-quality, contextually accurate images based on the provided grounding inputs.
+                                                  </p>
+                                                  <img src="assets\I made it\gligen.png" style="width:1200px;" class="portfolio-media-image" alt="Brochure 2" >
+                                                  <p>Using this, we finetuned RetinaNet and tested using different percent of data (100%, 75%, 50%, 25%, 12.5%, 6%) with RetinaNet with addition of Detectron2, MMDetection.
+                                                    Among various percentage, in case of LINZ dataset, using 12.5% image showed highers accuracy. Finetuning on LINZ data and testing on Utah Dataset showed highest accuracy 
+                                                    64.92% when using 25% of LINZ data.  
+                                                  </p>
+
+                                                  
+
+                                                  <img src="assets\I made it\gligen_result.png" style="width:1200px;" class="portfolio-media-image" alt="Brochure 2" ><br>
+                                                  
+                                                  <br><br>
+                                                  <h4>Adversarial Attack - Our Plan for Next Step</h4>
+                                                  <p>Me and my team will perform adversarial attacks on overhead view vehicle object detectors to enhance model explainability and identify failure cases. 
+                                                    We aim to combine the adversarial attack methods with modern text-to-image generative models to perform localized modifications on the vehicles in the images through adversarial prompting. 
+                                                    This approach seeks to enhance the robustness of detection models across various scenarios while minimizing unintended global image alterations. 
+                                                    The goal is to optimize directly over words or the prompt latent space for prompt modifications where the detector fails. 
+                                                    This can provide a more semantical description of where detectors fail. 
+                                                    We intend to investigate different adversarial prompting strategies to pinpoint the changes in the image, with a focus on the cross-attention component of the models. 
+                                                    Additionally, we plan to investigate merging their constrained adversarial attacks for local texture/shape adversarial changes with more holistic changes.</p> 
+                                                    
+                                                  
+
+
+                                                
+                                                
+
+                      
+
+
+
+
+                                                
+                                                
+                                                
+
+                        
+                                                    
+                    
+                                                <div class="entry-meta">
+
+                                                    <div class="meta-desc">
+                                                        <p>
+                                                            
+    
+
+</div>
+
+
+
+
+
+
+                                                  
+
+
+                           
+
+
+                                
+
+ 
+        <!-- Page Wrapper Ends -->
+
+        <!--  Scripts -->
+        <script type='text/javascript' src='assets/js/vendor/jquery-1.12.4.min.js'></script>
+        <script type='text/javascript' src='assets/js/vendor/TweenMax.min.js'></script>        
+        <script type='text/javascript' src='assets/js/vendor/headsup.min.js'></script>        
+        <script type='text/javascript' src='assets/js/vendor/jquery.easing.min.1.3.js'></script>      
+        <script type='text/javascript' src='assets/lib/cubeportfolio/js/jquery.cubeportfolio.min.js'></script>
+        <script type='text/javascript' src='assets/lib/swiper/js/swiper.min.js'></script>        
+
+        <script type='text/javascript' src='assets/js/main.js'></script>       
+        <!--  Scripts Ends -->
+    </body>
+</html>
+
+                        </main><!-- #main -->
+                    </div><!-- #primary -->  
+                </div><!-- .site-content-contain -->  
+            </div><!-- .site-content-contain -->  
+            <footer id="footer" class="site-footer standard" role="contentinfo">
+                <div class="container">
+                    <div class="site-info">			
+                        <p class="copyright">
+                            © 2024 Minhyek Jeon	
+                        </p>
+                    </div>    
+                    <nav class="footer-socials" role="navigation" aria-label="Footer Social Links Menu">                           
+                        <ul id="social-media-footer" class="social-links-menu">
+                            
+                            <li><a href="https://www.linkedin.com/in/minhyekjeon"><i class="fab fa-linkedin"></i></a></li>
+                            <li><a href="https://github.com/mhj0326"><i class="fab fa-github"></i></a></li>                               
+                        </ul>
+                    </nav>                        
+                </div>            
+            </footer>
+        </div><!-- #page -->
+    </body>
+</html>

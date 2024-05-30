@@ -1,0 +1,1006 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <!-- Document Title -->      
+        <title>Minhyek Jeon | When Cats meet GANs</title>
+
+        <!-- Metas -->      
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="author" content="CaliberThemes" />
+
+        <!-- Favicon -->      
+        <link rel="icon" type="image/png" href="assets/images/favicon.png" />
+
+        <!-- Links -->      
+        <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700&subset=latin,latin-ext" rel="stylesheet" type="text/css" />
+        <link rel='stylesheet' id='bootstrap-css'  href='assets/lib/bootstrap/css/bootstrap.min.css' type='text/css' media='all' />
+        <link rel='stylesheet' id='font-awesome-css'  href='assets/css/icons/font-awesome.min.css' type='text/css' media='all' />       
+        <link rel='stylesheet' id='swiper-css' href='assets/lib/swiper/css/swiper.min.css' type='text/css' media='all' />
+        <link rel='stylesheet' id='cubeportfolio-css'  href='assets/lib/cubeportfolio/css/cubeportfolio.min.css' type='text/css' media='all' />    
+        
+        <link rel='stylesheet' id='main-css'  href='style.css' type='text/css' media='all' />
+
+    </head>
+    <body class="single single-portfolio portfolio-details-top">
+
+        <div class="site-content-contain">
+            <div id="content" class="site-content">                    
+                <div id="primary" class="content-area">
+                    
+                    <main id="main" class="site-main" role="main">   
+                        <article class="page">                                
+                            <div class="entry-content">    
+                                <div class="container">
+                                    <div id="site-branding">			
+                                        <a class="logo-brand" href="../index.html">
+                                            <br><img class="logo" src="assets\I made it\logo_mj.png" alt="Logo">					                            
+                          				                            
+                                        </a>	
+                                    </div><!-- .site-branding -->  
+           
+                                </div><!-- .site-branding --> 
+                                <div class="container m-t-35"> 
+                                    <div class="row"> 
+                                        <div class="col-sm-12 col-md-12 col-lg-8">
+                                            <div class="heading-block text-left">
+                                                <h1 class="block-size-5">	
+                                                </h1>
+                                            </div>
+                                        </div>
+                                    </div>     
+                                </div>         
+                                
+
+                                <div class="container m-t-25 m-b-100">
+                                    <nav id="site-navigation" class="main-navigation" role="navigation" aria-label="Top Menu">
+                                        <ul id="top-menu" class="menu">
+                                            <li class="has-children"><a href="index.html">Go Back to Prior Page</a>
+                                                
+                                            </li>
+                                            <li class="has-children"><a href="../project.html">Go Back to Project</a>
+                                                
+                                            </li>      
+                                            <li class="has-children"><a href="../index.html">Go Back to Main</a>
+                                                
+                                            </li>                                       
+                                        </ul>	
+                                    </nav>
+
+                                <div class="container m-t-25 m-b-100">
+                                    <div class="row"> 
+                                        <div class="col-sm-12">
+                                            <div class="portfolio-wrap">
+
+
+                                                <div id="portfolio-container-grid" class="cbp" 
+                                                     data-loadmoreaction="click" data-loadnoofitems="1" data-layoutmode="grid" data-captionanimation="minimal" data-animationtype="fadeOut" 
+                                                     data-gaphorizontal="30" data-gapvertical="30" data-displaytype="default" data-large-desktop="4" data-tablet-landscape="4" data-tablet-portrait="2" data-mobile="1" 
+                                                     data-defaultfilter="*" >
+
+                                              
+
+
+
+                            </div>   
+                </div><!-- #primary -->                
+
+                <a id="gotoTop" href="#" class="scroll-top-link" data-easing="easeOutQuad" data-speed="700" ><i class="fa fa-angle-up"></i></a>
+
+            </div><!-- #content -->
+
+		
+            </header><!-- #masthead -->
+
+                    <img src="assets/I made it/10delaycatx.gif"  style="max-width: 500%; height: auto;">
+                    <p></p>
+                    <img src="assets/I made it/10delaycaty.gif"  style="max-width: 500%; height: auto;">
+                    <img src="assets/I made it/orangex.gif"  style="max-width: 500%; height: auto;">
+                    <p></p>
+                    <img src="assets/I made it/orangey.gif"  style="max-width: 500%; height: auto;">
+
+
+                 
+
+        
+
+
+
+                            <div class="container t-offset-20">
+                                <div class="row">
+                                    <div class="col-sm-12">
+
+                                        <article class="portfolio">
+
+                                            <header class="entry-header">	
+
+                                                <br><br><br><h2 class="entry-title">When Cats meet GANs</h2><br>
+                                                <h4>Summary</h4>
+                    
+                                                <div class="entry-meta">
+
+                                                    <div class="meta-desc">
+                                                        <p>
+                                                            This project is a practical exploration of Generative Adversarial Networks (GANs), 
+                                                            focusing on image synthesis through two distinct types of GAN architectures: Deep Convolutional GAN (DCGAN) and CycleGAN.<br>
+
+                                                            <br>First task is implementing and training a DCGAN to generate images of grumpy cats from random noise. 
+                                                            This involves crafting the generator and discriminator networks and setting up the training loop, with an emphasis on data augmentation to prevent overfitting due to the small dataset size. 
+                                                            Differentiable augmentations are also utilized to improve data efficiency and to help the discriminator generalize better.<br>
+                                                            
+                                                            <br>Second task shifts focus to CycleGAN, an architecture designed for image-to-image translation. 
+                                                            This task involves implement the CycleGAN for converting between images of different cat breeds and between fruits like apples and oranges. 
+                                                            The core of this model lies in its cycle consistency loss, 
+                                                            which ensures that an image translated from one domain to the other and back again should resemble the original image. 
+                                                            Extensive experiments will be conducted to compare the effects of including cycle consistency loss and the impact of different discriminators on the model's performance, 
+                                                            providing insight into the model's capabilities and limitations in synthesizing and transforming images.
+                                                            </p>
+                                                    </div>   
+
+                                                    
+
+
+
+                                                </div>
+
+                                
+
+                                                <br><br><br><h2>Deep Convolutional GAN</h2>
+                                                
+<p>
+    The Deep Convolutional GAN (DCGAN) aimed at generating cat images. 
+    It utilizes a generator architecture where a series of upsampling layers followed by convolutional layers replace the traditional transconvolutional layers. 
+    The generator begins with a latent vector z, drawn from a Gaussian distribution, 
+    and transforms it into a cat image. <br>
+
+    <h4>Data Augmentation</h4>
+    <p>
+        For training GANs effectively, particularly when working with limited datasets, 
+        it's crucial to integrate data augmentation techniques. 
+        These techniques help in introducing variability to the input images, 
+        thereby aiding in preventing the discriminator from memorizing the dataset and overfitting. 
+        In this project, a comprehensive data augmentation strategy, referred to as "deluxe," can be activated for any dataset by including the option --data_preprocess=deluxe in the training command. 
+        This advanced augmentation process is essential for enhancing model robustness and performance by broadening the range of input data variations the model is exposed to during training.
+        <br>On the other hand, the discriminator consists of convolutional layers designed to evaluate whether a given cat image is real or synthetically produced by the generator. 
+    This approach exemplifies a distinctive variation of the original GAN, incorporating convolutional layers not just to improve image generation fidelity but also to explore alternative architectural choices, 
+    specifically the substitution of transposed convolutions with a combination of upsampling and convolutional layers.</p>
+
+    <table style="border: 1px solid black; border-collapse: collapse;">
+        <tr>
+          <th style="border: 1px solid black;">Name</th>
+          <th style="border: 1px solid black;">Detail</th>
+        </tr>
+        <tr>
+          <td style="border: 1px solid black;">Resize</td>
+          <td style="border: 1px solid black;">Resize the input image to 1.1 times of its original size with BICUBIC interpolation.</td>
+        </tr>
+        <tr>
+          <td style="border: 1px solid black;">Random Crop</td>
+          <td style="border: 1px solid black;">Crop the given image centered at a random location to its original size.</td>
+        </tr>
+        <tr>
+          <td style="border: 1px solid black;">Random Flip</td>
+          <td style="border: 1px solid black;">Horizontally flip the given image randomly with a probability of 0.5.</td>
+        </tr>
+        <tr>
+          <td style="border: 1px solid black;">Color Jitter</td>
+          <td style="border: 1px solid black;">Adjust the brightness, contrast, saturation, and hue of the image with specified parameters.</td>
+        </tr>
+        <tr>
+          <td style="border: 1px solid black;">ToTensor</td>
+          <td style="border: 1px solid black;">Convert the image to a tensor.</td>
+        </tr>
+        <tr>
+          <td style="border: 1px solid black;">Normalize</td>
+          <td style="border: 1px solid black;">Normalize the image tensor with mean and standard deviation of 0.5 for all channels.</td>
+        </tr>
+      </table>
+
+      <br><h4>Differentiable Augmentation</h4>
+      <p>The paper "Differentialble Augmentation for Data-Efficient GAN Training" introduces a novel approach called differentiable augmentations, 
+        which can be applied to both authentic and generated images throughout the training. 
+        It utilizes a set of postprocess differentiable augmentations that enhance the learning process.
+        These augmentations include color adjustment, image translation, and cutout techniques. 
+        This method ensures that the model learns from a more diverse set of image transformations, potentially improving its generalization capabilities.</p>
+        <table style="border: 1px solid black; border-collapse: collapse;">
+            <tr>
+              <th style="border: 1px solid black;">Name</th>
+              <th style="border: 1px solid black;">Detail</th>
+            </tr>
+            <tr>
+              <td style="border: 1px solid black;">Color Jitter</td>
+              <td style="border: 1px solid black;">Randomly change the brightness, contrast, saturation of the image.</td>
+            </tr>
+            <tr>
+              <td style="border: 1px solid black;">Random Translation</td>
+              <td style="border: 1px solid black;">Randomly shift the image within the range 1/8 its original size.</td>
+            </tr>
+            <tr>
+              <td style="border: 1px solid black;">Random Cutout</td>
+              <td style="border: 1px solid black;">Randomly create a square in the image and replace it with gray color.</td>
+            </tr>
+          </table>
+          
+
+    <br><h4>Discriminator, Generator and Training Loop</h4>
+    <p>The Discriminator is structured as a convolutional neural network (CNN) and acts as a binary classifier. 
+        Its task is to distinguish between real images (from the dataset) and fake images (produced by the Generator). 
+        It achieves this by progressively reducing the spatial dimensions of the input image—this process is known as downsampling. 
+        The CNN does so through its layers by employing convolutions with strides greater than one. Specifically, in the DCGAN,
+         each convolutional layer in the Discriminator is designed to halve the input's width and height. 
+         This is typically accomplished by setting the stride of the convolution (S) to 2 and the kernel size (K) to 4.
+          With these settings, the appropriate padding must be calculated to ensure that the layer output has dimensions that are half the size of the input.<br>
+
+          <br>On the other side, the Generator is tasked with producing realistic images from random noise vectors. 
+        It starts with a low-resolution representation (often a flattened vector) and incrementally increases its spatial resolution, a process known as upsampling. 
+        In the modified DCGAN architecture, this is done by alternating upsampling layers with convolutional layers, which refine the upscaled image at each step. 
+        Unlike the Discriminator, which uses strides to downsample, the Generator uses the upsampling layers to increase the dimensions of the feature maps. 
+        Following each upsampling step, a convolutional layer is applied to the enlarged feature map to add complexity and detail, helping to shape the final image. 
+        The process culminates in the last layer where the image achieves its target size and detail level, ready to be evaluated by the Discriminator.
+        
+        Both architectures take advantage of layers like Instance Normalization and non-linear activation functions (ReLU in the Generator and LeakyReLU in the Discriminator) 
+        to stabilize training and allow for the generation of complex images. 
+        The final output of the Generator is typically passed through a tanh activation function to ensure the pixel values of the generated image are normalized.</p>
+        <h4>Padding Caculation</h4>
+        <p>The padding in a convolutional layer is generally used to control the spatial dimensions of the output volume. The formula to calculate the new height/width after applying a convolutional layer is:
+        output dimension = (input dimension - kernel size + 2 * padding) / stride + 1
+
+        <img src="assets\I made it\discriminator.png" alt="original image">
+
+        <br>For the first layer<br>
+        input:64
+        , output:32
+        , Kernel size = 4
+        , Stride =2<br>
+        so the formula is as follows:<br>
+        32 = (64-4+2*padding)/2+1<br>
+        62 = 64-4+2*padding<br>
+        2=2*padding<br>
+        padding =1<br>
+
+        For the second layer<br>
+        input:32
+        , output:16
+        , Kernel size = 4
+        , Stride =2<br>
+        16 = (32-4+2*padding)/2+1<br>
+        30 = 32-4+2*padding<br>
+        2=2*padding<br>
+        padding =1<br>
+        For conv3,4,5 with same process, we can find out that padding is 1
+    
+    </p>
+
+    <br><h4>Experiment with DCGANS</h4>
+    
+    <p>In the experiment focused on enhancing image diversity, the application of varying augmentations to the training dataset was important. 
+        These augmentations were specifically designed to be differentiable, allowing for a nuanced approach to modifying the training images. 
+        Techniques included adjustments to image attributes like brightness, saturation, and contrast, alongside spatial modifications such as random translations and the strategic removal of certain image portions.
+        <br>
+        <br>Standard augmentations, typically involving fixed transformations like rotation, flipping, and cropping, were straightforward to implement but lacked adaptability during the training process. 
+        These transformations, while effective in introducing basic variability, often led to a compromise in image quality, as observed in the slight blurriness of the augmented images. 
+        The rigid nature of standard augmentations meant they could inadvertently obscure critical features of the training data, affecting the learning process.<br>
+
+        <br>Conversely, differentiable augmentations introduced a layer of flexibility and complexity, applying a series of adaptable transformations that were computed as part of the model's learning process.
+        This approach included dynamic adjustments to brightness, saturation, and contrast, as well as sophisticated spatial modifications such as random translations and selective erasure of image parts. 
+        These augmentations were integrated into the training loop, allowing for gradient-based optimization that considered the effect of augmentations on the model's performance. 
+        As a result, differentiable augmentations not only enhanced the visual smoothness of the generated images but also promoted a more nuanced understanding of image diversity, 
+        as evidenced by the improved orientation variety.</p>
+        <h4>What the curves should look like if GAN manages to train.</h4>
+        <p>Discriminator Loss: <br>The discriminator's goal is to distinguish between real and fake images. 
+            At the start of training, since the generator is not good at producing realistic images, the discriminator's loss will decrease quickly 
+            because it can easily tell real images from the fake ones. 
+            However, as the generator improves, the discriminator's task becomes more difficult, and its loss starts to rise again. 
+            Eventually, if the GAN trains successfully, the discriminator's loss will oscillate around a value that suggests it is, on average,
+             equally likely to be correct or incorrect (e.g., 50% accuracy in a binary classification task), 
+             indicating that it's guessing, which is the ideal scenario as it means the generator is producing very realistic images.
+
+             <br><br>Generator Loss: <br>The generator's loss is based on how well it can fool the discriminator. 
+            Initially, this loss will be high because the generator's output is poor. As the generator learns to create more convincing images, this loss should decrease. 
+            In a well-trained GAN, the generator's loss will typically level out, but may not necessarily be low, as even strong generators can have a higher loss if 
+            the discriminator is also strong. The key is that the generator's loss should show signs of convergence, indicating that it has learned a stable distribution.
+            
+            In practice, the loss curves for GANs can be noisy and may not converge smoothly due to the adversarial dynamics. 
+            The generator and discriminator are in a continuous arms race, where improvements by one party lead to adjustments in the other. 
+            What's important is the overall trend towards convergence and the quality of images produced, rather than the specific loss values.
+            
+            To sum up, in a successfully trained GAN:
+            The discriminator loss would hover around a point of uncertainty, unable to reliably distinguish real from fake.
+            The generator loss would decrease and show convergence, indicating stable generation of realistic images.
+            The loss curves might be unstable and oscillate, reflecting the adversarial tug-of-war dynamic inherent to GAN training.</p>
+
+        <h5>Data_Preprocess=Basic without Differentiable Augmentation</h5>
+        <div class="image-grid">
+                                                    
+        <div class="image-item">
+     
+            <img src="assets\I made it\_Basic_D_loss.png" alt="이미지_설명">
+            <p>Discriminator loss function</p>
+  
+        </div>
+        <div class="image-item">
+            <img src="assets\I made it\_Basic_G_loss.png" alt="이미지_설명">
+            <p>Generator loss function</p>
+
+        </div>
+ 
+    </div>
+ 
+    <div class="image-grid">
+
+        <div class="image-item">
+            <img src="assets\I made it\no_basic_sample-000200.png"   alt="이미지_설명">
+            <p>200 epoch</p>
+         
+        </div>
+        <div class="image-item">
+            <img src="assets\I made it\no_basic_sample-010000.png"  alt="이미지_설명">
+            <p>10000 epoch</p>
+         
+        </div>
+
+    </div>
+    <h5>Data_Preprocess=Deluxe without Differentiable Augmentation</h5>
+
+    <div class="image-grid">
+                                                    
+        <div class="image-item">
+     
+            <img src="assets\I made it\_Deluxe_D_loss.png" alt="이미지_설명">
+            <p>Discriminator loss function</p>
+  
+        </div>
+        <div class="image-item">
+            <img src="assets\I made it\_Deluxe_G_loss.png" alt="이미지_설명">
+            <p>Generator loss function</p>
+        </div>
+ 
+    </div>
+ 
+    <div class="image-grid">
+
+        <div class="image-item">
+            <img src="assets\I made it\no_deluxe_sample-000200.png"   alt="이미지_설명">
+            <p>200 epoch</p>
+         
+        </div>
+        <div class="image-item">
+            <img src="assets\I made it\no_deluxe_sample-009800.png"  alt="이미지_설명">
+            <p>10000 epoch</p>
+         
+        </div>
+
+    </div>
+    <h5>Data_Preprocess=Basic with Differentiable Augmentation</h5>
+
+    <div class="image-grid">
+                                                    
+        <div class="image-item">
+     
+            <img src="assets\I made it\_aug_Basic_D_loss.png" alt="이미지_설명">
+            <p>Discriminator loss function</p>
+  
+        </div>
+        <div class="image-item">
+            <img src="assets\I made it\_aug_Basic_G_loss.png" alt="이미지_설명">
+            <p>Generator loss function</p>
+        </div>
+ 
+    </div>
+ 
+    <div class="image-grid">
+
+        <div class="image-item">
+            <img src="assets\I made it\sample-000200.png"   alt="이미지_설명">
+            <p>200 epoch</p>
+         
+        </div>
+        <div class="image-item">
+            <img src="assets\I made it\sample-010000.png"  alt="이미지_설명">
+            <p>10000 epoch</p>
+         
+        </div>
+
+    </div>
+    <h5>Data_Preprocess=Deluxe with Differentiable Augmentation</h5>
+    <p>The improvement in quality from the early to the later samples demonstrates the GAN's ability to refine its generative process over time. Initially, the network struggles to produce anything recognizable as it begins to understand the distribution of the data. As training progresses, the generator becomes more adept at producing samples that not only resemble the target domain but also exhibit a higher resolution and more accurate depiction of the subject matter, in this case, cat faces. The differentiable augmentation likely helps in this process by introducing more variability into the training, forcing the generator to become robust against a wider range of features and thus learning to produce more realistic images.</p>
+    <div class="image-grid">
+                                                    
+        <div class="image-item">
+     
+            <img src="assets\I made it\_aug_Deluxe_D_loss.png" alt="이미지_설명">
+            <p>Discriminator loss function</p>
+  
+        </div>
+        <div class="image-item">
+            <img src="assets\I made it\_aug_Deluxe_G_loss.png" alt="이미지_설명">
+            <p>Generator loss function</p>
+        </div>
+ 
+    </div>
+ 
+    <div class="image-grid">
+
+        <div class="image-item">
+            <img src="assets\I made it\deluxe_sample-000200.png"   alt="이미지_설명">
+            <p>200 epoch</p>
+         
+        </div>
+        <div class="image-item">
+            <img src="assets\I made it\deluxe_sample-010000.png"  alt="이미지_설명">
+            <p>10000 epoch</p>
+         
+        </div>
+    </div>
+
+    <p>
+        
+        The mix of these two augmentation schemes highlighted their distinct impacts.
+        While standard augmentations provided a foundational level of diversity, they did so at the cost of image clarity.
+        Differentiable augmentations, on the other hand, ensured high-quality, diverse outputs by embedding the augmentation process within the model's optimization, 
+        fostering a deeper and more adaptable learning experience. 
+        The optimal results were observed when these two methods were synergistically employed, 
+        leveraging the strengths of both to produce images of superior diversity and clarity. This blended approach demonstrated a significant advancement in overcoming the challenges of generating varied and high-fidelity images.</p>
+
+
+
+    <br><h2>CycleGan</h2>
+    <p> Differing from the traditional GANs, which rely on random noise to generate new images, the CycleGAN constructs new images by transforming an existing image from a source domain. 
+        This process is facilitated through three phases: encoding, transforming, and decoding. 
+        Initially, an image's attributes are distilled through convolutional layers. 
+        Subsequently, these attributes are reconfigured to match the target domain by passing through special residual blocks. 
+        The final image are made as the network reversely maps the transformed features into pixel data, using a series of upsampling in conjunction with convolutional layers.
+        
+       For the discriminator component of CycleGAN, which, instead of assessing an entire image, evaluates small sections of it. 
+        This allows for a granular understanding of the image's authenticity, enhancing the generated image's fidelity to local image structures.
+        
+        Training this architecture necessitates a pair of generators and discriminators for each domain translation direction. 
+        The generators convert images between domains, while the discriminators checks the authenticity of these translations, 
+        discerning real from synthetically altered image segments.<br>
+        <h5>Cycle Consistency Loss</h5>
+        For CycleGAN's loss functions, for discriminators, it involves identifying whether the image patches belong to their respective domains, 
+        while for generators, it entails the degree to which they can deceive the discriminators. 
+        A significant addition is the cycle consistency loss, which ensures that an image converted from domain A to B can be reverted back to A without loss of original detail, 
+        thus maintaining a logical symmetry in the transformations.
+        Therefore, the basic idea is that we translate an image from domain <strong>X</strong> to domain <strong>Y</strong>, and then translate the generated image back to domain <strong>X</strong>. The product should look like the original image that we started with. The cycle consistency component of the loss is the mean squared error between the input images and their reconstructions obtained by passing through both generators in sequence (i.e., from domain <strong>X</strong> to <strong>Y</strong> via the <strong>X → Y</strong> generator, and then from domain <strong>Y</strong> back to <strong>X</strong> via the <strong>Y → X</strong> generator). The cycle consistency for the <strong>Y → X → Y</strong> cycle is expressed as follows:
+
+
+        <br><br>Models were trained with varying configurations, including with and without cycle consistency on two different dataset. 
+        The cycle consistency was observed to enhance the translation quality, more so in the Apples to Oranges dataset, possibly due to the less varied nature of fruit compared to feline expressions.
+        The results indicated that discriminators evaluating sections of images, patch discriminators, outperformed the traditional design. 
+        They encouraged the generators to capture and replicate intricate details, 
+        avoiding the blurriness seen with other discriminators. 
+        This underlines the advantage of assessing local structure fidelity in image translations.
+        
+        </p>
+        
+        <h5>Cats Patch Loss With No Cycle Consistency Loss</h5>
+
+        <p>X-Y</p>
+        <div class="image-grid">
+                                                    
+            <div class="image-item">
+         
+                <img src="assets/I made it/sample-000100-X-Y.png" alt="이미지_설명">
+                <p>100 epoch</p>
+      
+            </div>
+            <div class="image-item">
+                <img src="assets/I made it/sample-001000-X-Y.png" alt="이미지_설명">
+                <p>1000 epoch</p>
+            </div>
+
+        </div>
+
+        <div class="image-grid">
+                                                    
+            <div class="image-item">
+         
+                <img src="assets/I made it/sample-005000-X-Y.png" alt="이미지_설명">
+                <p>5000 epoch</p>
+      
+            </div>
+            
+            <div class="image-item">
+                <img src="assets/I made it/sample-010000-X-Y.png" alt="이미지_설명">
+                <p>10000 epoch</p>
+            </div>
+     
+        </div>
+
+        <p>Y-X</p>
+                                                    
+        <div class="image-grid">
+                                                    
+            <div class="image-item">
+         
+                <img src="assets/I made it/sample-000100-Y-X.png" alt="이미지_설명">
+                <p>100 epoch</p>
+      
+            </div>
+            <div class="image-item">
+                <img src="assets/I made it/sample-001000-Y-X.png" alt="이미지_설명">
+                <p>1000 epoch</p>
+            </div>
+
+        </div>
+
+        <div class="image-grid">
+                                                    
+            <div class="image-item">
+         
+                <img src="assets/I made it/sample-005000-Y-X.png" alt="이미지_설명">
+                <p>5000 epoch</p>
+      
+            </div>
+            
+            <div class="image-item">
+                <img src="assets/I made it/sample-010000-Y-X.png" alt="이미지_설명">
+                <p>10000 epoch</p>
+            </div>
+     
+        </div>
+
+
+        <h5>Cats Patch Loss With Cycle Consistency Loss</h5>
+        <p>X-Y</p>
+        <div class="image-grid">
+                                                    
+            <div class="image-item">
+         
+                <img src="assets/I made it/cat_10deluxe_instance_patch_cycle_naive_cycle_withCL10000sample-000100-X-Y.png" alt="이미지_설명">
+                <p>100 epoch</p>
+      
+            </div>
+            <div class="image-item">
+                <img src="assets/I made it/cat_10deluxe_instance_patch_cycle_naive_cycle_withCL10000sample-001000-X-Y.png" alt="이미지_설명">
+                <p>1000 epoch</p>
+            </div>
+
+        </div>
+
+        <div class="image-grid">
+                                                    
+            <div class="image-item">
+         
+                <img src="assets/I made it/cat_10deluxe_instance_patch_cycle_naive_cycle_withCL10000sample-005000-X-Y.png" alt="이미지_설명">
+                <p>5000 epoch</p>
+      
+            </div>
+            
+            <div class="image-item">
+                <img src="assets/I made it/cat_10deluxe_instance_patch_cycle_naive_cycle_withCL10000sample-010000-X-Y.png" alt="이미지_설명">
+                <p>10000 epoch</p>
+            </div>
+     
+        </div>
+
+        <p>Y-X</p>
+                                                    
+        <div class="image-grid">
+                                                    
+            <div class="image-item">
+         
+                <img src="assets/I made it/cat_10deluxe_instance_patch_cycle_naive_cycle_withCL10000sample-000100-Y-X.png" alt="이미지_설명">
+                <p>100 epoch</p>
+      
+            </div>
+            <div class="image-item">
+                <img src="assets/I made it/cat_10deluxe_instance_patch_cycle_naive_cycle_withCL10000sample-001000-Y-X.png" alt="이미지_설명">
+                <p>1000 epoch</p>
+            </div>
+
+        </div>
+
+        <div class="image-grid">
+                                                    
+            <div class="image-item">
+         
+                <img src="assets/I made it/cat_10deluxe_instance_patch_cycle_naive_cycle_withCL10000sample-005000-Y-X.png" alt="이미지_설명">
+                <p>5000 epoch</p>
+      
+            </div>
+            
+            <div class="image-item">
+                <img src="assets/I made it/cat_10deluxe_instance_patch_cycle_naive_cycle_withCL10000sample-010000-Y-X.png" alt="이미지_설명">
+                <p>10000 epoch</p>
+            </div>
+     
+        </div>
+        <h5>With/without Cycle Consistency Loss</h5>
+        <p>Observing the provided images, there are noticeable differences between the results with cycle consistency loss and those without it. 
+            Here are the observations and the potential reasons why cycle consistency loss contributes to improved results
+
+            <br>1. The images generated with cycle consistency loss display a broader variety in terms of cat features and poses. 
+            The fur texture, color, and patterns are more distinct across different images. 
+            In contrast, the images without cycle consistency loss appear more homogeneous and less varied. 
+            This suggests that the cycle consistency loss encourages the model to learn a more comprehensive representation of the data distribution.
+            
+            <br>2. When cycle consistency loss is applied, the images not only exhibit diversity but also maintain realistic cat-like features. 
+            Without this loss, some images tend to lose characteristic features, such as the shape of the eyes or the alignment of the nose and mouth, 
+            indicating that the model may be disregarding key aspects of the cat's anatomy.
+            
+            <br>3. The sharpness and clarity of details such as fur, eyes, and whiskers are noticeably better in the images with cycle consistency loss. 
+            This loss component might be enforcing the generative model to better capture and reconstruct the intricate details of the input images, leading to clearer results.
+            
+            <br>4. The application of cycle consistency loss seems to reduce the number of artifacts and aberrations in the generated images. 
+            Without it, there's an increase in the occurrence of unrealistic patches or distortions, which detracts from the overall image quality.
+            
+            <br>The cycle consistency loss plays a critical role in cycleGANs by enforcing a bijective correspondence between the source and target domains. 
+            In essence, it ensures that the translation of an image to another domain (e.g., from Y to X) and then back again (from X to Y) will result in an image that is close to the original.
+            This constraint not only aids in preserving content during domain translation but also guides the model to generate diverse yet plausible images that conform to the target domain's distribution. 
+            Without this loss, the generators may produce images that look realistic in isolation but do not accurately reflect the variety and complexity of the true data distribution, 
+            leading to a more limited and potentially less realistic set of generated images.</p>
+
+        <h5>Cats Loss With Cycle Consistency Loss + DC_Discriminator</h5>
+        <p>X-Y</p>
+        <div class="image-grid">
+                                                    
+            <div class="image-item">
+         
+                <img src="assets/I made it/cat_10deluxe_instance_dc_cycle_naive_cyclesample-000100-X-Y.png" alt="이미지_설명">
+                <p>100 epoch</p>
+      
+            </div>
+            <div class="image-item">
+                <img src="assets/I made it/cat_10deluxe_instance_dc_cycle_naive_cyclesample-001000-X-Y.png" alt="이미지_설명">
+                <p>1000 epoch</p>
+            </div>
+
+        </div>
+
+        <div class="image-grid">
+                                                    
+            <div class="image-item">
+         
+                <img src="assets/I made it/cat_10deluxe_instance_dc_cycle_naive_cyclesample-005000-X-Y.png" alt="이미지_설명">
+                <p>5000 epoch</p>
+      
+            </div>
+            
+            <div class="image-item">
+                <img src="assets/I made it/cat_10deluxe_instance_dc_cycle_naive_cyclesample-010000-X-Y.png" alt="이미지_설명">
+                <p>10000 epoch</p>
+            </div>
+     
+        </div>
+
+        <p>Y-X</p>
+                                                    
+        <div class="image-grid">
+                                                    
+            <div class="image-item">
+         
+                <img src="assets/I made it/cat_10deluxe_instance_dc_cycle_naive_cyclesample-000100-Y-X.png" alt="이미지_설명">
+                <p>100 epoch</p>
+      
+            </div>
+            <div class="image-item">
+                <img src="assets/I made it/cat_10deluxe_instance_dc_cycle_naive_cyclesample-001000-Y-X.png" alt="이미지_설명">
+                <p>1000 epoch</p>
+            </div>
+
+        </div>
+
+        <div class="image-grid">
+                                                    
+            <div class="image-item">
+         
+                <img src="assets/I made it/cat_10deluxe_instance_dc_cycle_naive_cyclesample-005000-Y-X.png" alt="이미지_설명">
+                <p>5000 epoch</p>
+      
+            </div>
+            
+            <div class="image-item">
+                <img src="assets/I made it/cat_10deluxe_instance_dc_cycle_naive_cyclesample-010000-Y-X.png" alt="이미지_설명">
+                <p>10000 epoch</p>
+            </div>
+     
+        </div>
+        <h5>DCDiscriminator and PatchDiscriminator</h5>   
+        <p>1. DCDiscriminator:<br>
+
+            The DCDiscriminator seems to produce images that are somewhat uniform in appearance. 
+            The details are not as sharp, and there is a lack of fine texture and definition in features like fur and eyes.
+            This discriminator evaluates the image as a whole, which can sometimes lead to a generalization that misses the subtleties of smaller image regions. 
+            Consequently, this might result in generated images that lack local feature diversity.<br>
+            <br>2. PatchDiscriminator:<br>
+            The use of PatchDiscriminator leads to images with sharper details and more nuanced textural features. 
+            The fur, eyes, and other facial features are more defined and varied.
+            PatchDiscriminator works by assessing smaller patches of the image, which enables it to focus on finer details. 
+            This type of discriminator is known for encouraging higher fidelity in localized image features, 
+            which can contribute to the overall realism of the generated images.
+            The PatchDiscriminator, often used in Pix2Pix and CycleGAN models, is particularly effective at ensuring that small, distinct sections of the image are realistic. 
+            This is essential for tasks requiring high detail over small areas, like generating facial features of cats, as seen in the images.
+        
+            <h5>apple2orange Patch Loss Without Cycle Consistency Loss</h5>
+
+            <p>X-Y</p>
+            <div class="image-grid">
+                                                        
+                <div class="image-item">
+             
+                    <img src="assets/I made it/apple2orange_10deluxe_instance_patch_cycle_naivesample-000100-X-Y.png" alt="이미지_설명">
+                    <p>100 epoch</p>
+          
+                </div>
+                <div class="image-item">
+                    <img src="assets/I made it/apple2orange_10deluxe_instance_patch_cycle_naivesample-001000-X-Y.png" alt="이미지_설명">
+                    <p>1000 epoch</p>
+                </div>
+    
+            </div>
+    
+            <div class="image-grid">
+                                                        
+                <div class="image-item">
+             
+                    <img src="assets/I made it/apple2orange_10deluxe_instance_patch_cycle_naivesample-005000-X-Y.png" alt="이미지_설명">
+                    <p>5000 epoch</p>
+          
+                </div>
+                
+                <div class="image-item">
+                    <img src="assets/I made it/apple2orange_10deluxe_instance_patch_cycle_naivesample-010000-X-Y.png" alt="이미지_설명">
+                    <p>10000 epoch</p>
+                </div>
+         
+            </div>
+    
+            <p>Y-X</p>
+                                                        
+            <div class="image-grid">
+                                                        
+                <div class="image-item">
+             
+                    <img src="assets/I made it/apple2orange_10deluxe_instance_patch_cycle_naivesample-000100-Y-X.png" alt="이미지_설명">
+                    <p>100 epoch</p>
+          
+                </div>
+                <div class="image-item">
+                    <img src="assets/I made it/apple2orange_10deluxe_instance_patch_cycle_naivesample-001000-Y-X.png" alt="이미지_설명">
+                    <p>1000 epoch</p>
+                </div>
+    
+            </div>
+    
+            <div class="image-grid">
+                                                        
+                <div class="image-item">
+             
+                    <img src="assets/I made it/apple2orange_10deluxe_instance_patch_cycle_naivesample-005000-Y-X.png" alt="이미지_설명">
+                    <p>5000 epoch</p>
+          
+                </div>
+                
+                <div class="image-item">
+                    <img src="assets/I made it/apple2orange_10deluxe_instance_patch_cycle_naivesample-010000-Y-X.png" alt="이미지_설명">
+                    <p>10000 epoch</p>
+                </div>
+         
+            </div>
+        
+        
+            <h5>apple2orange Patch Loss With Cycle Consistency Loss</h5>
+
+            <p>X-Y</p>
+            <div class="image-grid">
+                                                        
+                <div class="image-item">
+             
+                    <img src="assets/I made it/apple2orange_10deluxe_instance_patch_cycle_naive_cyclesample-000100-X-Y.png" alt="이미지_설명">
+                    <p>100 epoch</p>
+          
+                </div>
+                <div class="image-item">
+                    <img src="assets/I made it/apple2orange_10deluxe_instance_patch_cycle_naive_cyclesample-001000-X-Y.png" alt="이미지_설명">
+                    <p>1000 epoch</p>
+                </div>
+    
+            </div>
+    
+            <div class="image-grid">
+                                                        
+                <div class="image-item">
+             
+                    <img src="assets/I made it/apple2orange_10deluxe_instance_patch_cycle_naive_cyclesample-005000-X-Y.png" alt="이미지_설명">
+                    <p>5000 epoch</p>
+          
+                </div>
+                
+                <div class="image-item">
+                    <img src="assets/I made it/apple2orange_10deluxe_instance_patch_cycle_naive_cyclesample-010000-X-Y.png" alt="이미지_설명">
+                    <p>10000 epoch</p>
+                </div>
+         
+            </div>
+    
+            <p>Y-X</p>
+                                                        
+            <div class="image-grid">
+                                                        
+                <div class="image-item">
+             
+                    <img src="assets/I made it/apple2orange_10deluxe_instance_patch_cycle_naive_cyclesample-000100-Y-X.png" alt="이미지_설명">
+                    <p>100 epoch</p>
+          
+                </div>
+                <div class="image-item">
+                    <img src="assets/I made it/apple2orange_10deluxe_instance_patch_cycle_naive_cyclesample-001000-Y-X.png" alt="이미지_설명">
+                    <p>1000 epoch</p>
+                </div>
+    
+            </div>
+    
+            <div class="image-grid">
+                                                        
+                <div class="image-item">
+             
+                    <img src="assets/I made it/apple2orange_10deluxe_instance_patch_cycle_naive_cyclesample-005000-Y-X.png" alt="이미지_설명">
+                    <p>5000 epoch</p>
+          
+                </div>
+                
+                <div class="image-item">
+                    <img src="assets/I made it/apple2orange_10deluxe_instance_patch_cycle_naive_cyclesample-010000-Y-X.png" alt="이미지_설명">
+                    <p>10000 epoch</p>
+                </div>
+         
+            </div>
+            <h5>apple2orange Patch Loss With/without Cycle Consistency Loss</h5>
+            <p>Without cycle consistency loss:<br>
+
+                The images exhibit less structural coherence, with more noticeable artifacts and distortions. This
+                results in a chaotic appearance, where the shapes and textures of fruits are not well-preserved.
+                
+                <br>The absence of cycle consistency loss means there is less emphasis on ensuring that an input image, once transformed to another domain and back, 
+                retains its original features. As a consequence, there’s a higher likelihood of generating images that are misaligned with the source domain’s characteristics.
+                The images seem to have lost the distinct features that classify them accurately as fruits. 
+                There’s a blending of colors and patterns that do not correspond to the typical appearance of fruits, such as oranges or apples.
+                <br><br>With cycle consistency loss:<br>
+                
+                The images maintain more accurate structures and recognizable fruit features. The consistency loss acts as a regularizing agent, encouraging the network to preserve key attributes of the fruit, such as shape, texture, and color, even after domain translation.
+                The generative model with cycle consistency loss produces images with a clearer resemblance to the target domain, reducing the occurrence of artifacts and maintaining the integrity of the original subject matter.
+                There is a noticeable improvement in the clarity and distinctness of individual fruits. For example, the textures and reflections on apples and the segmentation on oranges are more defined, which suggests a more faithful reconstruction of the fruit features.
+                
+                <br><br>Cycle consistency loss is integral to the success of image-to-image translation tasks, especially in the context of generating realistic and diverse images from a given dataset. The cycle consistency loss ensures that the learned transformation is reversible, leading to a more disciplined mapping between the source and the target domains. This reversibility is crucial in preserving the contextual and textural details of the images, which is clearly demonstrated in the enhanced quality of images generated with cycle consistency loss. It's this additional constraint that forces the model to pay closer attention to the preservation of identifiable features during the translation process, yielding results that are not just visually appealing but also contextually accurate.</p>
+
+            <h5>apple2orange Loss With Cycle Consistency Loss + DC_Discriminator</h5>
+
+            <p>X-Y</p>
+            <div class="image-grid">
+                                                        
+                <div class="image-item">
+             
+                    <img src="assets/I made it/apple2orange_10deluxe_instance_dc_cycle_naive_cyclesample-000100-X-Y.png" alt="이미지_설명">
+                    <p>100 epoch</p>
+          
+                </div>
+                <div class="image-item">
+                    <img src="assets/I made it/apple2orange_10deluxe_instance_dc_cycle_naive_cyclesample-001000-X-Y.png" alt="이미지_설명">
+                    <p>1000 epoch</p>
+                </div>
+    
+            </div>
+    
+            <div class="image-grid">
+                                                        
+                <div class="image-item">
+             
+                    <img src="assets/I made it/apple2orange_10deluxe_instance_dc_cycle_naive_cyclesample-005000-X-Y.png" alt="이미지_설명">
+                    <p>5000 epoch</p>
+          
+                </div>
+                
+                <div class="image-item">
+                    <img src="assets/I made it/apple2orange_10deluxe_instance_dc_cycle_naive_cyclesample-010000-X-Y.png" alt="이미지_설명">
+                    <p>10000 epoch</p>
+                </div>
+         
+            </div>
+    
+            <p>Y-X</p>
+                                                        
+            <div class="image-grid">
+                                                        
+                <div class="image-item">
+             
+                    <img src="assets/I made it/apple2orange_10deluxe_instance_dc_cycle_naive_cyclesample-000100-Y-X.png" alt="이미지_설명">
+                    <p>100 epoch</p>
+          
+                </div>
+                <div class="image-item">
+                    <img src="assets/I made it/apple2orange_10deluxe_instance_dc_cycle_naive_cyclesample-001000-Y-X.png" alt="이미지_설명">
+                    <p>1000 epoch</p>
+                </div>
+    
+            </div>
+    
+            <div class="image-grid">
+                                                        
+                <div class="image-item">
+             
+                    <img src="assets/I made it/apple2orange_10deluxe_instance_dc_cycle_naive_cyclesample-005000-Y-X.png" alt="이미지_설명">
+                    <p>5000 epoch</p>
+          
+                </div>
+                
+                <div class="image-item">
+                    <img src="assets/I made it/apple2orange_10deluxe_instance_dc_cycle_naive_cyclesample-010000-Y-X.png" alt="이미지_설명">
+                    <p>10000 epoch</p>
+                </div>
+         
+            </div>
+            <h5>DCDiscriminator vs PatchDiscriminator</h5>
+            <p>With the DCDiscriminator, the results tend to have a more global consistency but often lack fine details. The DCDiscriminator evaluates images at a larger scale and can sometimes miss finer nuances due to its broader focus. This might result in a smoother but less detailed image, which could be observed in the first two images where there’s an apparent lack of texture and edge definition.
+
+                On the other hand, the PatchDiscriminator looks at smaller regions within the image. This allows it to capture more detailed and localized features, leading to the generation of more complex and textured images. The last two images demonstrate this with sharper edges and more defined textural details. Fruits appear to have more realistic surfaces, and variations in lighting and shadow are more pronounced. However, focusing on small patches can sometimes result in less global coherence, and without proper balancing, it could lead to patchy or noisy images.
+                
+                In terms of implementation, the DCDiscriminator is generally simpler and has fewer parameters to learn, making it potentially faster and easier to train but at the cost of detailed generation. The PatchDiscriminator, while potentially more complex with more parameters, can better understand and replicate finer details within the image, often resulting in more realistic textures and patterns.
+                
+                The more defined texture and variety in the images that employ PatchDiscriminator suggest that it's better suited for tasks where detail is crucial, such as in high-resolution image generation or when fine features are important for the image's realism. The DCDiscriminator might be more appropriate for datasets where the main structure is more important than the fine details, or perhaps where the training data itself is limited in variation or detail.</p>
+    
+            <h5>GIF video</h5>       
+                <div class="image-grid">
+                                                        
+                    <div class="image-item">
+                 
+                        <img src="assets/I made it/10delaycaty.gif" alt="이미지_설명">
+                        <p>CAT X: Patch Loss With Cycle Consistency Loss</p>
+              
+                    </div>
+                
+                <div class="image-item">
+                        <img src="assets/I made it/10delaycatx.gif" alt="이미지_설명">
+                        <p>CAT Y: Patch Loss With Cycle Consistency Loss</p>
+                    </div>
+             
+                </div>
+
+                <div class="image-grid">
+                                                        
+                    <div class="image-item">
+                 
+                        <img src="assets/I made it/orangex.gif" alt="이미지_설명">
+                        <p>APPLE2ORANGE X: Patch Loss With Cycle Consistency Loss</p>
+              
+                    </div>
+                
+                <div class="image-item">
+                        <img src="assets/I made it/orangey.gif" alt="이미지_설명">
+                        <p>APPLE2ORANGE Y: Patch Loss With Cycle Consistency Loss</p>
+                    </div>
+             
+                </div>
+
+                </div><!-- #content -->
+
+                <footer id="footer" class="site-footer standard" role="contentinfo">
+                    <div class="container">
+                        <div class="site-info">			
+                            <p class="copyright">
+                                © Minhyek Jeon	
+                            </p>
+                        </div>    
+                           
+
+                    </div>            
+                </footer>
+
+            </div> <!-- .site-content-contain -->        
+
+        </div>    
+        <!-- Page Wrapper Ends -->
+
+        <!--  Scripts -->
+        <script type='text/javascript' src='assets/js/vendor/jquery-1.12.4.min.js'></script>
+        <script type='text/javascript' src='assets/js/vendor/TweenMax.min.js'></script>        
+        <script type='text/javascript' src='assets/js/vendor/headsup.min.js'></script>        
+        <script type='text/javascript' src='assets/js/vendor/jquery.easing.min.1.3.js'></script>      
+        <script type='text/javascript' src='assets/lib/cubeportfolio/js/jquery.cubeportfolio.min.js'></script>
+        <script type='text/javascript' src='assets/lib/swiper/js/swiper.min.js'></script>        
+
+        <script type='text/javascript' src='assets/js/main.js'></script>       
+        <!--  Scripts Ends -->
+    </body>
+</html>

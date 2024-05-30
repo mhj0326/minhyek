@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <!-- Document Title -->      
+        <title>Minhyek Jeon | Gradient Domain Fusion</title>
+
+        <!-- Metas -->      
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="author" content="CaliberThemes" />
+
+        <!-- Favicon -->      
+        <link rel="icon" type="image/png" href="assets/images/favicon.png" />
+
+        <!-- Links -->      
+        <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700&subset=latin,latin-ext" rel="stylesheet" type="text/css" />
+        <link rel='stylesheet' id='bootstrap-css'  href='assets/lib/bootstrap/css/bootstrap.min.css' type='text/css' media='all' />
+        <link rel='stylesheet' id='font-awesome-css'  href='assets/css/icons/font-awesome.min.css' type='text/css' media='all' />       
+        <link rel='stylesheet' id='swiper-css' href='assets/lib/swiper/css/swiper.min.css' type='text/css' media='all' />
+        <link rel='stylesheet' id='cubeportfolio-css'  href='assets/lib/cubeportfolio/css/cubeportfolio.min.css' type='text/css' media='all' />    
+        
+        <link rel='stylesheet' id='main-css'  href='style.css' type='text/css' media='all' />
+
+    </head>
+    <body class="single single-portfolio portfolio-details-top">
+
+        <div class="site-content-contain">
+            <div id="content" class="site-content">                    
+                <div id="primary" class="content-area">
+                    
+                    <main id="main" class="site-main" role="main">   
+                        <article class="page">                                
+                            <div class="entry-content">    
+                                <div class="container">
+                                    <div id="site-branding">			
+                                        <a class="logo-brand" href="../index.html">
+                                            <br><img class="logo" src="assets\I made it\logo_mj.png" alt="Logo">					                            
+                          				                            
+                                        </a>	
+                                    </div><!-- .site-branding -->  
+           
+                                </div><!-- .site-branding --> 
+                                <div class="container m-t-35"> 
+                                    <div class="row"> 
+                                        <div class="col-sm-12 col-md-12 col-lg-8">
+                                            <div class="heading-block text-left">
+                                                <h1 class="block-size-5">	
+                                                </h1>
+                                            </div>
+                                        </div>
+                                    </div>     
+                                </div>         
+                                
+
+                                <div class="container m-t-25 m-b-100">
+                                    <nav id="site-navigation" class="main-navigation" role="navigation" aria-label="Top Menu">
+                                        <ul id="top-menu" class="menu">
+                                            <li class="has-children"><a href="index.html">Go Back to Prior Page</a>
+                                                
+                                            </li>
+                                            <li class="has-children"><a href="../project.html">Go Back to Project</a>
+                                                
+                                            </li>      
+                                            <li class="has-children"><a href="../index.html">Go Back to Main</a>
+                                                
+                                            </li>                                       
+                                        </ul>	
+                                    </nav>
+
+                                <div class="container m-t-25 m-b-100">
+                                    <div class="row"> 
+                                        <div class="col-sm-12">
+                                            <div class="portfolio-wrap">
+
+
+                                                <div id="portfolio-container-grid" class="cbp" 
+                                                     data-loadmoreaction="click" data-loadnoofitems="1" data-layoutmode="grid" data-captionanimation="minimal" data-animationtype="fadeOut" 
+                                                     data-gaphorizontal="30" data-gapvertical="30" data-displaytype="default" data-large-desktop="4" data-tablet-landscape="4" data-tablet-portrait="2" data-mobile="1" 
+                                                     data-defaultfilter="*" >
+
+                                              
+
+
+
+                            </div>   
+                </div><!-- #primary -->                
+
+                <a id="gotoTop" href="#" class="scroll-top-link" data-easing="easeOutQuad" data-speed="700" ><i class="fa fa-angle-up"></i></a>
+
+            </div><!-- #content -->
+
+		
+            </header><!-- #masthead -->
+
+
+
+                            <div class="container t-offset-20">
+                                <div class="row">
+                                    <div class="col-sm-12">
+
+                                        <article class="portfolio">
+
+                                            <header class="entry-header">	
+
+                                                <h2 class="entry-title">Gradient Domain Fusion</h2>
+                    
+                                                <div class="entry-meta">
+
+                                                    <div class="meta-desc">
+                                                        <p>
+                                                            Gradient-domain processing is a powerful technique with a wide array of applications in image processing, such as seamless blending,
+                                                             dynamic range adjustment, and stylized rendering effects. 
+                                                             Among its various methods, Poisson blending stands out as a particularly effective approach for integrating elements from one image into another 
+                                                             without the harsh edges that a simple cut-and-paste technique would produce. This project will delve into the intricacies of Poisson blending, 
+                                                             along with a brief exploration of its applications in tone mapping and non-photorealistic rendering.
+                                                            </p>
+                                                    </div>   
+
+                                                    
+
+
+
+                                                </div>
+                                                <img src="assets\I made it\poissondistribution.png" alt="original image">
+                                
+                                
+
+                                                <div class="meta-desc">
+                                                    <p>Poisson blending is based on the principle of manipulating the gradient fields of images. Instead of directly transferring pixel values from a source image to a target image, Poisson blending calculates the gradient (the change in intensity) of the source image and applies these changes to the target. This method focuses on blending the images in such a way that the transitions between them are smooth and seamless.
+
+                                                        The core idea behind Poisson blending is to solve a Poisson equation that aims to preserve the gradient of the source image while conforming to the boundary conditions set by the target image. The result is a harmonious integration of the source into the target, with edges and textures blending smoothly without the abrupt transitions characteristic of simpler methods.</p>
+                                                </div> 
+
+                                                <h2>Poisson Blending: Mathematical Framework</h2>
+                                                
+<p>The Poisson blending process involves solving an optimization problem that aims to blend the source and target images seamlessly. The optimization function can be described as follows:</p>
+
+<code>v = argmin<sub>v</sub> Σ<sub>i∈S,j∈N<sub>i</sub>∩S</sub> ((v<sub>i</sub> - v<sub>j</sub>) - (s<sub>i</sub> - s<sub>j</sub>))<sup>2</sup> + Σ<sub>i∈S,j∈N<sub>i</sub>∩¬S</sub> ((v<sub>i</sub> - t<sub>j</sub>) - (s<sub>i</sub> - s<sub>j</sub>))<sup>2</sup></code>
+
+<ul>
+  <li><code>v</code> represents the pixel values in the blended image we are trying to find.</li>
+  <li><code>S</code> is the set of pixels in the source image's region we wish to blend.</li>
+  <li><code>N<sub>i</sub></code> is the set of neighboring pixels around pixel <code>i</code>.</li>
+  <li><code>v<sub>i</sub></code> and <code>v<sub>j</sub></code> are the pixel values in the blended image at positions <code>i</code> and <code>j</code>, respectively.</li>
+  <li><code>s<sub>i</sub></code> and <code>s<sub>j</sub></code> are the pixel values in the source image at positions <code>i</code> and <code>j</code>, respectively.</li>
+  <li><code>t<sub>j</sub></code> is the pixel value in the target image at position <code>j</code>.</li>
+  <li><code>¬S</code> represents the region outside of <code>S</code>, the complement of the source region.</li>
+</ul>
+
+<ol>
+  <li>The first term ensures that the difference in gradients between neighboring pixels within the source region in the blended image (<code>v<sub>i</sub> - v<sub>j</sub></code>) is similar to that in the source image (<code>s<sub>i</sub> - s<sub>j</sub></code>).</li>
+  <li>The second term ensures that the pixel values at the boundary of the source region in the blended image match the corresponding pixel values in the target image, allowing for a seamless transition.</li>
+</ol>
+
+
+
+                                          
+                                                <h2>Toy Problem</h2>
+                                                <div class="meta-desc">
+                                                    <br><img src="assets\I made it\toy.png" alt="이미지_설명" style="max-width: 80%; height: auto;"><br>
+
+                                                    <p>The toy problem in gradient domain processing is a fundamental technique used to understand how to manipulate image gradients for tasks like image blending. It involves calculating the gradients in the x and y directions from a source image and using these gradients to reconstruct an image.</p>
+<p>The source image is denoted by s(x,y) and the target image by v(x,y). The task is to solve for v(x,y) such that it maintains the gradient of s while also adhering to certain constraints.</p>
+<ol>
+  <li>Minimize the difference in x-gradients between v and s which can be written as v(x+1, y) - v(x, y) \approx s(x+1, y) - s(x, y) .</li>
+  <li>Minimize the difference in y-gradients between v and s written as v(x, y+1) - v(x, y) \approx s(x, y+1) - s(x, y) .</li>
+  <li>Ensure the top left corners of v and s have the same color, adding the constraint v(1, 1) = s(1, 1).</li>
+</ol>
+
+                                                    
+
+                                                    <p>
+                                                        These constraints are set up as a least squares problem which can be mathematically represented and solved using linear algebra. The least squares approach will find the pixel values for image v that best fit the gradient constraints taken from image s.
+
+The implementation involves setting up a system of equations Av = b, where A is a matrix representing the gradient constraints, v is the vectorized form of the image to be solved, and b is a known vector derived from the gradients of s. This system can be solved using numerical methods such as the least squares solver in NumPy's linear algebra package.
+
+Once you solve for v, you can reshape this vector back into the form of an image and see if the reconstructed image v matches the original source image s. If the reconstruction is correct, you will have effectively demonstrated how to manipulate and reconstruct images in the gradient domain.
+                                                        </p>
+                                                        
+                                                </div>
+
+
+                                                <h2>Poisson Blending</h2>
+                                                <p>The overall process of Poisson Blending is as follows:</p>
+
+                                                <ol>
+                                                    <li>
+                                                        <strong>Preparation of the Mask:</strong> Convert the mask to a boolean array to indicate which pixels to blend.
+                                                    </li>
+                                                    <li>
+                                                        <strong>Mapping Pixels to Variables:</strong> Each pixel within the mask is mapped to a variable in a linear system.
+                                                    </li>
+                                                    <li>
+                                                        <strong>Setting Up the System of Equations:</strong> A sparse matrix system is created to solve for pixel values.
+                                                    </li>
+                                                    <li>
+                                                        <strong>Calculating the Divergence:</strong> The divergence of the gradient at each pixel is calculated and set in the system.
+                                                    </li>
+                                                    <li>
+                                                        <strong>Boundary Conditions:</strong> Target image values are used for boundary pixels to ensure a seamless blend.
+                                                    </li>
+                                                    <li>
+                                                        <strong>Solving the Linear System:</strong> The sparse system is solved to find the optimal blended pixel values.
+                                                    </li>
+                                                    <li>
+                                                        <strong>Reconstructing the Image:</strong> The solved pixel values are inserted back into the target image.
+                                                    </li>
+                                                    <li>
+                                                        <strong>Result:</strong> The final blended image with a smooth transition is produced.
+                                                    </li>
+                                                </ol>
+
+                                                <p>Some of the results are as follows:</p>
+
+
+                                                <p>Example Image</p>
+
+
+
+                                                <div class="image-grid">
+                                                    
+                                                    <div class="image-item">
+                                                 
+                                                        <img src="assets\I made it\source_01.jpg" alt="이미지_설명">
+                                                        <p>Source Image</p>
+                                              
+                                                    </div>
+                                                    <div class="image-item">
+                                                        <img src="assets\I made it\target_01.jpg" alt="이미지_설명">
+                                                        <p>Target Image</p>
+                                                    </div>
+                                                    <div class="image-item">
+                                                        <img src="assets\I made it\posisson_blend.png"  style="max-width: 2000%; height: auto;" alt="이미지_설명">
+                                                     
+                                                    </div>
+                                                </div>
+                                                <p>Favorite Image</p>
+
+                                                <div class="image-grid">
+                                                    <div class="image-item">
+                                                 
+                                                        <img src="assets\I made it\charlie.jpeg" alt="이미지_설명">
+                                                        <p>Source Image</p>
+                                              
+                                                    </div>
+                                                    <div class="image-item">
+                                                        <img src="assets\I made it\cafe.jpg" alt="이미지_설명">
+                                                        <p>Target Image</p>
+                                                    </div>
+                                                    <div class="image-item">
+                                                        <img src="assets\I made it\charlie.png"  style="max-width: 2000%; height: auto;" alt="이미지_설명">
+                                                
+                                                    </div>
+                                                </div>
+                                                <div class="image-grid">
+                                                    <div class="image-item">
+                                                 
+                                                        <img src="assets\I made it\sister2.png" alt="이미지_설명">
+                                                        <p>Source Image</p>
+                                              
+                                                    </div>
+                                                    <div class="image-item">
+                                                        <img src="assets\I made it\bear.jpg" alt="이미지_설명">
+                                                        <p>Target Image</p>
+                                                    </div>
+                                                    <div class="image-item">
+                                                        <img src="assets\I made it\sister.png"  style="max-width: 2000%; height: auto;" alt="이미지_설명">
+                                                
+                                                    </div>
+                                                </div>
+                                                <p>Failed Image</p>
+                                                <div class="image-grid">
+                                                    <div class="image-item">
+                                                 
+                                                        <img src="assets\I made it\obama.jpg" alt="이미지_설명">
+                                                        <p>Source Image</p>
+                                              
+                                                    </div>
+                                                    <div class="image-item">
+                                                        <img src="assets\I made it\penguine.jpeg" alt="이미지_설명">
+                                                        <p>Target Image</p>
+                                                    </div>
+                                                    <div class="image-item">
+                                                        <img src="assets\I made it\obama_blend.png"  style="max-width: 2000%; height: auto;" alt="이미지_설명">
+                                                
+                                                    </div>
+                                                </div>
+                                                <h2>Unsuccessful Poisson Blending: Potential Causes</h2>
+                                                <p>Several factors could contribute to the unsuccessful blending observed in Poisson Blending:</p>
+                                                <ul>
+                                                    <li><strong>Incorrect Masking:</strong> Poisson blending requires an accurate mask that defines the region of the source image to be blended. If the mask is not correctly defined, the algorithm may not interpret which gradients to match correctly, leading to a poor blend.</li>
+                                                    <li><strong>Gradient Mismatch:</strong> The Poisson algorithm relies on the assumption that the gradients of the source and target can be matched smoothly. Significant differences in gradient fields due to lighting or texture might prevent the algorithm from finding a solution that blends the images naturally.</li>
+                                                    <li><strong>Boundary Conditions:</strong> If boundary conditions are not correctly enforced or if the region where the source and target meet is not well-defined, the algorithm may fail to produce a result that aligns well with the target image.</li>
+                                                
+                                                    <li><strong>Image Content and Complexity:</strong> The content of the images being blended can affect the outcome. Blending a complex object into a complex background may not be as seamless as blending a simple object into a uniform background.</li>
+                                                    <li><strong>Algorithm Limitations:</strong> Poisson blending may struggle with scenarios where there is a vast difference in color intensity ranges between the source and target images, potentially causing blending artifacts or color distortions.</li>
+                                                </ul>
+                                                
+
+                                                
+
+
+                                                <h2>Mixed Gradient Belnding</h2>  
+                                                <div class="meta-desc">
+                                                    
+<p>Mixed Gradients Blending is an image processing technique that refines the concept of Poisson blending by selectively using the largest gradient magnitude from either the source or the target image to guide the blending process.</p>
+
+<p>The process aims to minimize the squared differences between the blended image gradients and the larger gradients from the source or target. The mathematical expression is as follows:</p>
+<code>v = argmin_v ∑ (|∇v - d_ij|)^2</code>
+<p>where <code>d_ij</code> is the gradient chosen from the source or the target image at each pixel.</p>
+
+<p>The selection of gradients is based on their magnitude, favoring the gradient that has the higher magnitude between the source and target images. This decision is made for each pixel, ensuring that the most dominant features are preserved in the blending process.</p>
+<pre>
+if abs(∇s_i - ∇s_j) > abs(∇t_i - ∇t_j):
+    d_ij = ∇s_i - ∇s_j
+else:
+    d_ij = ∇t_i - ∇t_j
+</pre>
+<p>This technique provides several benefits:</p>
+<ul>
+    <li>It preserves sharp features and ensures smooth transitions by selectively choosing gradients.</li>
+    <li>The blending often appears more natural by accommodating texture and lighting variations.</li>
+    <li>It's particularly effective when blending images with plain backgrounds into more textured scenes.</li>
+</ul>
+<p>Mixed Blend result:</p>
+                                                    
+                                                    
+<img src="assets\I made it\mixed_blend.png" alt="이미지_설명">
+
+                                                <h2>Color2Gray</h2> 
+<p>Converting color images to grayscale is a common process, but standard methods like MATLAB's rgb2gray can result in the loss of important contrast information. This makes details harder to distinguish, particularly when the image is used in different contexts, such as printing.</p>
+
+
+<p>The goal is to create a grayscale image that maintains the intensity levels of a standard rgb2gray output but retains the contrast present in the original color image. This task is akin to a tone-mapping problem, often encountered when converting High Dynamic Range (HDR) images for display on standard RGB screens.</p>
+
+
+<p>Gradient-domain processing offers a solution. By examining the gradients of the image, particularly in the HSV (Hue, Saturation, Value) color space, we can address the contrast issue. This approach involves:</p>
+<ul>
+    <li>Converting the color image to HSV space.</li>
+    <li>Analyzing the gradients in the Value channel, which corresponds to the image's intensity.</li>
+    <li>Approaching the conversion as a mixed gradients problem to preserve both the grayscale intensity and the contrast of the original image.</li>
+</ul>
+
+<p>To implement this technique:</p>
+<ol>
+    <li>Transform the image into the HSV color space.</li>
+    <li>Examine the gradient in each channel, focusing on the Value channel for intensity information.</li>
+    <li>Utilize the gradient information to guide the conversion, ensuring that the intensity is maintained while enhancing contrast where necessary.</li>
+</ol>
+
+<p>This method ensures that important visual details are retained, making the grayscale image more understandable and closer to the perception of the original color version.</p>
+<p>color2gray result:</p>
+
+
+                                                <img src="assets\I made it\color2gray.png" alt="이미지_설명">
+
+
+                                                    
+
+                                                    
+                                                        
+                                                </div>
+
+                                                
+
+
+                </div><!-- #content -->
+
+                <footer id="footer" class="site-footer standard" role="contentinfo">
+                    <div class="container">
+                        <div class="site-info">			
+                            <p class="copyright">
+                                © Minhyek Jeon	
+                            </p>
+                        </div>    
+                           
+
+                    </div>            
+                </footer>
+
+            </div> <!-- .site-content-contain -->        
+
+        </div>    
+        <!-- Page Wrapper Ends -->
+
+        <!--  Scripts -->
+        <script type='text/javascript' src='assets/js/vendor/jquery-1.12.4.min.js'></script>
+        <script type='text/javascript' src='assets/js/vendor/TweenMax.min.js'></script>        
+        <script type='text/javascript' src='assets/js/vendor/headsup.min.js'></script>        
+        <script type='text/javascript' src='assets/js/vendor/jquery.easing.min.1.3.js'></script>      
+        <script type='text/javascript' src='assets/lib/cubeportfolio/js/jquery.cubeportfolio.min.js'></script>
+        <script type='text/javascript' src='assets/lib/swiper/js/swiper.min.js'></script>        
+
+        <script type='text/javascript' src='assets/js/main.js'></script>       
+        <!--  Scripts Ends -->
+    </body>
+</html>

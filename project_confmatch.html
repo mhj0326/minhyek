@@ -1,0 +1,923 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <!-- Document Title -->      
+        <title>Minhyek Jeon | Cross Fusion After Alignment
+            Drug-Target Affinity Prediction</title>
+
+        <!-- Metas -->      
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="author" content="CaliberThemes" />
+
+        <!-- Favicon -->      
+        <link rel="icon" type="image/png" href="assets\I made it\logo_mj.png" />
+
+        <!-- Links -->      
+        <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700&subset=latin,latin-ext" rel="stylesheet" type="text/css" />
+        <link rel='stylesheet' id='bootstrap-css'  href='assets/lib/bootstrap/css/bootstrap.min.css' type='text/css' media='all' />
+        <link rel='stylesheet' id='font-awesome-css'  href='assets/css/icons/font-awesome.min.css' type='text/css' media='all' />       
+        <link rel='stylesheet' id='swiper-css' href='assets/lib/swiper/css/swiper.min.css' type='text/css' media='all' />
+        <link rel='stylesheet' id='cubeportfolio-css'  href='assets/lib/cubeportfolio/css/cubeportfolio.min.css' type='text/css' media='all' /> 
+
+        <link rel='stylesheet' id='main-css'  href='style.css' type='text/css' media='all' />
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+        <script id="MathJax-script" async
+        src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+        <style>
+            table {
+                width: 100%;
+                border-collapse: collapse;
+            }
+            th, td {
+                border: 1px solid black;
+                padding: 8px;
+                text-align: center;
+            }
+            th {
+                background-color: #f2f2f2;
+            }
+            caption {
+                font-weight: bold;
+                margin: 10px 0;
+            }
+        </style>
+
+        <style>
+            .image-container {
+                text-align: left;
+                margin: 20px;
+            }
+            .caption {
+                font-size: 16px;
+                color: #555;
+            }
+        </style>
+
+    </head>
+    <body class="single single-portfolio portfolio-details-top">
+
+        <!-- Page Wrapper -->
+        <div id="page" class="site">
+            <header id="masthead" class="site-header standard sticky" role="banner">		
+                <div class="container">
+                    <div id="site-branding">			
+                        <a class="logo-brand" href="index.html">
+                            <img class="logo" src="assets\I made it\logo_mj.png" alt="Logo">					                            
+                            <img class="retina-logo" src="assets\I made it\logo_mj.png" alt="Retina Logo">					                            
+                        </a>	
+                    </div><!-- .site-branding -->
+                    <span id="ham-trigger-wrap">
+                        <span class="ham-trigger">
+                            <span></span>                            
+                        </span>                            
+                    </span>
+                    <nav id="site-navigation" class="main-navigation" role="navigation" aria-label="Top Menu">
+                        <ul id="top-menu" class="menu">
+                            <li class="has-children"><a href="index.html">Home</a>
+                                
+                            </li>
+                            <li class="has-children"><a href="project.html">Project</a>
+                                
+                            </li>
+                            <li class="has-children"><a href="experience.html">Experience</a>
+                                
+                                
+                            </li>
+                            <li class="has-children"><a href="publication.html">Publication</a>
+                                
+                                
+                            </li>
+                            <li class="has-children"><a href="awards.html">Others</a>
+                                
+                            </li>
+                            
+                        </ul>	
+                    </nav>
+                                             
+                </div><!-- .wrap -->
+
+                
+	
+            </header><!-- #masthead -->
+
+            <div class="site-content-contain">
+                <div id="content" class="site-content">                 
+                    <div id="primary" class="content-area">
+                        <!-- Portfolio Filter -->
+                        
+                        <main id="main" class="site-main" role="main">        
+                            <div class="container t-offset-20">
+                                <div class="row">
+                                    <div class="col-sm-12">
+
+                                        <article class="portfolio">
+
+                                            <header class="entry-header">
+                                                
+
+                                                <h2>ConfMatch: Confidence-guided Matching</h2>
+                                                
+
+                                    
+                                                
+
+            
+                                             
+
+                                                
+                                                <h4>Summary</h4>
+                                                <p>Despite recent advances in semantic correspondence models, these models generally follow supervised learning objectives using sparse keypoint annotations. Recently, some methods suggested unsupervised approaches, including synthetic warp or pseudo-labeling, to provide effective means of leveraging unlabeled data. However, since they generally predict a single match for each pixel without any confidence measure, they struggle to handle occlusions and background clutter, which are significant challenges in the semantic matching task. In light of this, we propose a matching framework, called ConfMatch, which estimates confidence of pseudo-matching probabilities using our novel confidence estimation network architecture in a semi-supervised manner. The confidence estimation network, consisting of confidence feature extraction network and a confidence classifier, generates trainable confidence measures by fusing multi-modal confidence features. The proposed ConfMatch achieves a new state-of-the-art on semantic matching benchmarks among recent approaches with different degree of supervision.</p>
+
+                                                
+                                                    
+                                                <div class="image-container">
+                                                    <img src="assets/I made it/conf1.png" alt="Description of the image" width="700" >
+                                                    <div class="caption">Figure 1: Overview of the proposed architecture</div>
+                                                </div>
+
+
+                                                
+                                                <h4>1. Introduction</h4>
+                                                <p>Despite recent advances in semantic correspondence models, these models generally follow supervised learning objectives using sparse keypoint annotations. Recently, some methods suggested unsupervised approaches, including synthetic warp or pseudo-labeling, to provide effective means of leveraging unlabeled data. However, since they generally predict a single match for each pixel without any confidence measure, they struggle to handle occlusions and background clutter, which are significant challenges in the semantic matching task. In light of this, we propose a matching framework, called ConfMatch, which estimates confidence of pseudo-matching probabilities using our novel confidence estimation network architecture in a semi-supervised manner. The confidence estimation network, consisting of confidence feature extraction network and a confidence classifier, generates trainable confidence measures by fusing multi-modal confidence features. The proposed ConfMatch achieves a new state-of-the-art on semantic matching benchmarks among recent approaches with different degree of supervision.</p>
+
+                                                <h4>2. Related Work</h4>
+                                                <h5>Semantic Correspondence</h5>
+                                                <p>Semantic correspondence is employed in finding dense correspondence between images which depicts different instances of a same object or scene category. Recent methods outmaneuver conventional methods by adopting a convolutional neural network (CNN) based architecture. However, supervised settings often fail to provide sufficient key points and resulted in inadequate supervision. The trained model blunders in detecting holistic perspective, which causes overfitting in local regions and creates bias.</p>
+                                                <p>Currently various methods have focused on combining unsupervised training strategies to surmount the requirements of large volumes of labeled correspondences. Combined with supervised models, unsupervised methods outperformed existing frameworks. To guarantee the qualities of generated labels, confidence measures are applied in the framework. Nevertheless, confidence measures have drawbacks because it is non-trainable and leverage handcrafted keypoints.</p>
+                                                <p>Self-supervised methods exploit synthetically warped versions of image and cast the task as an image alignment problem. Other methods utilize pseudo labels which use the model’s prediction itself between a pair of images.</p>
+                                                
+                                                <h5>Semi-Supervised Learning</h5>
+                                                <p>Semi-supervised learning provides measures of leveraging unlabeled data to ameliorate performance of model in cases where only limited labeled data are available. For this task, numerous methods were proposed such as consistency regularization. and they also include pseudo-labeling, which a model uses unlabeled samples with high confidence as training targets by exploiting the predicted class on inputs. Confidence-based strategy has readily been used in semi-supervised learning along with pseudo labeling to reduce the density of data points at the decision boundary and curtail the entropy of the prediction. It is utilized to such an extent that unlabeled data are employed only when confidence of predictions are sufficient.</p>
+                                                <p>However, network discrepancy between the confidence level of individual predictions and its overall accuracy leads to noisy training and poor generalization. Current methods generally address frameworks that directly use network output as confidence. But research on how to learn the confidence of pseudo-labels has not been conducted. In this work, we therefore set out to design an architecture to address aforementioned task.</p>
+                                                
+                                                <h5>Stereo Confidence Estimation</h5>
+                                                <p>Machine learning approaches which rely on shallow classifiers, e.g., random tree, enable the model to classify correct and incorrect pixels. However, traditional confidence measures showed subpar performance on challenging elements such as repeated patterns, textureless regions, reflective surfaces and occlusions. As Deep convolutional neural network (CNN)-based approaches have become a mainstream, various methods that use the single- or bi-modal input, e.g., disparity, left and right disparities, 3D matching cost, 3D matching cost and disparity, color image and disparity have been introduced. Kim et al. made full use of the tri-modal input in conjunction with locally adaptive attention and scale networks, and achieved state-of-the-art prediction accuracy. All of these techniques require ground truth depth maps and are utilized to refine a depth (or disparity) map with a fixed threshold which is set empirically. Poggi et al. introduced a method for learning self-supervised confidence measure with various criterion.</p>
+
+                                                                                            
+
+                                                <h4>3. Methodology</h4>
+    
+                                                <h5>3.1 Motivation and Overview</h5>
+                                                <p>Dense matching of the given pair of semantically similar images, i.e., a source image \(I_s\) and a target image \(I_t\), aims to estimate pixel-by-pixel correspondence between the two images. In general, learning-based methods extract features \(F_s, F_t \in \mathbb{R}^{h \times w \times d}\) from the given images, where \(h \times w\) and \(d\) represents spatial resolution and the number of channels, respectively. Then using, the cost volume is computed such that \(C(i, j) = F_s(i)^T F_t(j)\) for points \(i \in \{1, \ldots, h_s w_s\}\) and \(j \in \{1, \ldots, h_t w_t\}\). Recent approaches refine the initial matching similarities to achieve the aggregated cost \(A(i, j)\) by using cost aggregation networks, because initial cost volume is only susceptible to repeated or textureless regions. In this setting, we consider a matching probability by normalizing the cost volume through a simple Softmax function, such that \(\hat{P}(i) = p(I_s, I_t(i); \theta) \in \mathbb{R}^{h_s w_s \times 1}\) with the network parameters \(\theta\) is defined across all the points in \(I_s\) for point \(i\) in \(I_t\).</p>
+                                                <p>For semantic correspondence, usually only sparsely-annotated ground-truths \(P_{gt}(i)\) are available. Using this, the supervised loss function is defined such that</p>
+                                                <p>\[
+                                                L_{sup} = \sum_{i} m(i)D(p(I_s, I_t(i); \theta), P_{gt}(i)),
+                                                \]</p>
+                                                <p>where \(D(\cdot, \cdot)\) is the distance function. However, due to the significant cost of labeling data, and impaired performance from sparse annotations, supervised methods may provide the limited performance. To overcome this, other methods presented a self-supervised learning framework, by using synthetic matching pairs using geometric warping on a single image. It seems to be an appealing alternative to the lack of large-scale ground-truth labels, but it does not consider the appearance variations between synthetically-warped images, which is the key factor in semantic correspondence.</p>
+                                                <p>Motivated by recent semi-supervision literature in image classification, SemiMatch attempted to employ pseudo-labeling to learn a matching model on a large number of unlabeled pixels with few labeled pixels between images by exploiting the difference of difficulty in matching given image \(I_s\) with the weakly augmented \(\alpha(I_t)\), and the strongly augmented \(G(\alpha(I_t))\), where \(\alpha(\cdot)\) and \(A(\cdot)\) represent photometric augmentations, and \(G(\cdot)\) represents geometric augmentation with a randomly-defined warping field \(\phi\), e.g., generated by affine or thin-plate-spline (TPS). The unsupervised loss function is then defined as</p>
+                                                <p>\[
+                                                L_{un-sup} = -\sum_{i} m(i) \log \left( \frac{\exp(p(I_s(i'), G(I_t(i); \theta)/\gamma)}{\sum_{j} \exp(p(I_s(j), G(I_t(j); \theta)/\gamma)} \right), 
+                                                \]</p>
+                                                <p>where the pseudo label \(P_{pl}(i) = G(p(I_s, \alpha(I_t(i)); \phi)\). Those geometrically-warped correspondences of weak pairs act as pseudo labels for the correspondences strong pairs, and \(m(i)\) is a confidence of \(P_{pl}(i)\).</p>
+                                                <p>In order to overcome the confirmation bias presented by poorly annotated pseudo-labels, following earlier confidence-aware semi-supervised approaches in image classification, SemiMatch leverages a handcrafted confidence measure for \(m(i)\) defined as an intersection of. However, many recent literature pointed out relying on handcrafted confidence measures may not be ideal for detecting unreliable pixels in more complex scenes. Hand-crafted measures such as stereo matching, is extremely vulnerable to the domain shift from synthetic to real. The most recent trend in confidence of pseudo labels, on the other hand, have attempted to estimate the confidence directly from data. Following these works, we reformulate SemiMatch to exploit a learnable confidence measure to improve confidence estimation of the pseudo labels for more stable training.</p>
+                                                
+                                                <div class="image-container">
+                                                    <img src="assets/I made it/conf2.png" alt="Description of the image" width="700" >
+                                                    <div class="caption">Figure 2: Overview of the proposed confidence estimation architecture.Our confidence estimation
+                                                        network architectures consist of the confidence feature extraction network and the confidence classifier
+                                                        network.</div>
+                                                </div>
+                                                <h5>3.2 Learning Confidence for Pseudo Dense Correspondence</h5>
+                                                <p>The main issue of applying pseudo-labels for matching tasks is that erroneous pseudo-labels is much more detrimental to performance compared to similar methods used in image classification, due to its dense prediction nature. Even compared to similar tasks such as stereo matching, semantic correspondence requires much more carefully designed features and more global context, due to its lack of conditions on the similarity of source and target images. Even though SemiMatch leverages a confidence mask that excepts pseudo-labels with low confidence during training, its employment of an inflexible hand-crafted measure and dependence on single images as input makes the confidence mask ineffective. In addition, given the matching probability \(\hat{P}(i)\) for pixel \(i\), perhaps the most straightforward way to estimate the confidence is to utilize a maximal value of \(\hat{P}(i)\) as done in. However, this simple confidence is very sensitive to outliers. To address this, our proposed ConfMatch present a learnable confidence estimation network tailored for consistency regularization in semantic confidence estimation.</p>
+                                                <p>Driven by the recent success of confidence measures in stereo matching literature, we present a novel trainable confidence estimation network to measure confidence of each pixel-level pseudo-labels generated in ConfMatch. The confidence estimation network \(p_c\), first extracts a set of features by a Confidence Feature Extractor \(z\), and pass the concatenated confidence features to a Confidence Classifier \(h\), where the output is considered as a confidence of matching probability through a sigmoid function. Confidence of each matches is estimated by fully exploiting a tri-modal input, consisting of a target feature map \(F_t\), an aggregated matching cost \(A\), and a correspondence map \(M\) estimated from \(A\). The intuition behind this is that such tri-modal input allows for considering heterogeneous confidence features. We use separate feature extraction parameters \((\theta_F, \theta_A, \theta_M\) for each modality, to obtain individual confidence features \(X_F = z(F; \theta_F), X_A = z(A; \theta_A), X_M = z(M; \theta_M)\), which complement each other for enhanced semantic feature representations. In practice, we design the feature extraction networks \(z(\cdot; \theta_F)\) and \(z(\cdot; \theta_M)\) as linear layers, and \(z(\cdot; \theta_A)\) as an 1 × 1 convolution.</p>
+                                                <p>In addition, we build the confidence classifier \(h(\cdot; \theta_c)\) upon a Transformer, which is renowned for its global receptive field. While confidence estimation for stereo utilizes CNNs to identify local patterns, more global reasoning on diverse set of features can improve the matching prediction, especially for tasks with larger scale and geometric variations as semantic matching. We leverage a Transformer followed by a linear layer to discover global consensus of the concatenated intermediate confidence features \(\Pi(X_F, X_A, X_M)\) by considering each global context information, where \(\Pi(\cdot)\) is a concatenation operator.</p>
+                                                <p>To summarize, the confidence measure \(c(i)\) of pixel \(i\) is defined as follows:</p>
+                                                <p>\[
+                                                c(i) = h(\Pi(X_F, X_A, X_M); \theta_c)
+                                                \]</p>
+                                                <p>The confidence estimation network for confidence matching is illustrated in Fig. 2.</p>
+
+                                                <h4>3.3 Loss Functions</h4>
+                                                <p>We propose loss functions for learning matching networks and confidence estimation networks, each using two kinds of supervision, e.g. supervised and semi-supervised loss.</p>
+                                                <h5>Losses for Matching</h5>
+                                                <p>For supervised training of semantic matching, given a set of sparse ground-truth keypoints \(P_{GT}\), in order to take into account only the pixels with ground-truth available for supervision, we utilize a binary indicator for representing the existence of ground-truth at the given pixel, such that \(mk(i) = 1[ I_t(i) \in P_{GT} ]\). While any distance function can be used, following the common practice, \(L_{sup}\) is defined as the L2 distance such that</p>
+                                                <p>\[
+                                                L_{sup} = \sum_{i} mk(i) [ \xi(p(I_s, I_t(i); \theta)) - \xi(P_{GT}(i)) ]
+                                                \]</p>
+                                                <p>where \(\xi(\cdot)\) is denoted as general max function including soft argmax and hard argmax.</p>
+                                                <p>As sparse ground-truths are not enough for learning dense matching, by leveraging confidence from a trained confidence estimation network, we also train the network under the guidance of pseudo-labels whose estimated confidence fall above a predefined threshold \(\tau\). With another binary indicator \(mc(i) = 1[ c(i) \ge \tau ]\), the unsupervised matching loss \(L_{unsup}\) is constructed upon a contrastive loss function such that,</p>
+                                                <p>\[
+                                                L_{unsup} = -\sum_{i} mc(i) \log \left( \frac{\exp(p(I_s(i'), G(I_t(i); \theta)/\gamma)}{\sum_{j} \exp(p(I_s(j), G(I_t(j); \theta)/\gamma)} \right), 
+                                                \]</p>
+                                                <p>where \(G = G(A(I_t); \phi), i'\) and \(j\) represent the locations in source image, respectively, \(i'\) is determined as \(\xi(P(i))\), and \(\gamma\) is the temperature hyper-parameter.</p>
+                                                
+                                                <h5>Losses for Confidence Estimation</h5>
+                                                <p>Unlike other dense-level downstream tasks using trainable confidence estimation where per-pixel GT confidence maps are available, the only ground-truth confidence that can be used in semantic correspondence for semantic correspondence is the sparse ground-truth keypoints for each image-pair. Thus, the supervised loss for confidence estimation \(L_{conf-sup}\) can be defined as a binary cross-entropy</p>
+                                                <p>\[
+                                                L_{conf-sup} = -\sum_{i} mk(i) [ Q_{conf} \log (c(i)) + (1 - Q_{conf} ) \log (1 - c(i)) ] 
+                                                \]</p>
+                                                <p>The confidence estimation networks are trained by the matching probabilities from \(\theta_{freeze}\) with a stop gradient. The intuition behind is that during the confidence network training, we just want to make the network learn the confidence itself, rather than collapsing to trivial solution to learn the matching network simultaneously. We can define the binary GT confidence label \(Q_{conf}\) using the distance difference between the predicted correspondence map \(M\) and the GT correspondence map \(M_{GT}\) which are generated by the general argmax function on the matching probabilities. We thus formulate the objective function as</p>
+                                                <p>\[
+                                                Q_{conf} = 
+                                                \begin{cases} 
+                                                1, & \text{if } \| M - M_{gt} \|_2 \le \alpha_r \cdot \max(w_r, h_r) \\ 
+                                                0, & \text{otherwise}
+                                                \end{cases}
+                                                \]</p>
+                                                <p>where \(w_r, h_r\) are the weight and height of object bounding box, \(\alpha_r\) is a tolerance factor.</p>
+                                                <p>To complement the limited ground-truth for supervised training, we also exploit a self-supervised framework designed in a similar fashion by replacing the image pairs \(\{I_s, I_t\}\) with synthetic pairs \(\{I_t, G(I_t; \phi) \}\) generated by a random geometric transformations \(\phi\). The self-supervised loss for confidence estimation \(L_{conf-unsup}\) is formulated as same as \(L_{conf-sup}\), but without the binary indicator, as guidance for all pixels are available with synthetically warped pairs.</p>
+                                                <p>The total loss for confidence estimation networks can be defined as \(L_{conf} = L_{conf-sup} + L_{conf-unsup}\)</p>
+                                                
+                                                <h4>Total Loss</h4>
+                                                <p>Our total loss \(L_{total} = L_{sup} + \lambda L_{unsup} + L_{conf}\) where \(\lambda\) is a weight that is adaptively determined by the ratio between \(L_{sup}\) and \(L_{unsup}\) such that \(\lambda = L_{sup}^{*} / L_{unsup}^{*}\), where \(L^{*}\) is the loss value itself and no back propagation happens.</p>
+                                                
+                                                <h5>3.4 Stage-Wise Training</h5>
+                                                <p>Even though our framework can be trained in an end-to-end manner, we further propose a stage-wise training strategy to boost the convergence of training. This stage-wise training consists of three stages, 1) pre-training for the matching networks, 2) pre-training for the confidence estimator networks, and 3) fine-tuning for both matching networks and confidence estimator networks. Specifically, we first warm-up the matching networks by solely using \(L_{total}\). And then, we train the confidence estimator networks based on the outputs of the pre-trained matching networks based on \(L_{conf-total}\). As mentioned in, this kind of simple technique highly boosts the convergence to discriminate confident and unconfident outputs from the networks. Finally, we fine-tune all the networks with \(L_{total} + L_{conf-total}\). We empirically demonstrate the effectiveness of the stage-wise training by achieving the state-of-the-art results on standard benchmark datasets.</p>
+
+    
+                                                <div class="image-container">
+                                                    <img src="assets/I made it/conf3.png" alt="Description of the image" width="700" >
+                                                    <div class="caption">Figure 3: Comparison of qualitative results on PF-PASCAL. The point-to-point matches are
+                                                        drawn by linking key point pairs with line segments. Green and red line denotes correct and wrong
+                                                        prediction, respectively, with respect to the ground-truth.</div>
+                                                </div>
+                                                <h4>Experiemental Results</h4>
+                                                <h5>4.1 Implementation Details</h5>
+    <p>We integrate our approach into the state-of-the-art network, CATs and used the same corresponding hyper-parameters for a fair comparison. For dense correspondence, semi-supervised learning is processed when the model's prediction for weak augmented pairs coincides with strong augmented pairs. On account of the deviation in difficulty to learn for each dataset, we trained our confidence estimation network using different hyper-parameters for each benchmark. Concretely, to generate the confidence GT labels, we set \(\alpha_r\) for supervised loss and self-supervised loss as 0.1 and 0.05 for PF-PASCAL, and 0.15 and 0.1 for SPair. Only pseudo labels are used for correspondences with confidence values that surpass the threshold \(\gamma = 0.7\). Additional details for the experiments are provided in the supplementary materials. The code and pretrained weights will be made publicly available.</p>
+    
+    <h5>4.2 Experimental Settings</h5>
+    <p>In this section, we comprehensively evaluate our approach for semantic correspondence by comparisons to state-of-the-art methods including unsupervised setting, supervised setting, and the combination of supervised and unsupervised methods. Additionally, each component of our framework is analyzed and compared to other confidence loss functions in section 4.4. We conduct extensive experiments on three datasets for semantic correspondence: PF-Pascal, PF-Willow, and SPair-71K and follows data split as in. For evaluation, we employ the standard metric, Percentage of Correct Keypoints (PCK), computed as the ratio of estimated keypoints within a threshold from ground-truths to the number of keypoints. All models are trained on an NVIDIA RTX 3090 GPU platform.</p>
+    
+    <h5>4.3 Results</h5>
+    <p>We conducted our experiments in the same network architecture as the baseline to compute the performance improvement of our proposed framework distinctively, following the common evaluation protocol of. Table 1 summarizes quantitative results on PF-PASCAL, PF-Willow, and SPair-71k. The results of ConfMatch clearly show that the proposed method sets new state-of-the-art results on all the three benchmarks, proving the effectiveness of our approach. We record state-of-the-art results with 81.0%/93.6%/97.1% PCK @ 0.05, PCK @ 0.1 and PCK @ 0.15 for PF-PASCAL. We also show the best performance with 54.2% PCK @ 0.05 on PF-WILLOW and 51.8% PCK @ 0.1 on SPair-71k dataset, respectively. We also summarize per-class PCK with results of other recent methods in Table 2.</p>
+    <p>In comparison with the supervised methods (S) in the middle sections of Table 1, ConfMatch, CATs with fine-tuning feature backbone and our proposed confidence estimation networks in semi-supervised setting, clearly outperforms the previous state of the art results of supervised models, including our baseline, CATs. ConfMatch outperforms CATs by 6.3% and 5.6% PCK@0.05 on PF-PASCAL depending on fine-tuning feature backbone. In particular, while bringing improvements on the PF-PASCAL dataset itself, our approach ConfMatch most notably achieves widely better generalization properties, with impressive 3.8%/3.9%, 3.1%/2.0%, 2.5%/1.5% and 7.4%/1.9% absolute gains compared to CATs on PF-WILLOW (\(\alpha = 0.05, 0.1, 0.15\), and SPair-71K (\(\alpha = 0.1\)), respectively. This result clearly shows that a large amount of pseudo-labels with our trainable confidence measures provide information on neighboring keypoints that cannot be provided by sparse GT keypoints.</p>
+    <p>In the comparison with the semi-supervised methods (S+U), integrating supervised setting and unsupervised settings, in the bottom sections of Table 1, our model also achieves the state of the art results, outperforming both self-supervision and pseudo-labeling on all the three benchmarks.</p>
+    
+    <table>
+        <caption>Table 1: PCK performance comparison obtained by different state-of-the-art methods on standard benchmarks. Numbers in bold indicate the best performance and underlined ones are the second best. S denotes supervised model using keypoint match annotations, U is fully unsupervised requiring only single images, and S+U refers to semi-supervised model using both supervised and unsupervised supervision. CATs† means without fine-tuning feature backbone.</caption>
+        <thead>
+            <tr>
+                <th>Sup.</th>
+                <th>Methods</th>
+                <th>PF-PASCAL<br>PCK @ \(\alpha_{img}\)</th>
+                <th>PF-WILLOW<br>PCK @ \(\alpha_{bbox}\)</th>
+                <th>SPair-71K<br>PCK @ \(\alpha_{bbox}\)</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>U</td>
+                <td>CNNGeo</td>
+                <td>41.0 / 69.5 / 84.6</td>
+                <td>39.6 / 69.2 / 78.9</td>
+                <td>20.6</td>
+            </tr>
+            <tr>
+                <td>U</td>
+                <td>GLU-Net</td>
+                <td>42.2 / 69.1 / 83.1</td>
+                <td>39.1 / 67.5 / 72.9</td>
+                <td>20.0</td>
+            </tr>
+            <tr>
+                <td>U</td>
+                <td>Semantic-GLU-Net</td>
+                <td>48.3 / 72.5 / 88.1</td>
+                <td>39.7 / 67.5 / 82.1</td>
+                <td>16.5</td>
+            </tr>
+            <tr>
+                <td>U</td>
+                <td>A2Net</td>
+                <td>43.8 / 70.9 / 85.7</td>
+                <td>37.4 / 65.8 / 82.4</td>
+                <td>20.1</td>
+            </tr>
+            <tr>
+                <td>U</td>
+                <td>PMD</td>
+                <td>- / 80.5 / -</td>
+                <td>- / 73.4 / -</td>
+                <td>-</td>
+            </tr>
+            <tr>
+                <td>S</td>
+                <td>UCN</td>
+                <td>36.2 / 72.2 / 82.0</td>
+                <td>32.2 / 66.2 / 75.2</td>
+                <td>17.7</td>
+            </tr>
+            <tr>
+                <td>S</td>
+                <td>SCNet</td>
+                <td>60.1 / 84.4 / 92.5</td>
+                <td>40.2 / 75.0 / 84.9</td>
+                <td>28.6</td>
+            </tr>
+            <tr>
+                <td>S</td>
+                <td>HPF</td>
+                <td>60.1 / 84.4 / 92.5</td>
+                <td>40.2 / 75.0 / 84.9</td>
+                <td>28.6</td>
+            </tr>
+            <tr>
+                <td>S</td>
+                <td>SCOT</td>
+                <td>78.7 / 91.0 / 94.5</td>
+                <td>49.8 / 86.1 / 92.4</td>
+                <td>40.0</td>
+            </tr>
+            <tr>
+                <td>S</td>
+                <td>CHMNet</td>
+                <td>80.1 / 91.6 / 94.9</td>
+                <td>52.7 / 79.4 / 87.5</td>
+                <td>46.3</td>
+            </tr>
+            <tr>
+                <td>S</td>
+                <td>PMD</td>
+                <td>- / 90.5 / -</td>
+                <td>- / 75.6 / -</td>
+                <td>-</td>
+            </tr>
+            <tr>
+                <td>S</td>
+                <td>MMNet</td>
+                <td>77.6 / 91.0 / 94.5</td>
+                <td>49.4 / 79.6 / 87.5</td>
+                <td>40.3</td>
+            </tr>
+            <tr>
+                <td>S</td>
+                <td>DHPF</td>
+                <td>75.7 / 91.5 / 95.0</td>
+                <td>47.5 / 80.6 / 89.6</td>
+                <td>42.8</td>
+            </tr>
+            <tr>
+                <td>S</td>
+                <td>CATs</td>
+                <td>67.5 / 89.1 / 91.4</td>
+                <td>46.6 / 80.7 / 87.5</td>
+                <td>42.4</td>
+            </tr>
+            <tr>
+                <td>S</td>
+                <td>CATs†</td>
+                <td>75.4 / 92.6 / 96.4</td>
+                <td>54.3 / 83.3 / 90.3</td>
+                <td>49.9</td>
+            </tr>
+            <tr>
+                <td>S+U</td>
+                <td>PWarpC-CATs†</td>
+                <td>64.9 / 87.0 / 93.8</td>
+                <td>49.3 / 76.9 / 88.1</td>
+                <td>23.3</td>
+            </tr>
+            <tr>
+                <td>S+U</td>
+                <td>PWarpC-CATs†</td>
+                <td>76.9 / 91.3 / 95.8</td>
+                <td>51.4 / 79.6 / 88.1</td>
+                <td>27.7</td>
+            </tr>
+            <tr>
+                <td>S+U</td>
+                <td>SemiMatch-CATs†</td>
+                <td>75.0 / 91.5 / 96.6</td>
+                <td>47.4 / 78.6 / 87.2</td>
+                <td>43.0</td>
+            </tr>
+            <tr>
+                <td>S+U</td>
+                <td>SemiMatch-CATs†</td>
+                <td>80.1 / 93.6 / 96.6</td>
+                <td>54.0 / 82.1 / 92.1</td>
+                <td>50.7</td>
+            </tr>
+            <tr>
+                <td>S+U</td>
+                <td>ConfMatch-CATs†</td>
+                <td>73.8 / 92.6 / 96.0</td>
+                <td>50.4 / 78.7 / 90.0</td>
+                <td>47.1</td>
+            </tr>
+            <tr>
+                <td>S+U</td>
+                <td>ConfMatch-CATs†</td>
+                <td>81.0 / 93.6 / 97.1</td>
+                <td>54.2 / 81.2 / 91.8</td>
+                <td>51.8</td>
+            </tr>
+        </tbody>
+    </table>
+    
+    <table>
+        <caption>Table 2: Per-class quantitative evaluation on SPair-71k dataset. The best results are in bold, and the second best results are underlined.</caption>
+        <thead>
+            <tr>
+                <th>Methods</th>
+                <th>aero.</th>
+                <th>bike</th>
+                <th>bird</th>
+                <th>boat</th>
+                <th>bott.</th>
+                <th>bus</th>
+                <th>car</th>
+                <th>cat</th>
+                <th>chai.</th>
+                <th>cow</th>
+                <th>dog</th>
+                <th>hors.</th>
+                <th>mbik.</th>
+                <th>pers.</th>
+                <th>plan.</th>
+                <th>shee.</th>
+                <th>tra.</th>
+                <th>tv</th>
+                <th>all</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>CNNGeo</td>
+                <td>23.4</td>
+                <td>16.7</td>
+                <td>40.2</td>
+                <td>14.3</td>
+                <td>16.4</td>
+                <td>27.7</td>
+                <td>20.4</td>
+                <td>36.4</td>
+                <td>27.4</td>
+                <td>27.4</td>
+                <td>20.9</td>
+                <td>17.5</td>
+                <td>30.2</td>
+                <td>17.5</td>
+                <td>10.3</td>
+                <td>17.0</td>
+                <td>38.4</td>
+                <td>34.4</td>
+                <td>25.1</td>
+            </tr>
+            <tr>
+                <td>A2Net</td>
+                <td>22.6</td>
+                <td>15.2</td>
+                <td>46.3</td>
+                <td>14.9</td>
+                <td>17.4</td>
+                <td>27.4</td>
+                <td>20.7</td>
+                <td>37.6</td>
+                <td>26.7</td>
+                <td>26.6</td>
+                <td>20.1</td>
+                <td>21.6</td>
+                <td>30.2</td>
+                <td>17.8</td>
+                <td>15.2</td>
+                <td>18.0</td>
+                <td>33.7</td>
+                <td>34.5</td>
+                <td>25.0</td>
+            </tr>
+            <tr>
+                <td>WeakAlign</td>
+                <td>22.7</td>
+                <td>11.4</td>
+                <td>41.1</td>
+                <td>15.6</td>
+                <td>18.4</td>
+                <td>29.3</td>
+                <td>20.8</td>
+                <td>34.2</td>
+                <td>26.5</td>
+                <td>27.6</td>
+                <td>21.0</td>
+                <td>17.2</td>
+                <td>30.3</td>
+                <td>17.2</td>
+                <td>13.2</td>
+                <td>18.4</td>
+                <td>33.3</td>
+                <td>36.3</td>
+                <td>24.8</td>
+            </tr>
+            <tr>
+                <td>NC-Net</td>
+                <td>18.2</td>
+                <td>12.1</td>
+                <td>39.0</td>
+                <td>15.6</td>
+                <td>18.4</td>
+                <td>32.5</td>
+                <td>22.7</td>
+                <td>34.8</td>
+                <td>30.7</td>
+                <td>28.3</td>
+                <td>20.9</td>
+                <td>21.1</td>
+                <td>26.6</td>
+                <td>14.1</td>
+                <td>14.4</td>
+                <td>15.2</td>
+                <td>33.4</td>
+                <td>38.3</td>
+                <td>25.6</td>
+            </tr>
+            <tr>
+                <td>HPF</td>
+                <td>42.7</td>
+                <td>16.3</td>
+                <td>45.8</td>
+                <td>24.7</td>
+                <td>23.2</td>
+                <td>38.4</td>
+                <td>32.3</td>
+                <td>46.9</td>
+                <td>38.0</td>
+                <td>29.5</td>
+                <td>29.4</td>
+                <td>22.9</td>
+                <td>38.3</td>
+                <td>17.0</td>
+                <td>27.8</td>
+                <td>20.4</td>
+                <td>37.8</td>
+                <td>40.6</td>
+                <td>31.6</td>
+            </tr>
+            <tr>
+                <td>SCOT</td>
+                <td>28.1</td>
+                <td>17.3</td>
+                <td>46.3</td>
+                <td>26.6</td>
+                <td>24.3</td>
+                <td>41.3</td>
+                <td>33.2</td>
+                <td>44.5</td>
+                <td>33.3</td>
+                <td>28.3</td>
+                <td>29.1</td>
+                <td>25.5</td>
+                <td>38.6</td>
+                <td>17.6</td>
+                <td>27.4</td>
+                <td>20.5</td>
+                <td>38.4</td>
+                <td>40.9</td>
+                <td>32.5</td>
+            </tr>
+            <tr>
+                <td>DHPF</td>
+                <td>33.3</td>
+                <td>16.8</td>
+                <td>46.7</td>
+                <td>26.5</td>
+                <td>24.2</td>
+                <td>41.1</td>
+                <td>33.1</td>
+                <td>44.9</td>
+                <td>33.2</td>
+                <td>28.6</td>
+                <td>30.1</td>
+                <td>25.7</td>
+                <td>38.9</td>
+                <td>17.2</td>
+                <td>27.9</td>
+                <td>20.6</td>
+                <td>38.5</td>
+                <td>41.4</td>
+                <td>32.8</td>
+            </tr>
+            <tr>
+                <td>CHMNet</td>
+                <td>43.5</td>
+                <td>19.7</td>
+                <td>47.2</td>
+                <td>28.3</td>
+                <td>25.2</td>
+                <td>42.0</td>
+                <td>34.4</td>
+                <td>47.0</td>
+                <td>35.3</td>
+                <td>30.2</td>
+                <td>32.0</td>
+                <td>27.4</td>
+                <td>40.2</td>
+                <td>18.3</td>
+                <td>29.2</td>
+                <td>21.1</td>
+                <td>39.6</td>
+                <td>41.2</td>
+                <td>34.2</td>
+            </tr>
+            <tr>
+                <td>MMNet</td>
+                <td>41.5</td>
+                <td>19.5</td>
+                <td>48.3</td>
+                <td>29.2</td>
+                <td>26.3</td>
+                <td>43.3</td>
+                <td>35.2</td>
+                <td>47.7</td>
+                <td>37.1</td>
+                <td>31.2</td>
+                <td>34.0</td>
+                <td>27.9</td>
+                <td>41.0</td>
+                <td>18.9</td>
+                <td>30.0</td>
+                <td>21.9</td>
+                <td>40.7</td>
+                <td>42.5</td>
+                <td>35.3</td>
+            </tr>
+            <tr>
+                <td>CATs</td>
+                <td>31.0</td>
+                <td>16.1</td>
+                <td>45.3</td>
+                <td>27.1</td>
+                <td>25.4</td>
+                <td>41.0</td>
+                <td>33.8</td>
+                <td>44.3</td>
+                <td>32.2</td>
+                <td>28.4</td>
+                <td>29.9</td>
+                <td>24.2</td>
+                <td>38.2</td>
+                <td>17.5</td>
+                <td>28.3</td>
+                <td>20.4</td>
+                <td>38.4</td>
+                <td>40.6</td>
+                <td>31.6</td>
+            </tr>
+            <tr>
+                <td>CATs†</td>
+                <td>47.5</td>
+                <td>20.3</td>
+                <td>48.9</td>
+                <td>28.1</td>
+                <td>25.3</td>
+                <td>43.3</td>
+                <td>34.3</td>
+                <td>48.2</td>
+                <td>35.7</td>
+                <td>31.1</td>
+                <td>34.5</td>
+                <td>27.3</td>
+                <td>41.3</td>
+                <td>19.3</td>
+                <td>30.8</td>
+                <td>22.1</td>
+                <td>40.9</td>
+                <td>42.5</td>
+                <td>36.3</td>
+            </tr>
+            <tr>
+                <td>SemiMatch</td>
+                <td>45.3</td>
+                <td>18.3</td>
+                <td>46.9</td>
+                <td>27.7</td>
+                <td>25.1</td>
+                <td>43.0</td>
+                <td>33.7</td>
+                <td>46.5</td>
+                <td>33.3</td>
+                <td>30.4</td>
+                <td>31.4</td>
+                <td>26.7</td>
+                <td>40.8</td>
+                <td>18.6</td>
+                <td>29.8</td>
+                <td>21.8</td>
+                <td>39.5</td>
+                <td>41.8</td>
+                <td>34.1</td>
+            </tr>
+           
+            <tr>
+                <td>ConfMatch</td>
+                <td>53.7</td>
+                <td>39.8</td>
+                <td>39.8</td>
+                <td>33.6</td>
+                <td>49.9</td>
+                <td>37.8</td>
+                <td>36.5</td>
+                <td>49.1</td>
+                <td>46.1</td>
+                <td>49.6</td>
+                <td>70.7</td>
+                <td>21.6</td>
+                <td>65.7</td>
+                <td>56.7</td>
+                <td>52.1</td>
+                <td>62.1</td>
+                <td>47.4</td>
+                <td>63.9</td>
+                <td>51.8</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <table>
+        <caption>Table 3: Comparison to other alternative approaches for confidence measures for unsupervised setting for the semantic correspondence on PF-PASCAL.</caption>
+        <thead>
+            <tr>
+                <th>Methods</th>
+                <th>PF-PASCAL</th>
+                <th>PCK @ \(\alpha_{img}\)</th>
+                <th>Time (ms/sample)</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>I</td>
+                <td>CATs baseline</td>
+                <td>75.4 / 92.6 / 96.4</td>
+                <td>-</td>
+            </tr>
+            <tr>
+                <td>II</td>
+                <td>Mapping Warp Consistency</td>
+                <td>73.1 / 93.0 / 96.1</td>
+                <td>1.467</td>
+            </tr>
+            <tr>
+                <td>III</td>
+                <td>Max-score</td>
+                <td>76.2 / 92.8 / 95.8</td>
+                <td>0.055</td>
+            </tr>
+            <tr>
+                <td>IV</td>
+                <td>Min-entropy</td>
+                <td>77.1 / 92.6 / 95.8</td>
+                <td>0.104</td>
+            </tr>
+            <tr>
+                <td>V</td>
+                <td>SemiMatch (II+III+IV)</td>
+                <td>80.1 / 93.5 / 96.6</td>
+                <td>2.014</td>
+            </tr>
+            <tr>
+                <td>VI</td>
+                <td>ConfMatch</td>
+                <td>81.0 / 93.6 / 97.1</td>
+                <td>1.058</td>
+            </tr>
+        </tbody>
+    </table>
+    
+    <h5>4.4 Ablation study</h5>
+    <p>Effectiveness of trainable confidence measure: In Table 3, we prove the effectiveness of our trainable confidence measure by comparing the existing ones, which are commonly non-trainable and hand-crafted approaches. On the baseline, the versions (II), (III), and (V) is handcrafted confidence measure by manipulating the hyper-parameters, results in much worse performance than our ConfMatch (VI). We have performance similar to or better than (V), using the intersection of the aforementioned hand-crafted confidence measures, but we show 1/2 time computation, 1/2 times faster than (V). We further illustrate the benefit of our approach on examples in Fig. 4 compared to baseline. Fig. 4(e), (f) show the final confidence masks, whose values in (c), (d) are over \(\tau\), respectively. Compared to (e), struggling to differentiate between the object boundary due to ambiguous confidence scores, our masks in Fig. 4(f) clearly separates background and object region in the challenging scenes. The visualization proves that the ConfMatch firmly establishes the confidence of estimated matching regions by extracting and aggregating the tri-modality compared to CATs which only rely on the aggregated costs. The results show that the ConfMatch has the potential to have awareness of its estimated matching regions, not only the points of keys but also the overall potential matching regions with much more refined confidence.</p>
+    
+    <table>
+        <caption>Table 4: Analysis of our confidence estimation design on PF-PASCAL dataset.</caption>
+        <thead>
+            <tr>
+                <th>Methods</th>
+                <th>PF-Pascal</th>
+                <th>PCK @ \(\alpha_{img}\)</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>I</td>
+                <td>CATs baseline</td>
+                <td>75.4 / 92.6 / 96.4</td>
+            </tr>
+            <tr>
+                <td>II</td>
+                <td>+ Pseudo-labeling</td>
+                <td>75.2 / 92.8 / 96.4</td>
+            </tr>
+            <tr>
+                <td>III</td>
+                <td>+ Trainable confidence estimation</td>
+                <td>78.8 / 93.2 / 96.8</td>
+            </tr>
+            <tr>
+                <td>IV</td>
+                <td>+ Self-sup. confidence loss</td>
+                <td>79.5 / 93.3 / 97.0</td>
+            </tr>
+            <tr>
+                <td>IV</td>
+                <td>+ Multi-modality input</td>
+                <td>80.1 / 93.3 / 97.0</td>
+            </tr>
+            <tr>
+                <td>V</td>
+                <td>ConfMatch</td>
+                <td>81.0 / 93.6 / 97.1</td>
+            </tr>
+        </tbody>
+    </table>
+    
+    <table>
+        <caption>Table 5: Ablation study of warm-up stage.</caption>
+        <thead>
+            <tr>
+                <th>Warm-up</th>
+                <th>PF-PASCAL</th>
+                <th>\(\alpha_{img}\)</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>✗</td>
+                <td>78.0 / 93.0 / 96.6</td>
+            </tr>
+            <tr>
+                <td>✓</td>
+                <td>81.0 / 93.6 / 97.1</td>
+            </tr>
+        </tbody>
+    </table>
+    
+    <p>Designing confidence estimator network: In Table 4, we analyze our confidence estimation networks with the ablation evaluations, with respect to the effectiveness of the proposed confidence estimation with multi-modalities and confidence loss formulation. Based on the fact that the continuous performance improvement in PCK@0.05 on PF-PASCAL occurs as we add our module, our module has a great effect on capturing the features around the keypoints. Table 5 also proves that training the confidence networks with stage-wise training shows a greater performance improvement compared to end-to-end training by having pre-training stage of matching networks and confidence estimation networks, respectively.</p>
+    
+    <h5>4.5 Limitations</h5>
+    <p>Through extensive experiments, we found directly applying the latest methods in semi-supervised image classification to our method does not improve performance, and resorted to a fixed threshold for our final model. However, that doesn’t mean ConfMatch was immune to inheriting the aforementioned drawbacks of using a fixed confidence threshold. Thus, a natural next step, which we leave for future work, is to examine how to leverage an adaptive confidence threshold in semi-supervised semantic matching.</p>
+    
+    <div class="image-container">
+        <img src="assets/I made it/conf4.png" alt="Description of the image" width="700" >
+        <div class="caption">Figure 4: Visualization of confidence map: (a) source image, (b) target image, (c), (d) and (e), (f)
+            are the confidence maps of CATs and ConfMatch, with threshold 0.0 and 0.7, respectively.</div>
+    </div>
+
+    <h4>5 Conclusion</h4>
+    <p>In this paper, we have proposed, for the first time, confidence estimating networks for semantic correspondence which extracting and aggregating the tri-modality. We successfully modified the recent confidence estimation methods in stereo literature and incorporated into a popular semi-supervised framework. Extensive experimental results show that ConfMatch achieved state-of-the-art performances on semantic correspondence benchmarks.</p>
+
+                                                
+                                                
+
+                        
+                                                    
+                    
+                                                <div class="entry-meta">
+
+                                                    <div class="meta-desc">
+                                                        <p>
+                                                            
+    
+
+</div>
+
+
+
+
+
+
+                                                  
+
+
+                           
+
+
+                                
+
+ 
+        <!-- Page Wrapper Ends -->
+
+        <!--  Scripts -->
+        <script type='text/javascript' src='assets/js/vendor/jquery-1.12.4.min.js'></script>
+        <script type='text/javascript' src='assets/js/vendor/TweenMax.min.js'></script>        
+        <script type='text/javascript' src='assets/js/vendor/headsup.min.js'></script>        
+        <script type='text/javascript' src='assets/js/vendor/jquery.easing.min.1.3.js'></script>      
+        <script type='text/javascript' src='assets/lib/cubeportfolio/js/jquery.cubeportfolio.min.js'></script>
+        <script type='text/javascript' src='assets/lib/swiper/js/swiper.min.js'></script>        
+
+        <script type='text/javascript' src='assets/js/main.js'></script>       
+        <!--  Scripts Ends -->
+    </body>
+</html>
+
+                        </main><!-- #main -->
+                    </div><!-- #primary -->  
+                </div><!-- .site-content-contain -->  
+            </div><!-- .site-content-contain -->  
+            <footer id="footer" class="site-footer standard" role="contentinfo">
+                <div class="container">
+                    <div class="site-info">			
+                        <p class="copyright">
+                            © 2024 Minhyek Jeon	
+                        </p>
+                    </div>    
+                    <nav class="footer-socials" role="navigation" aria-label="Footer Social Links Menu">                           
+                        <ul id="social-media-footer" class="social-links-menu">
+                            
+                            <li><a href="https://www.linkedin.com/in/minhyekjeon"><i class="fab fa-linkedin"></i></a></li>
+                            <li><a href="https://github.com/mhj0326"><i class="fab fa-github"></i></a></li>                               
+                        </ul>
+                    </nav>                        
+                </div>            
+            </footer>
+        </div><!-- #page -->
+    </body>
+</html>
