@@ -423,16 +423,16 @@ var KRAFT = KRAFT || {};
                     layoutMode          : ( portfolioGrid.data( 'layoutmode' ) == null ) ? 'grid' : portfolioGrid.data( 'layoutmode' ),
                     sortToPreventGaps   : true,
                     mediaQueries: [{
-                                width: 100,
+                                width: 1150,
                                 cols: ( portfolioGrid.data('large-desktop' ) == null ) ? 4 : portfolioGrid.data( 'large-desktop' )
                             }, {
                                 width: 800,
                                 cols: ( portfolioGrid.data( 'tablet-landscape' ) == null ) ? 3 : portfolioGrid.data( 'tablet-landscape' )
                             }, {
-                                width: 550,
+                                width: 750,
                                 cols: ( portfolioGrid.data( 'tablet-portrait' ) == null ) ? 2 : portfolioGrid.data( 'tablet-portrait' )
                             }, {
-                                width: 700,
+                                width: 480,
                                 cols: ( portfolioGrid.data( 'mobile' ) == null ) ? 1 : portfolioGrid.data( 'mobile' )
                             }],
                     defaultFilter       : portfolioGrid.data( 'defaultfilter' ),

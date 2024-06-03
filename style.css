@@ -11,22 +11,54 @@
 /*--------------------------------------------------------------
 Typography
 --------------------------------------------------------------*/
-#sub-menu2{
-  visibility: visible !important;
-  display: block !important;
-  transition: none !important;
-}
 
+*-----------------------------------------------------------------------------------
+
+    Theme Name: Kraft
+    Theme URI: https://kraft.caliberthemes.com/template/minimal/
+    Description: Minimal Portfolio Template
+    Author: CaliberThemes
+    Author URI: https://www.caliberthemes.com
+    Version: 2.0
+
+-----------------------------------------------------------------------------------*/
+/*--------------------------------------------------------------
+Typography
+--------------------------------------------------------------*/
 body {
   cursor: url('assets/I made it/eye.png') 20 30, auto;
 }
 
 a, button, .cbp-filter-item {
-  cursor: url('assets/I made it/eye2.png') 20 30, auto;
+  cursor: url('assets/I made it/eye.png') 20 30, auto;
 }
 
 a:hover, button:hover, .cbp-filter-item:hover {
-  cursor: url('assets/I made it/eye2.png') 20 30, auto;
+  cursor: url('assets/I made it/eye.png') 20 30, auto;
+}
+
+.image-item {
+  flex: 5;
+  text-align: center; /* 이미지 및 텍스트 중앙 정렬 */
+  margin: 0 10px; /* 이미지 아이템 간격 조정 */
+}
+
+.image-item img {
+  max-width: 100%;
+  height: auto;
+}
+
+.image-item p {
+  margin-top: 5px; /* 이미지와 설명 사이 간격 조정 */
+}
+.image-grid {
+  display: flex;
+}
+
+.image-grid img {
+  flex: 1;
+  /* 각 이미지가 컨테이너 너비의 1/3을 차지하도록 설정 */
+  height: auto; /* 가로세로 비율 유지 */
 }
 
 body {
@@ -398,21 +430,6 @@ div.kraftcf .ajax-loader {
 /*--------------------------------------------------------------
 Contents
 --------------------------------------------------------------*/
-html {
-  scroll-behavior: smooth;
-}
-
-.portfolio-thumbnail {
-  height: 300px !important;
-}
-
-@media (max-width: 768px) {
-  .portfolio-thumbnail {
-      height: auto !important;
-      width: 100% !important;
-  }
-}
-
 .page-click-capture {
   position: fixed;
   width: 100%;
@@ -1559,7 +1576,6 @@ Header General
 }
 #masthead.site-header #site-branding .retina-logo {
   display: none;
-
 }
 #masthead.site-header #site-branding a {
   display: inline-block;
@@ -1739,7 +1755,7 @@ Header General
   }
 }
 #masthead.site-header #site-branding .retina-logo {
-  max-width: 80px;
+  max-width: 50px;
 }
 
 /*--------------------------------------------------------------
@@ -2355,7 +2371,6 @@ body.single.single-post .site-main {
 .post .post-thumbnail, .post .entry-video, .post .entry-slider {
   margin-bottom: 30px;
 }
-
 .post .entry-content .link-more {
   margin-top: 25px;
   margin-bottom: 0;
@@ -2847,8 +2862,7 @@ html {
 }
 
 body {
-  background-color: #ffffff;
-  padding-top: 50px;
+  background-color: #fff;
 }
 
 .search.search-no-results .search-form .search-submit {
@@ -3142,7 +3156,7 @@ h2.widget-title:after {
 }
 .widget ol li {
   border-bottom: 1px solid #e3e3e3;
-  border-top: 1px solid #e3e3e3;
+  border-top: 1px solid #e3e3e;
   padding: 0.5em 0;
 }
 .widget ul li ul {
@@ -3303,15 +3317,6 @@ h2.widget-title:after {
 /*--------------------------------------------------------------
 Heading
 --------------------------------------------------------------*/
-#header-pdf {
-  width: 100%;
-  height: 800px;
-}
-#iframe-wrapper {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
 .heading-block h1.block-size-1 {
   font-size: 44px;
   line-height: 59px;
@@ -4015,10 +4020,6 @@ Portfolio Section
   margin-left: 0;
   width: 100%;
 }
-#portfolio-container-grid {
-  display: flex;
-  flex-direction: column;
-}
 .cbp.cbp-caption-fadeIn.cbp-caption-ribbon.cbp-ribbon-alignCenter .cbp-item-wrapper {
   padding: 0;
 }
@@ -4502,7 +4503,7 @@ Portfolio Listing
   flex-direction: row-reverse;
 }
 .portfolio-listing-wrap.zig-zag .portfolio-list {
-  margin-bottom: 0px;
+  margin-bottom: 80px;
 }
 .portfolio-listing-wrap.zig-zag .portfolio-list:last-of-type {
   margin-bottom: 0;

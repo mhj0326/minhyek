@@ -412,7 +412,7 @@ var KRAFT = KRAFT || {};
                                 width: 750,
                                 cols: ( portfolioGrid.data( 'tablet-portrait' ) == null ) ? 2 : portfolioGrid.data( 'tablet-portrait' )
                             }, {
-                                width: 700,
+                                width: 480,
                                 cols: ( portfolioGrid.data( 'mobile' ) == null ) ? 1 : portfolioGrid.data( 'mobile' )
                             }],
                     defaultFilter       : portfolioGrid.data( 'defaultfilter' ),
