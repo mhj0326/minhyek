@@ -401,6 +401,18 @@ Contents
 html {
   scroll-behavior: smooth;
 }
+
+.portfolio-thumbnail {
+  height: 300px !important;
+}
+
+@media (max-width: 768px) {
+  .portfolio-thumbnail {
+      height: auto !important;
+      width: 100% !important;
+  }
+}
+
 .page-click-capture {
   position: fixed;
   width: 100%;
