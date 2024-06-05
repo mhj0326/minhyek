@@ -25,6 +25,10 @@ Typography
 /*--------------------------------------------------------------
 Typography
 --------------------------------------------------------------*/
+html {
+    scroll-behavior: smooth;
+}
+
 #sub-menu2{
   visibility: visible !important;
   display: block !important;
