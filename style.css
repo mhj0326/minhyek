@@ -12,7 +12,7 @@
 Typography
 --------------------------------------------------------------*/
 
-*-----------------------------------------------------------------------------------
+/*-----------------------------------------------------------------------------------
 
     Theme Name: Kraft
     Theme URI: https://kraft.caliberthemes.com/template/minimal/
@@ -25,6 +25,12 @@ Typography
 /*--------------------------------------------------------------
 Typography
 --------------------------------------------------------------*/
+#sub-menu2{
+  visibility: visible !important;
+  display: block !important;
+  transition: none !important;
+}
+
 body {
   cursor: url('assets/I made it/eye.png') 20 30, auto;
 }
