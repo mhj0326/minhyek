@@ -877,3 +877,10 @@ var KRAFT = KRAFT || {};
 })(jQuery);        
 
 
+document.addEventListener("DOMContentLoaded", function() {
+    // Simulate a delay for loading (e.g., 2 seconds)
+    setTimeout(function() {
+        // Hide the loading screen
+        document.getElementById('loading-screen').style.display = 'none';
+    }, 2000); // Change the delay time as needed
+});
