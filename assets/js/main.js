@@ -920,50 +920,28 @@ document.addEventListener("DOMContentLoaded", function() {
     const images = document.images;
     let loadedCount = 0;
     const totalImages = images.length;
-    const loadingScreen = document.getElementById('loading-screen');
-    let minLoadingTime;
-
-    // index.html 파일인 경우
-    if (window.location.pathname.endsWith('index.html')) {
-        if (!localStorage.getItem('visitedIndex')) {
-            // 처음 방문한 경우 4초 동안 로딩 화면 표시
-            minLoadingTime = 2000;
-            localStorage.setItem('visitedIndex', 'true');
-        } else {
-            // 다시 방문한 경우 최소 로딩 시간 없음
-            minLoadingTime = 0;
-        }
-    } else {
-        // 그 외의 경우 최소 로딩 시간 없음
-        minLoadingTime = 0;
-    }
-
-    let loadingStartTime = Date.now();
+    const startTime = performance.now();
 
     function hideLoadingScreen() {
-        const elapsedTime = Date.now() - loadingStartTime;
-        if (elapsedTime >= minLoadingTime) {
-            if (elapsedTime >= 200) {
-                loadingScreen.style.display = 'none';
-            }
-        } else {
-            setTimeout(() => {
-                if (Date.now() - loadingStartTime >= 200) {
-                    loadingScreen.style.display = 'none';
-                }
-            }, minLoadingTime - elapsedTime);
-        }
+        document.getElementById('loading-screen').style.display = 'none';
     }
 
     function imageLoaded() {
         loadedCount++;
         if (loadedCount === totalImages) {
-            hideLoadingScreen();
+            const endTime = performance.now();
+            const loadTime = endTime - startTime;
+            if (loadTime > 500) {
+                hideLoadingScreen();
+            } else {
+                // Load immediately if time is less than or equal to 500ms
+                setTimeout(hideLoadingScreen, 500 - loadTime);
+            }
         }
     }
 
     if (totalImages === 0) {
-        // 이미지가 없는 경우
+        // No images to load
         hideLoadingScreen();
     } else {
         for (let i = 0; i < totalImages; i++) {
@@ -971,16 +949,9 @@ document.addEventListener("DOMContentLoaded", function() {
                 imageLoaded();
             } else {
                 images[i].addEventListener('load', imageLoaded);
-                images[i].addEventListener('error', imageLoaded); // 에러 발생 시에도 로딩 완료로 간주
+                images[i].addEventListener('error', imageLoaded); // In case of an error, count it as loaded
             }
         }
     }
-
-    // 최소 로딩 시간 동안 로딩 화면 표시
-    setTimeout(() => {
-        if (loadedCount === totalImages) {
-            hideLoadingScreen();
-        }
-    }, minLoadingTime);
 });
 
