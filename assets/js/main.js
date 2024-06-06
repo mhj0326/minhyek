@@ -883,7 +883,7 @@ document.addEventListener("DOMContentLoaded", function() {
         // Hide the loading screen
         document.getElementById('loading-screen').style.display = 'none';
     }, 2000); // Change the delay time as needed
-});*/
+});
 
 document.addEventListener("DOMContentLoaded", function() {
     const images = document.images;
@@ -915,4 +915,51 @@ document.addEventListener("DOMContentLoaded", function() {
         }
     }
 });
+*/
+document.addEventListener("DOMContentLoaded", function() {
+    const images = document.images;
+    let loadedCount = 0;
+    const totalImages = images.length;
+    const loadingScreen = document.getElementById('loading-screen');
+    const minLoadingTime = 1000; // 최소 로딩 시간 1초
+    let loadingStartTime = Date.now();
 
+    function hideLoadingScreen() {
+        const elapsedTime = Date.now() - loadingStartTime;
+        if (elapsedTime >= minLoadingTime) {
+            loadingScreen.style.display = 'none';
+        } else {
+            setTimeout(() => {
+                loadingScreen.style.display = 'none';
+            }, minLoadingTime - elapsedTime);
+        }
+    }
+
+    function imageLoaded() {
+        loadedCount++;
+        if (loadedCount === totalImages) {
+            hideLoadingScreen();
+        }
+    }
+
+    if (totalImages === 0) {
+        // 이미지가 없는 경우
+        hideLoadingScreen();
+    } else {
+        for (let i = 0; i < totalImages; i++) {
+            if (images[i].complete) {
+                imageLoaded();
+            } else {
+                images[i].addEventListener('load', imageLoaded);
+                images[i].addEventListener('error', imageLoaded); // 에러 발생 시에도 로딩 완료로 간주
+            }
+        }
+    }
+
+    // 최소 1초 동안 로딩 화면 표시
+    setTimeout(() => {
+        if (loadedCount === totalImages) {
+            hideLoadingScreen();
+        }
+    }, minLoadingTime);
+});
