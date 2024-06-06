@@ -922,20 +922,20 @@ document.addEventListener("DOMContentLoaded", function() {
     const totalImages = images.length;
     const loadingScreen = document.getElementById('loading-screen');
     let minLoadingTime;
-    
+
     // index.html 파일인 경우
     if (window.location.pathname.endsWith('index.html')) {
         if (!localStorage.getItem('visitedIndex')) {
-            // 처음 방문한 경우 3초 동안 로딩 화면 표시
-            minLoadingTime = 3000;
+            // 처음 방문한 경우 4초 동안 로딩 화면 표시
+            minLoadingTime = 4000;
             localStorage.setItem('visitedIndex', 'true');
         } else {
-            // 다시 방문한 경우 로딩 시간 없음
-            minLoadingTime = 500;
+            // 다시 방문한 경우 최소 로딩 시간 없음
+            minLoadingTime = 0;
         }
     } else {
-        // 그 외의 경우 최소 로딩 시간 1초
-        minLoadingTime = 1000;
+        // 그 외의 경우 최소 로딩 시간 없음
+        minLoadingTime = 0;
     }
 
     let loadingStartTime = Date.now();
@@ -943,10 +943,14 @@ document.addEventListener("DOMContentLoaded", function() {
     function hideLoadingScreen() {
         const elapsedTime = Date.now() - loadingStartTime;
         if (elapsedTime >= minLoadingTime) {
-            loadingScreen.style.display = 'none';
+            if (elapsedTime >= 200) {
+                loadingScreen.style.display = 'none';
+            }
         } else {
             setTimeout(() => {
-                loadingScreen.style.display = 'none';
+                if (Date.now() - loadingStartTime >= 200) {
+                    loadingScreen.style.display = 'none';
+                }
             }, minLoadingTime - elapsedTime);
         }
     }
