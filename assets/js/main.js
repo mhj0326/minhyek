@@ -921,7 +921,7 @@ document.addEventListener("DOMContentLoaded", function() {
     let loadedCount = 0;
     const totalImages = images.length;
     const loadingScreen = document.getElementById('loading-screen');
-    const minLoadingTime = 1000; // 최소 로딩 시간 1초
+    const minLoadingTime = 1500; // 최소 로딩 시간 1초
     let loadingStartTime = Date.now();
 
     function hideLoadingScreen() {
