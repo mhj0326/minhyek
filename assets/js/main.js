@@ -931,7 +931,7 @@ document.addEventListener("DOMContentLoaded", function() {
             localStorage.setItem('visitedIndex', 'true');
         } else {
             // 다시 방문한 경우 로딩 시간 없음
-            minLoadingTime = 0;
+            minLoadingTime = 1000;
         }
     } else {
         // 그 외의 경우 최소 로딩 시간 1초
