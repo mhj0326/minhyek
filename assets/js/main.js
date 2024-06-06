@@ -927,7 +927,7 @@ document.addEventListener("DOMContentLoaded", function() {
     if (window.location.pathname.endsWith('index.html')) {
         if (!localStorage.getItem('visitedIndex')) {
             // 처음 방문한 경우 4초 동안 로딩 화면 표시
-            minLoadingTime = 4000;
+            minLoadingTime = 2000;
             localStorage.setItem('visitedIndex', 'true');
         } else {
             // 다시 방문한 경우 최소 로딩 시간 없음
