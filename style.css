@@ -1147,7 +1147,7 @@ Header Standard
     top: 70px;
     background-color: #101010;
     width: 170px;
-    z-index: 10;
+    z-index: 2;
     left: -7px;
     margin-left: 0;
     opacity: 0;
@@ -1404,7 +1404,7 @@ Header Hamburger
     position: absolute;
     top: 100%;
     width: 100%;
-    z-index: 10;
+    z-index: 2;
     -webkit-transition: all .4s ease;
     -o-transition: all .4s  ease;
     -o-transition: all .4s ease;
@@ -1476,8 +1476,9 @@ Header Hamburger
   top: 0;
   right: -300px;
   padding: 55px 10px 40px 50px;
-  z-index: 10;
+  z-index: 2;
 }
+
 #masthead.site-header.hamburger-side #site-navigation .menu {
   max-height: calc(100vh - 80px);
   overflow-y: scroll;
@@ -1691,7 +1692,7 @@ Header General
     position: absolute;
     top: 100%;
     width: 100%;
-    z-index: 10;
+    z-index: 2;
     -webkit-transition: all .4s ease;
     -o-transition: all .4s  ease;
     -o-transition: all .4s ease;
@@ -1700,10 +1701,12 @@ Header General
     visibility: hidden;
     padding: 0 15px;
     margin-left: -15px;
+    pointer-events: none; /* 추가: 메뉴가 숨겨진 상태에서 링크 클릭 방지 */
   }
   #masthead.site-header:not(.hamburger-side) #site-navigation.display-menu {
     opacity: 1;
     visibility: visible;
+    pointer-events: auto; /* 추가: 메뉴가 보일 때 링크 클릭 허용 */
   }
   #masthead.site-header:not(.hamburger-side) #site-navigation .menu {
     background-color: #101010;
