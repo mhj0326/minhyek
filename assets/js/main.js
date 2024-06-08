@@ -23,43 +23,45 @@ var KRAFT = KRAFT || {};
                 }, 
                 
                 menuItemTrigger: function() {
-                    
-                     if( headerEl.hasClass( 'hamburger-side' ) || headerEl.hasClass( 'left-sidebar' ) || windowWidth < 991 ) {  
+
+                    var currentPage = window.location.pathname.split("/").pop();
+                
+                    if( headerEl.hasClass( 'hamburger-side' ) || headerEl.hasClass( 'left-sidebar' ) || windowWidth < 991 ) {  
                         
                         $( '#top-menu' ).find( 'li.has-children > a' ).off( 'click' );
                     
                         $( '#top-menu' ).find( 'li.has-children > a' ).on( 'click', function( e ) {
-
-                            /*$( this ).closest( 'li' ).siblings().find( 'ul.sub-menu' ).slideUp();
-                            $( this ).closest( 'li' ).siblings().removeClass( 'active' );
-                            $( this ).closest( 'li' ).children( 'ul.sub-menu' ).slideToggle();
-                            $( this ).closest( 'li' ).toggleClass( 'active' );
-                            
-                            return false;*/
-
+                
                             var clickedMenuText = $(this).text().trim();
-
+                
                             if (clickedMenuText === 'Menu') {
                                 return false;
                             }
-
-                            // "Contact"를 클릭한 경우 slideUp 효과를 건너뜀
-                            if (clickedMenuText === 'Contact') {
-                                $(this).closest('li').toggleClass('active');
-                                $(this).closest('li').children('ul.sub-menu').slideToggle();
+                
+                            // 현재 페이지가 index.html인 경우에만 동작
+                            if (currentPage === 'index.html') {
+                                // "Contact"를 클릭한 경우 slideUp 효과를 건너뜀
+                                if (clickedMenuText === 'Contact') {
+                                    $(this).closest('li').toggleClass('active');
+                                    $(this).closest('li').children('ul.sub-menu').slideToggle();
+                                } else {
+                                    $(this).closest('li').siblings().find('ul.sub-menu').slideUp();
+                                    $(this).closest('li').siblings().removeClass('active');
+                                    $(this).closest('li').children('ul.sub-menu').slideToggle();
+                                    $(this).closest('li').toggleClass('active');
+                                }
+                
+                                return false;
                             } else {
-                                $(this).closest('li').siblings().find('ul.sub-menu').slideUp();
-                                $(this).closest('li').siblings().removeClass('active');
-                                $(this).closest('li').children('ul.sub-menu').slideToggle();
-                                $(this).closest('li').toggleClass('active');
+                                // 다른 페이지에서는 원래처럼 링크가 눌러지도록 허용
+                                return true;
                             }
-                            
-                            return false;
-
+                
                         });
                     }
-                    
-                },          
+                
+                },
+                      
                 
                 initHeadsUp: function() {
                     
@@ -70,7 +72,7 @@ var KRAFT = KRAFT || {};
                 
                 },            
                 
-                hamburgerTrigger: function() {                 
+                /*hamburgerTrigger: function() {                 
             
                     if( hamburger_trigger.length > 0 ) {     
                         
@@ -130,7 +132,89 @@ var KRAFT = KRAFT || {};
                             
                         });
                     }                    
-                },       
+                },       */
+
+                hamburgerTrigger: function() {                 
+    
+                    if( hamburger_trigger.length > 0 ) {     
+                        
+                        var page_overlay_capture = $( '.page-click-capture' );
+                        var iframeEl = $('iframe'); // iframe 요소 선택
+                        
+                        hamburger_menu_animation = new TimelineMax({ paused: true }); 
+                                
+                        hamburger_menu_animation.to( navigationEl, 0.8, { ease: Expo.easeInOut, right: "0%", strictUnits: true, onStart: function() {  
+                            page_overlay_capture.addClass( 'page-overlay' ); 
+                            navigationEl.css('z-index', 10);  // 메뉴 z-index를 10으로 설정
+                            iframeEl.css('z-index', -1); // iframe z-index를 -1로 설정
+                        }, onReverseComplete: function() {  
+                            page_overlay_capture.removeClass( 'page-overlay' ); 
+                            navigationEl.css('z-index', 1);  // 메뉴 z-index를 다시 1로 설정
+                            iframeEl.css('z-index', 10); // iframe z-index를 다시 10으로 설정
+                        } });
+                                
+                        hamburger_menu_animation.reversed( true );      
+                    
+                        hamburger_trigger.on( 'click', function() {          
+                
+                            if( headerEl.hasClass( 'hamburger-side' ) ) {  
+                                
+                                hamburger_menu_animation.restart();                                   
+                                
+                                page_overlay_capture.addClass( 'page-overlay' );
+                                
+                            } 
+                            else {
+                                
+                                navigationEl.toggleClass( 'display-menu' );
+                                $( this ).toggleClass( 'open' );
+                                if (navigationEl.hasClass('display-menu')) {
+                                    navigationEl.css('z-index', 10);  // 메뉴 z-index를 10으로 설정
+                                    iframeEl.css('z-index', -1); // iframe z-index를 -1로 설정
+                                } else {
+                                    navigationEl.css('z-index', 1);  // 메뉴 z-index를 다시 1로 설정
+                                    iframeEl.css('z-index', 10); // iframe z-index를 다시 10으로 설정
+                                }
+                            }     
+                            
+                            return false;                   
+                
+                        });
+                    }                    
+                },      
+                
+                hamburgerMenuCloseTrigger: function() {                 
+                    
+                    if( hamburger_menu_close_trigger.length > 0 ) {     
+                        
+                        var page_overlay_capture = $( '.page-click-capture' );
+                        var iframeEl = $('iframe'); // iframe 요소 선택
+                    
+                        hamburger_menu_close_trigger.on( 'click', function() {                                   
+                       
+                            page_overlay_capture.removeClass( 'page-overlay' );
+                                
+                            $( 'ul.sub-menu' ).slideUp();              
+                            navigationEl.css('z-index', 1);  // 메뉴 z-index를 다시 1로 설정
+                            iframeEl.css('z-index', 10); // iframe z-index를 다시 10으로 설정
+                            hamburger_menu_animation.reverse();  
+                
+                        });
+                        
+                        $('.page-click-capture').on( 'click', function() {
+                            
+                            navigationEl.removeClass( 'display-menu' );
+                            page_overlay_capture.removeClass( 'page-overlay' );
+                                
+                            $( 'ul.sub-menu' ).slideUp();       
+                            navigationEl.css('z-index', 1);  // 메뉴 z-index를 다시 1로 설정
+                            iframeEl.css('z-index', 10); // iframe z-index를 다시 10으로 설정
+                            hamburger_menu_animation.reverse();  
+                            
+                        });
+                    }                    
+                },  
+                
                 
                 dropdownInvert: function() {
                     
@@ -914,5 +998,8 @@ document.addEventListener("DOMContentLoaded", function() {
             }
         }
     }
+
 });
+
+
 
