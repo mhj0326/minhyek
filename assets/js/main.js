@@ -967,7 +967,7 @@ document.addEventListener("DOMContentLoaded", function() {
         // Hide the loading screen
         document.getElementById('loading-screen').style.display = 'none';
     }, 2000); // Change the delay time as needed
-});*/
+});
 
 document.addEventListener("DOMContentLoaded", function() {
     const images = document.images;
@@ -999,6 +999,45 @@ document.addEventListener("DOMContentLoaded", function() {
         }
     }
 
+});
+*/
+document.addEventListener("DOMContentLoaded", function() {
+    const images = document.images;
+    let loadedCount = 0;
+    const totalImages = images.length;
+    const startTime = performance.now();
+
+    function hideLoadingScreen() {
+        document.getElementById('loading-screen').style.display = 'none';
+    }
+
+    function imageLoaded() {
+        loadedCount++;
+        if (loadedCount === totalImages) {
+            const endTime = performance.now();
+            const loadTime = endTime - startTime;
+            if (loadTime > 500) {
+                hideLoadingScreen();
+            } else {
+                // Load immediately if time is less than or equal to 500ms
+                setTimeout(hideLoadingScreen, 500 - loadTime);
+            }
+        }
+    }
+
+    if (totalImages === 0) {
+        // No images to load
+        hideLoadingScreen();
+    } else {
+        for (let i = 0; i < totalImages; i++) {
+            if (images[i].complete) {
+                imageLoaded();
+            } else {
+                images[i].addEventListener('load', imageLoaded);
+                images[i].addEventListener('error', imageLoaded); // In case of an error, count it as loaded
+            }
+        }
+    }
 });
 
 
