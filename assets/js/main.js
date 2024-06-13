@@ -39,7 +39,7 @@ var KRAFT = KRAFT || {};
                             }
                 
                             // 현재 페이지가 index.html인 경우에만 동작
-                            if (currentPage === 'index.html') {
+                            if (currentPage === 'index.html' || currentPage === '') {
                                 // "Contact"를 클릭한 경우 slideUp 효과를 건너뜀
                                 if (clickedMenuText === 'Contact') {
                                     $(this).closest('li').toggleClass('active');
