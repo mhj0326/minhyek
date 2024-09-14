@@ -39,12 +39,13 @@ body {
   cursor: url('assets/I made it/eye.png') 20 30, auto;
 }
 
-a, button, .cbp-filter-item {
-  cursor: url('assets/I made it/eye2.png') 20 30, auto;
-}
 
 a:hover, button:hover, .cbp-filter-item:hover {
   cursor: url('assets/I made it/eye2.png') 20 30, auto;
+}
+
+.description:hover {
+  text-decoration: underline;
 }
 
 .image-item {
