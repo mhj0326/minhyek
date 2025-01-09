@@ -20,6 +20,16 @@
         <link rel='stylesheet' id='cubeportfolio-css'  href='assets/lib/cubeportfolio/css/cubeportfolio.min.css' type='text/css' media='all' /> 
 
         <link rel='stylesheet' id='main-css'  href='style.css' type='text/css' media='all' />
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Equation Example</title>
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+        <script id="MathJax-script" async
+            src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+            <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>ControlNet Description</title>
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
 
     </head>
     <body class="single single-portfolio portfolio-details-top">
@@ -87,26 +97,15 @@
                                     
                                                 
 
-                                                <h4>Table of Contents</h4>
-                                                        <p>
-
-                                                            1. Introduction & Background<br>
-                                                        
-                                                            2. Method<br>
-
-                                                            3. Result<br>
-
-                                                            4. Discussion<br>
-
-                                                            5. Future works<br>
-
-                                                            6. Reference<br>
-                                                             
-                                                        </p>
                                              
 
-                                                <h4>Introduction & Background</h4>
-                                                <p>
+                                                <h4>Background</h4>
+                                                <p> Computer aided diagnostics (CAD) is a field recently garnering research attention, especially with the application of deep learning and artificial intelligence enhancing the ability of computational systems to model and learn from medical imaging data. 
+                                                    Chest x-ray images are a dominant modality in clinical medicine for screening and diagnosis of diseases related to the lungs, requiring the expertise of highly skilled professionals to provide medical interpretation. 
+                                                    Acute respiratory infections account for over 4 million deaths each year across the world and are responsible for up to 40% of hospitalizations among children. 
+                                                    The accurate and efficient diagnosis of lung disease is critical to public health initiatives, garnering the importance and utility of the application of computer-aided diagnostics.  
+                                                    The development of computational systems to perform this interpretation would be of significant utility in the democratization of access to this expertise, 
+                                                    while simultaneously increasing consistency and reducing the potential for human error in medical diagnostics. <br>
                                                     In the medical domain, certain diseases are more prevalent than others, which often results in unbalanced datasets when data is collected without preprocessing. 
                                                     This imbalance means that some classes (diseases) have significantly more samples than others. 
                                                     Most traditional machine learning algorithms operate under the assumption that data is evenly distributed across classes. 
@@ -205,17 +204,22 @@
                                                     Especially for cases where dataset is unbalanced,simple method to handle the problem is just by more sampling of the data.
                                                     However, the more rare the disease sample is, the harder and more expensive it is to get. 
                                                     Also the condition the sample was processed might be different from existing ones. 
-                                                    Therefore it would be ideal if we could generate samples that are similar to existing ones.   
-                                                    Data augmentation is particularly effective in resolving class imbalance issues in image datasets and increases the diversity of the dataset. 
-                                                    This helps the model to learn more evenly across different classes. 
-                                                    By using DreamBooth model, we can increase the sample size of minority classes and balance the overall dataset. 
-                                                    This approach can be efficiently used with any image dataset, enhancing its diversity and improving overall prediction performance 
-                                                    by supplementing the less represented parts of the data.
-
+                                                    Therefore it would be ideal if we could generate samples that are similar to existing ones.
+                                                    Prior research demonstrates that even simplistic methods, such as image replication for achieving class balance, 
+                                                    can yield noticeable improvements in performance. 
+                                                    For instance, ResNet-50 binary classification accuracy for pleural effusion increased from 0.529 to 0.612 by addressing class imbalance. 
+                                                    These findings emphasize the importance of data balance in improving diagnostic accuracy. 
+                                                    Therefore, synthetic image generation, especially for medical purposes, can revolutionize the ability for machine learning models to learn from. 
+                                                    Given the prevalence of class imbalance and lack of equal data, being able to create realistic images for models can help them train better. 
+                                                    With chest x-rays, these models can classifiy diseases and segment key features. 
+                                                    To do so, there are growing and popular techniques in the field of deep learning. 
+                                                    Many generative models use generative advesarial networks, diffusion models, and more to create wanted images. 
+                                                    In this project, three models are explored: DreamBooth, ControlNet, and grounded language-image generation (GLIGEN).   
+                                                    
                                                     
 
                                                 </p>
-
+                                                
                                                 <h4>Data Analysis</h4>
                                                 <strong>VinDR-CXR EDA & Data Preprocessing</strong><br><br>
                                                 The project will be using benchmark dataset for chest X-ray images called VinDR-CXR data.
@@ -251,205 +255,91 @@
                                                 like 'Hernia', are less integrated into the network, 
                                                 indicating they have fewer or weaker associations with other conditions. 
 
+                                                <h4>Methods</h4>
+
+                                                <p>The methodology is broken down into a few key steps. 
+                                                  Initially, the dataset was converted from DICOM to jpg, cropped and padded to have equal shape, and had its bounding boxes for disease classification adjusted. 
+                                                  Then, a qualitative phenotype study was performed to determine that the labels should be binned into six unique classifications, 
+                                                  where some of the more qualitatively similar diseases were grouped together. This would aid in better image generation to match the classification phenotype. 
+                                                  A pretrained ChexNet model was used to generate realistic captions similar to radiologist findings. 
+                                                  These were applied as a form of control for DreamBooth, ControlNet, and GLIGEN. 
+                                                  Additionally, canny edge detection was used because ControlNet and GLIGEN use additional information in the form of an edge detection mask to highlight the key parts of the images. 
+                                                  With these tools, images were generated with fine tuning on the models and evaluated with ResNet50 to produce accuracy and F1 scores. 
+                                                  The results could then be compared to a lower and upper bound of scores to compare performance.</p>
+
+                                                
                                                 <br><br><h4>Model for Image Generation & Evaluation</h4>
+                                                <strong>ChexNet</strong><br>
+                                                ChexNet is a pretrained neural network that is based on the DenseNet121 framework, which contains 121 fully connected convolutional layers. 
+                                                Normally, these convolutions would be used to learn a feature map from the data, and the feature map would be used for downstream steps such as chest X-ray image classification. 
+                                                However, instead of using the trained CheXNet model for a classification task, we opted to use it to generate the feature maps to use as input to a separate  encoder-decoder caption generation model. 
+                                                The caption generation model outputs a realistic caption that should be semantically similar to the true radiologist annotations.
 
-
-                                                <strong>DreamBooth - Image Generation Model</strong><br>
-                                                Given as input just a few images of a subject, dreambooth can fine-tune a pretrained text-to-image model such that it learns to bind a unique identifier with that specific subject.
-                                                Once the subject is embedded in the output domain of the model, 
-                                                the unique identifier can be used to synthesize novel photorealistic images of the subject contextualized in different scenes. 
-                                                By leveraging the semantic prior embedded in the model with a new autogenous class-specific prior preservation loss, 
-                                                our technique enables synthesizing the subject in diverse scenes, poses, views and lighting conditions that do not appear in the reference images
-
-                                                <img src="assets\I made it\dreambooth.png" alt="이미지_설명" width="800"><br>
-                                                The image showcases an example from "DreamBooth," a tool driven by AI that can generate numerous images of a specific subject, 
-                                                in this case, a dog, placed in various scenarios. 
-                                                Initially, a small number of input images (around three to five) are provided. 
-                                                These images depict the subject in simple settings. 
-                                                Leveraging a text-based prompt, the tool then produces diverse visual representations of the subject in different scenes and activities, 
-                                                such as being at historical sites, engaging in activities like swimming, or resting. 
-                                                These generated images effectively capture the subject’s interactions with their surroundings and show variations in expression and lighting, 
-                                                all while consistently representing the subject’s core visual traits.This can be applied to generating similar X-ray images with certain condition for disease.
-
-
-                                                <img src="assets\I made it\dreambooth_model.png" alt="이미지_설명" width="500"><br>
-                                                Diffusion model for DreamBooth is trained using a squared error loss to denoise a variably-noised image or latent code
-                                                where x is the ground-truth image, c is a conditioning vector (e.g., obtained from a text prompt), and αt,σt,wt are terms that control the noise schedule and sample quality, and are functions of the diffusion process time t ∼ U([0,1]).
-                                                <br><img src="assets\I made it\loss1.png" alt="이미지_설명" width="300"><br>
-                                                Class-specific Prior Preservation Loss is introduce in this model for following problem:
-                                                <br>Language Drift:
-                                                This phenomenon occurs when a model, initially trained on a broad text corpus and later fine-tuned for a specific task, 
-                                                progressively loses its foundational language knowledge. 
-                                                Fine-tuning all layers of the model achieves the best results in maintaining subject fidelity. 
-                                                Language drift is typically observed in language models, 
-                                                but the document notes that diffusion models used for generating specific subjects also exhibit this problem.
-                                                <br>Reduced Output Diversity:
-                                                Text-to-image diffusion models inherently possess high output diversity. 
-                                                However, this capability can decrease when the model is fine-tuned to generate a specific set of images. 
-                                                This often leads to the model favoring certain poses or views of the subject.
-                                                To address these issues, it introduces class-specific preservation loss, 
-                                                which supervises the model with its own generated images to maintain diversity and counteract language drift. 
-                                                Experimentally, about 1000 iterations of fine-tuning with an appropriate learning rate have been shown to effectively handle these challenges.
-
-                                                Adding a class prior, the loss function becomes<br>
-                                                <img src="assets\I made it\loss2.png" alt="이미지_설명" width="350"><br>
-                                                where the second term is the prior-preservation term that supervises the model with its own generated images, and λ controls for the relative weight of this term.
-
-                                                <br><strong>CXR CLIP - Evaluation Model </strong><br>
-                                                CXR CLIP is vision-language pre-training (VLP) model specifically tailored for the medical field, 
-                                                particularly focusing on chest X-rays. 
-                                                This model addresses the issue of data scarcity by expanding image-text pairings through general prompts and using multiple images alongside radiologic reports. 
-                                                The model incorporates two novel contrastive losses, named ICL and TCL, which are designed to learn the characteristics of medical studies and reports, respectively. 
-                                                This approach has led to the model outperforming similar state-of-the-art models trained under the same conditions. <br>
-                                                  
+                                                <br><strong>DreamBooth</strong><br>
                                                
-                                                <img src="assets\I made it\cxrclip.png" alt="이미지_설명" width="500"><br>
-                                                The figure illustrates the training approach of the newly developed method, which processes a batch containing multiple studies. Each study includes a duo of images and a corresponding pair of textual descriptions. If a study initially contains only one image or one text, additional data is generated through augmentation to complete the pairs. For training with image data, two unique prompts are crafted based on the labels associated with the images. The training of the encoders incorporates three distinct types of contrastive losses: MVS, ICL, and TCL.
-                                                <br><img src="assets\I made it\image 30.png" alt="이미지_설명" width="500"><br>
+                                                <img src="assets\I made it\dreambooth.png" alt="이미지_설명" width="800"><br>
+             
                                                 
-                                                
-                                                    <li><strong>MVS:</strong> Uses all possible pairs of augmented views for supervision.</li>
-                                                    <math xmlns="http://www.w3.org/1998/Math/MathML">
-                                                        <mi>L</mi>
-                                                        <sub>
-                                                            <mi>MVS</mi>
-                                                          </sub>
-                                                        
-                                                        <mo>=</mo>
-                                                        <mfrac>
-                                                          <mn>1</mn>
-                                                          <mn>4</mn>
-                                                        </mfrac>
-                                                        <mo stretchy="false">(</mo>
-                                                        <mi>L</mi>
-                                                        <sub>
-                                                          <mi>CLIP</mi>
-                                                        </sub>
-                                                        <mo stretchy="false">(</mo>
-                                                        <mi>U</mi>
-                                                        <sup>
-                                                          <mn>1</mn>
-                                                          <mo>'</mo>
-                                                        </sup>
-                                                        <mo>,</mo>
-                                                        <mi>V</mi>
-                                                        <sup>
-                                                          <mn>1</mn>
-                                                          <mo>'</mo>
-                                                        </sup>
-                                                        <mo stretchy="false">)</mo>
-                                                        <mo>+</mo>
-                                                        <mi>L</mi>
-                                                        <sub>
-                                                          <mi>CLIP</mi>
-                                                        </sub>
-                                                        <mo stretchy="false">(</mo>
-                                                        <mi>U</mi>
-                                                        <sup>
-                                                          <mn>2</mn>
-                                                          <mo>'</mo>
-                                                        </sup>
-                                                        <mo>,</mo>
-                                                        <mi>V</mi>
-                                                        <sup>
-                                                          <mn>1</mn>
-                                                          <mo>'</mo>
-                                                        </sup>
-                                                        <mo stretchy="false">)</mo>
-                                                        <mo>+</mo>
-                                                        <mi>L</mi>
-                                                        <sub>
-                                                          <mi>CLIP</mi>
-                                                        </sub>
-                                                        <mo stretchy="false">(</mo>
-                                                        <mi>U</mi>
-                                                        <sup>
-                                                          <mn>1</mn>
-                                                          <mo>'</mo>
-                                                        </sup>
-                                                        <mo>,</mo>
-                                                        <mi>V</mi>
-                                                        <sup>
-                                                          <mn>2</mn>
-                                                          <mo>'</mo>
-                                                        </sup>
-                                                        <mo stretchy="false">)</mo>
-                                                        <mo>+</mo>
-                                                        <mi>L</mi>
-                                                        <sub>
-                                                          <mi>CLIP</mi>
-                                                        </sub>
-                                                        <mo stretchy="false">(</mo>
-                                                        <mi>U</mi>
-                                                        <sup>
-                                                          <mn>2</mn>
-                                                          <mo>'</mo>
-                                                        </sup>
-                                                        <mo>,</mo>
-                                                        <mi>V</mi>
-                                                        <sup>
-                                                          <mn>2</mn>
-                                                          <mo>'</mo>
-                                                        </sup>
-                                                        <mo stretchy="false">)</mo>
-                                                        <mo stretchy="false">)</mo>
-                                                      </math>
-                                                    <li><strong>ICL:</strong> Focused on image embeddings to learn intra-study variability.</li>
-                                                    <math xmlns="http://www.w3.org/1998/Math/MathML">
-                                                        <mi>L</mi>
-                                                        <sub>
-                                                          <mi>ICL</mi>
-                                                        </sub>
-                                                        <mo>=</mo>
-                                                        <mi>L</mi>
-                                                        <sub>
-                                                          <mi>CLIP</mi>
-                                                        </sub>
-                                                        <mo stretchy="false">(</mo>
-                                                        <mi>V</mi>
-                                                        <mo>','</mo>
-                                                        <mo>,</mo>
-                                                        <mi>V</mi>
-                                                        <mn>1</mn>
-                                                        <mo>,</mo>
-                                                        <mi>V</mi>
-                                                        <mn>2</mn>
-                                                        <mo stretchy="false">)</mo>
-                                                      </math>
-                                                    
-                                                    <li><strong>TCL:</strong> Focused on text embeddings to match varied clinical expressions.</li>
-                                                    <math xmlns="http://www.w3.org/1998/Math/MathML">
-                                                        <mi>L</mi>
-                                                        <sub>
-                                                          <mi>TCL</mi>
-                                                        </sub>
-                                                        <mo>=</mo>
-                                                        <mi>L</mi>
-                                                        <sub>
-                                                          <mi>CLIP</mi>
-                                                        </sub>
-                                                        <mo stretchy="false">(</mo>
-                                                        <mi>U</mi>
-                                                        <sup>
-                                                          <mn>1</mn>
-                                                          <mo>'</mo>
-                                                        </sup>
-                                                        <mo>,</mo>
-                                                        <mi>V</mi>
-                                                        <sup>
-                                                          <mn>2</mn>
-                                                          <mo>'</mo>
-                                                        </sup>
-                                                        <mo stretchy="false">)</mo>
-                                                      </math>
-                                                </ul>
+                                                <p>
+                                                  DreamBooth is a fine-tuning method designed to personalize diffusion models by enabling them to generate images of specific subjects 
+                                                  (e.g., a particular person or object) while retaining their ability to generate diverse outputs. It achieves this by training the model 
+                                                  on a small set of reference images.
+                                              </p>
+                                              <p>
+                                                  For the loss function, it combines reconstruction and regularization losses:
+                                              </p>
+                                              <div>
+                                                  \[
+                                                  \mathcal{L}_\text{DreamBooth} = \mathbb{E}_{x \sim I_\text{ref}, \epsilon} \left[ \lVert D_\theta(x, S, t) - (x_t - \epsilon) \rVert^2 \right] + \lambda \mathcal{L}_\text{reg}
+                                                  \]
+                                              </div>
+                                              <p>
+                                                  where \(\mathcal{L}_\text{reg}\) ensures that the model does not overfit to the reference images and retains generalization. 
+                                                  Regularization is achieved by augmenting the training data with diverse samples, often generated using text prompts unrelated to the subject.
+                                              </p>
 
-                                                The overall loss is a weighted combination of MVS, ICL, and TCL
-                                                <br><img src="assets\I made it\cxrclip_result.png" alt="이미지_설명" width="500"><br>
-                                                The result of the paper well shows that ResNet-50 embedding works well for classification. From the first, second and fifth row in the evaluation, 
-                                                CXR-CLIP with Resnet-50 shows accuracy in range of 80. The project will be using CXR-CLIP for evaluation. 
-                                                
-                                                
+                                                <br><strong>ControlNet</strong><br>
+                                                <p>
+                                                  ControlNet is a model designed to guide pretrained diffusion models, such as Stable Diffusion, 
+                                                  by conditioning the image generation process on additional input structures like edges, poses, or segmentation maps. 
+                                                  The primary idea is to control the content and structure of the output while leveraging the powerful generative capabilities of diffusion models.
+                                              </p>
+                                              <p>
+                                                  ControlNet introduces a "control branch" alongside the pretrained diffusion model. This branch processes the conditioning input and guides 
+                                                  the generation process. During training, ControlNet optimizes both the control branch and the diffusion model weights to enforce consistency 
+                                                  between the conditioning input and the generated output.
+                                              </p>
+                                              <p>
+                                                  For training, the diffusion model learns to generate an image \(y\) from noise \(\eta\), guided by the structural conditioning. 
+                                                  The loss function combines standard diffusion loss and a control objective:
+                                              </p>
+                                              <div>
+                                                  \[
+                                                  \mathcal{L}_\text{ControlNet} = \mathbb{E}_{x, x_\text{cond}, \epsilon} \left[ \lVert D_\theta(x, x_\text{cond}, t) - (x_t - \epsilon) \rVert^2 \right]
+                                                  \]
+                                              </div>
+                                              <p>
+                                                  where \(x_t\) is the noisy version of \(x\), \(t\) is the timestep, and \(D_{\theta}\) represents the diffusion model.
+                                              </p>
+                                                <br><strong>GLIGEN</strong><br>
+                                                <p>
+                                                  GLIGEN extends diffusion models to generate images grounded in textual descriptions and additional spatial inputs like bounding boxes. 
+                                                  It focuses on aligning textual semantics with specific regions in the image, making it suitable for tasks like scene generation and object placement.
+                                              </p>
+                                              <p>
+                                                  For the loss function, it combines a grounding loss and a standard diffusion loss to ensure the alignment of objects with the specified regions:
+                                              </p>
+                                              <div>
+                                                  \[
+                                                  \mathcal{L}_\text{GLIGEN} = \mathcal{L}_\text{diffusion} + \lambda \mathcal{L}_\text{grounding}
+                                                  \]
+                                              </div>
+                                              <p>
+                                                  where \(\mathcal{L}_\text{grounding}\) enforces consistency between the predicted and ground-truth bounding box regions. 
+                                                  It uses cross-attention layers in the diffusion model to inject grounding information. These layers align text embeddings and spatial inputs with the generated image features.
+                                              </p>
+
+
                                                 
                                                 <br><br><h4>Prompt Engineering on Dreambooth</h4>
                                                 <strong>Basic Prompting - How to Generate General Looking X-ray images</strong>

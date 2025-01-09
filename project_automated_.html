@@ -97,17 +97,18 @@
                                                             focusing on detecting and quantifying fusion events between biological structures of telomeres, PML bodies, and APBs (ALT-associated promyelocytic leukemia nuclear bodies). 
                                                             The analysis involves fluorescently labeled puncta categorized into red, green, and yellow channels, corresponding to specific subcellular structures. 
                                                             The primary tool used is TrackMate 7, which provides object detection and tracking through algorithms like DoG, Hessian, and LoG. 
-                                                            However, its default Linear Assignment Problem (LAP) tracker faced challenges in detecting complex events like merging and splitting of puncta.
+                                                            However, Trackmate 7 faced challenges in detecting complex events like merging and splitting of puncta.
                                                         </p>    
                                                         <p>To address these limitations, a custom merging detection function was developed, 
                                                             extracting coordinates from LAP tracker outputs, defining circular regions around detected puncta, 
                                                             and identifying overlaps across frames to track fusion events. 
                                                             Preprocessing steps, including rigid transformations, blob masking, and gamma correction, were implemented to improve detection accuracy and reduce noise. 
-                                                            Advanced tracking methods, such as an enhanced Kalman tracker, were explored to detect merging and splitting events more effectively 
+                                                            Enhanced Kalman tracker were explored to detect merging and splitting events more effectively 
                                                             by incorporating penalties based on features like circularity, intensity, and track continuity.
                                                         </p> 
-                                                        <p> The evaluation framework included manual annotation of merging events and quantitative comparison with the detected results to validate the pipeline's accuracy. 
-                                                            Key challenges, such as misdetection, inconsistent circularity, and tracking failures, were mitigated by refining detection thresholds and optimizing parameters like search radius and frame gap limits. 
+                                                        <p> The evaluation framework included manual annotation of merging events and quantitative comparison with the detected results to validate the pipeline's accuracy.
+                                                            Using the developed custom function, enhanced the accuracy of tracking cellular merging event. 
+                                                            Additionally, misdetection, inconsistent circularity, and tracking failures, were mitigated by refining detection thresholds and optimizing parameters like search radius and frame gap limits. 
                                                             This project demonstrates the integration of advanced image analysis tools and custom algorithms to tackle the complexities of dynamic subcellular processes, 
                                                             enabling more accurate and robust quantification of biological phenomena.
                                                         </p>
@@ -117,9 +118,14 @@
                                                         <ul>
                                                             <li>
                                                                 <span>Clip Description</span>
-                                                                1. Tracking Result<br>
+                                                                1. Tracking Result (Original vs Custom Tracking Function)<br>
                                                         
                         
+                                                            </li>
+                                                            <li>
+                                                                <span>Figure Description</span>
+                                                                1. Trackmate 7 with Custom Fucntion applied<br>
+                                                                2. Different Methods of Masking Original Image for Tracking <br>
                                                             </li>
                                                         </ul>
 
@@ -130,7 +136,21 @@
                                             <div class="entry-content">
                                                 <div class="media-wrap">
                                                     <div class="portfolio-media embed-responsive embed-responsive-16by9">
-                                                        <iframe title="Image Analysis Pipeline" width="1260" height="709" src="https://www.youtube.com/embed/a0d8vZZZBRc?si=Hsn0zTEjujucrTTg" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
+                                                        <iframe title="Image Analysis Pipeline" width="1260" height="709" src="https://www.youtube.com/embed/M8ckX6jfi20?si=47tdLScrJ8zNM-2e" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
+                                                    </div>
+
+                                                    <div class="portfolio-media swiper-container single-image-slider">
+                                                        <div class="swiper-wrapper" >
+                                                            <div class="swiper-slide">
+                                                                <img width="1200" height="800" alt="Catalogue" src="assets\I made it\final_puncta.gif">                                                             
+                                                            </div>  
+                                                            <div class="swiper-slide">
+                                                                <img width="1200" height="800" alt="Catalogue" src="assets\I made it\collage.gif">                                                             
+                                                            </div>                                                    
+                                                        </div>
+
+                                                        <div class="swiper-pagination"></div>	
+
                                                     </div>
 
 
