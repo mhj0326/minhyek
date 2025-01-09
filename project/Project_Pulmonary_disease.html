@@ -480,13 +480,14 @@
 
                                                 <br><br><h4>ControlNet Generated Images</h4>
                                                 <img src="assets\I made it\ControlNet.png" alt="이미지_설명" width="2000"><br>
-                                                        <p><strong>Prompt: “A photo of a waj sks lung x-ray”</strong></p>
-
+                                                        <p><strong>Generation of chest X-ray images using ControlNet.The top-left image is a real chest X-ray, the top-center image shows a canny edge-detected X-ray, and the rest of images are generated X-ray with pleural effusion using different prompts</strong></p>
+                                                <p>ControlNet-generated images exhibit a range of outcomes, producing both realistic and unrealistic results depending on the prompting used. Realistic images successfully replicate the anatomical structure of chest X-rays, including accurate rib alignment, lung field textures, and shading, which are essential for diagnostic purposes. However, other images appear highly stylized or exaggerated, with unnatural colors, textures, and inconsistent anatomical features, such as overly highlighted lungs or distorted proportions. These unrealistic results suggest that while ControlNet has the capacity to generate plausible medical images, the effectiveness is highly dependent on carefully crafted prompts and appropriate guidance during the generation process. This variability highlights the importance of prompt design and model constraints in generating medically relevant synthetic data.</p>
                                                 <br><br><h4>GLIGEN Generated Images</h4>
                                                 <img src="assets\I made it\GLIGEN (1).png" alt="이미지_설명" width="2000"><br>
                                                         <p><strong>Generation of chest X-ray images using GLIGEN. The top-left image is a real chest X-ray,
                                                           the top-center image shows a canny edge-detected X-ray, and the rest of images are generated X-ray
                                                           with pleural effusion</strong></p>
+                                                <p>The generated images demonstrate a strong ability to replicate the anatomical structure of chest X-rays, including the rib cage, spine, and lung fields, ensuring structural consistency. Features mimicking pleural effusion are well-represented, adding value to datasets with underrepresented pathological cases. However, some generated features may appear overly uniform or exaggerated, and minor artifacts in texture and shading are noticeable upon close inspection. While realistic overall, these images may benefit from post-processing to enhance their utility in high-stakes diagnostic applications. The canny image effectively highlights edge structures, providing a useful reference for evaluating the generated data.</p>
 
                                                 
 
