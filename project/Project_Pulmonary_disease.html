@@ -52,17 +52,19 @@
                     <nav id="site-navigation" class="main-navigation" role="navigation" aria-label="Top Menu">
                         <ul id="top-menu" class="menu">
                             <li class="has-children"><a href="../index.html">Home</a>
-                                
-                            </li>
-                            <li class="has-children"><a href="../project.html">Project</a>
-                                
-                            </li>
-                            <li class="has-children"><a href="../experience.html">Experience</a>
-                                
+
                                 
                             </li>
                             <li class="has-children"><a href="../publication.html">Publication</a>
                                 
+                                
+                            </li>
+                            
+                            <li class="has-children"><a href="../experience.html">Experience</a>
+                                
+                                
+                            </li>
+                            <li class="has-children"><a href="../project.html">Project</a>
                                 
                             </li>
                             <li class="has-children"><a href="../awards.html">Others</a>
@@ -270,6 +272,8 @@
                                                 
                                                 <br><br><h4>Model for Image Generation & Evaluation</h4>
                                                 <strong>ChexNet</strong><br>
+                                
+                                                
                                                 ChexNet is a pretrained neural network that is based on the DenseNet121 framework, which contains 121 fully connected convolutional layers. 
                                                 Normally, these convolutions would be used to learn a feature map from the data, and the feature map would be used for downstream steps such as chest X-ray image classification. 
                                                 However, instead of using the trained CheXNet model for a classification task, we opted to use it to generate the feature maps to use as input to a separate  encoder-decoder caption generation model. 
@@ -473,6 +477,17 @@
                                                 However, where artifacts occur, they are significantly more pronounced, creating stark contrasts in the images. 
                                                 This could indicate that the generation process, while improved in some respects, still struggles with consistency and may exaggerate certain features excessively in its worst outputs, 
                                                 potentially affecting the utility of these images for precise diagnostic or educational applications.<br>
+
+                                                <br><br><h4>ControlNet Generated Images</h4>
+                                                <img src="assets\I made it\ControlNet.png" alt="이미지_설명" width="2000"><br>
+                                                        <p><strong>Prompt: “A photo of a waj sks lung x-ray”</strong></p>
+
+                                                <br><br><h4>GLIGEN Generated Images</h4>
+                                                <img src="assets\I made it\GLIGEN (1).png" alt="이미지_설명" width="2000"><br>
+                                                        <p><strong>Generation of chest X-ray images using GLIGEN. The top-left image is a real chest X-ray,
+                                                          the top-center image shows a canny edge-detected X-ray, and the rest of images are generated X-ray
+                                                          with pleural effusion</strong></p>
+
                                                 
 
                                                 
