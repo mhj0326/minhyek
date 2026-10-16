@@ -14,6 +14,16 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   });
 
+  var themeToggle = document.getElementById('theme-toggle');
+  if (themeToggle) {
+    themeToggle.addEventListener('click', function () {
+      var current = document.documentElement.getAttribute('data-theme') || 'light';
+      var next = current === 'dark' ? 'light' : 'dark';
+      document.documentElement.setAttribute('data-theme', next);
+      try { localStorage.setItem('theme', next); } catch (e) {}
+    });
+  }
+
   var emailLink = document.getElementById('email-link');
   if (emailLink) {
     emailLink.addEventListener('click', function (e) {

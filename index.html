@@ -4,6 +4,16 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Minhyek Jeon</title>
+  <script>
+    (function () {
+      try {
+        var saved = localStorage.getItem('theme');
+        if (saved === 'dark' || saved === 'light') {
+          document.documentElement.setAttribute('data-theme', saved);
+        }
+      } catch (e) {}
+    })();
+  </script>
   <meta name="description" content="Minhyek Jeon — DPhil student in the Visual Geometry Group, Department of Engineering Science, University of Oxford, working on generative models for computer vision and computational biology.">
   <link rel="icon" type="image/png" href="assets/favicon.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -22,8 +32,13 @@
         <li><a href="#publications">Publications</a></li>
         <li><a href="#awards">Awards</a></li>
         <li><a href="#teaching">Teaching</a></li>
+        <li><a href="#experience">Experience</a></li>
         <li><a href="#contact">Contact</a></li>
       </ul>
+      <button id="theme-toggle" aria-label="Toggle dark mode" title="Toggle dark mode">
+        <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/></svg>
+        <svg class="icon-moon" viewBox="0 0 24 24" fill="currentColor"><path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"/></svg>
+      </button>
       <button id="nav-toggle" aria-label="Toggle menu" aria-expanded="false">
         <span></span><span></span><span></span>
       </button>
@@ -75,12 +90,10 @@
           Carnegie Mellon University, where I was part of the
           <a href="https://www.cmu.edu/cs/humansensing/" target="_blank" rel="noopener">Human Sensing Lab</a>
           at the Robotics Institute, advised by <a href="https://www.cs.cmu.edu/~ftorre/" target="_blank" rel="noopener">Fernando De la Torre</a>.
-          There, I collaborated with the U.S. Army's DEVCOM Army Research Laboratory on domain
-          adaptation and data augmentation for satellite imagery. Earlier, at Korea University,
-          I conducted research on multimodal diagnosis models and cohort studies in reproductive
-          health, advised by <a href="https://scholar.google.com/citations?user=r6OBQqgAAAAJ&hl=en" target="_blank" rel="noopener">Yoonjung Yoonie Joo</a>.
-          I'm broadly interested in making generative models more reliable and trustworthy for
-          clinical use.
+          There, I worked on domain adaptation and data augmentation for satellite imagery.
+          Earlier, at Korea University, I conducted research on multimodal diagnosis models and
+          cohort studies in reproductive health, advised by <a href="https://scholar.google.com/citations?user=r6OBQqgAAAAJ&hl=en" target="_blank" rel="noopener">Yoonjung Yoonie Joo</a>.
+          I'm broadly interested in making generative models more reliable and trustworthy.
         </p>
       </div>
     </header>
@@ -95,35 +108,35 @@
             <span class="dot"></span>
           </div>
           <div class="timeline-item">
-            <div class="timeline-content"><span class="date">2025</span><span class="news-text">Graduated from CMU</span></div>
+            <div class="timeline-content"><span class="date">May 2025</span><span class="news-text">Graduated from CMU</span></div>
             <span class="dot"></span>
           </div>
           <div class="timeline-item">
-            <div class="timeline-content"><span class="date">2025</span><span class="news-text">Selected for Fulbright Scholarship</span></div>
+            <div class="timeline-content"><span class="date">Jun 2025</span><span class="news-text">ICCV paper accepted</span></div>
             <span class="dot"></span>
           </div>
           <div class="timeline-item">
-            <div class="timeline-content"><span class="date">2025</span><span class="news-text">ICCV paper accepted</span></div>
+            <div class="timeline-content"><span class="date">Sep 2025</span><span class="news-text">Selected for Fulbright Scholarship</span></div>
             <span class="dot"></span>
           </div>
           <div class="timeline-item">
-            <div class="timeline-content"><span class="date">2025</span><span class="news-text">Started DPhil in CS at Oxford</span></div>
+            <div class="timeline-content"><span class="date">Oct 2025</span><span class="news-text">Started DPhil in CS at Oxford</span></div>
             <span class="dot"></span>
           </div>
           <div class="timeline-item">
-            <div class="timeline-content"><span class="date">2025</span><span class="news-text">Awarded Mogam Science Scholarship</span></div>
+            <div class="timeline-content"><span class="date">Nov 2025</span><span class="news-text">Awarded Mogam Science Scholarship</span></div>
             <span class="dot"></span>
           </div>
           <div class="timeline-item">
-            <div class="timeline-content"><span class="date">2026</span><span class="news-text">ECCV paper accepted</span></div>
+            <div class="timeline-content"><span class="date">Jun 2026</span><span class="news-text">ECCV paper accepted</span></div>
             <span class="dot"></span>
           </div>
           <div class="timeline-item">
-            <div class="timeline-content"><span class="date">2026</span><span class="news-text">Joined VGG</span></div>
+            <div class="timeline-content"><span class="date">Sep 2026</span><span class="news-text">Joined VGG</span></div>
             <span class="dot"></span>
           </div>
           <div class="timeline-item">
-            <div class="timeline-content"><span class="date">2026</span><span class="news-text">Started as Lecturer, St Anne's College</span></div>
+            <div class="timeline-content"><span class="date">Oct 2026</span><span class="news-text">Started as Lecturer, St Anne's College</span></div>
             <span class="dot"></span>
           </div>
         </div>
@@ -138,21 +151,21 @@
           <span class="entry-title">University of Oxford</span>
           <span class="entry-date">Oct. 2025 &ndash; Present</span>
         </div>
-        <div class="entry-sub">DPhil in Engineering Science &middot;<br> Advised by João F. Henriques and Andrew Zisserman</div>
+        <div class="entry-sub">DPhil in Engineering Science<br> Advised by João F. Henriques and Andrew Zisserman</div>
       </div>
       <div class="entry">
         <div class="entry-head">
           <span class="entry-title">Carnegie Mellon University</span>
           <span class="entry-date">Aug. 2023 &ndash; May 2025</span>
         </div>
-        <div class="entry-sub">M.S. in Computational Biology, School of Computer Science &middot; <br> Advised by Fernando De la Torre <br>Graduated with Honors in Academic Achievement and Research Excellence</div>
+        <div class="entry-sub">M.S. in Computational Biology, School of Computer Science<br> Advised by Fernando De la Torre <br>Graduated with Honors in Academic Achievement and Research Excellence</div>
       </div>
       <div class="entry">
         <div class="entry-head">
           <span class="entry-title">Korea University</span>
           <span class="entry-date">Mar. 2017 &ndash; Aug. 2023</span>
         </div>
-        <div class="entry-sub">B.Eng. in Artificial Intelligence &middot;<br> B.S. in Biotechnology &middot; <br> Advised by Yoonjung Yoonie Joo</div>
+        <div class="entry-sub">B.Eng. in Artificial Intelligence<br> B.S. in Biotechnology<br> Advised by Yoonjung Yoonie Joo</div>
       </div>
     </section>
 
@@ -239,7 +252,6 @@
         <li><span class="date">2025</span> Certificate of Excellence in Academic Achievement, Carnegie Mellon University</li>
         <li><span class="date">2020, 2022</span> Semester High Honors, Division of Biotechnology, Korea University (Spring 2020, Spring &amp; Fall 2022)</li>
         <li><span class="date">2022</span> Future Leaders Scholarship, Korea University ($2,650)</li>
-        <li><span class="date">2019</span> Award Certificate, Seoul Metropolitan Police Agency</li>
         <li><span class="date">2015</span> KAIST Presidential Award, 12th Chemistry Frontier Festival</li>
       </ul>
     </section>
@@ -257,13 +269,63 @@
       </ul>
     </section>
 
+    <!-- Experience -->
+    <section class="section" id="experience">
+      <h2>Experience</h2>
+      <div class="entry entry--role">
+        <div class="entry-title">VGG, University of Oxford</div>
+        <div class="entry-role">DPhil Researcher</div>
+        <div class="entry-sub-row">
+          <span class="entry-research">Main research area: Generative models for medical imaging</span>
+          <span class="entry-date">2026 &ndash; Present</span>
+        </div>
+      </div>
+      <div class="entry entry--role">
+        <div class="entry-title">Human Sensing Lab, Carnegie Mellon University</div>
+        <div class="entry-role">Research Assistant (advised by Fernando De la Torre)</div>
+        <div class="entry-sub-row">
+          <span class="entry-research">Main research area: Synthetic data generation, diffusion models</span>
+          <span class="entry-date">2024 &ndash; 2025</span>
+        </div>
+      </div>
+      <div class="entry entry--role">
+        <div class="entry-title">Koes Lab, University of Pittsburgh</div>
+        <div class="entry-role">Research Assistant</div>
+        <div class="entry-sub-row">
+          <span class="entry-research">Main research area: Boltzmann sampling, molecular dynamics</span>
+          <span class="entry-date">2024</span>
+        </div>
+      </div>
+      <div class="entry entry--role">
+        <div class="entry-title">Korea University</div>
+        <div class="entry-role">Research Assistant</div>
+        <div class="entry-sub-row">
+          <span class="entry-research">Main research area: PCOS&ndash;endometriosis comorbidity, multimodal diagnosis</span>
+          <span class="entry-date">2022 &ndash; 2023</span>
+        </div>
+      </div>
+      <div class="entry entry--role">
+        <div class="entry-title">Computer Vision Lab, Korea University</div>
+        <div class="entry-role">Undergraduate Research Assistant (advised by Seungryong Kim)</div>
+        <div class="entry-sub-row">
+          <span class="entry-research">Main research area: Semantic correspondence</span>
+          <span class="entry-date">2021 &ndash; 2022</span>
+        </div>
+      </div>
+    </section>
+
   </main>
 
   <footer id="contact">
     <div class="footer-inner">
       <h2>Contact</h2>
       <p><a href="mailto:minhyek.jeon@cs.ox.ac.uk">minhyek.jeon@cs.ox.ac.uk</a></p>
-      <p class="footer-meta">Oxford, UK &middot; <a href="https://github.com/mhj0326" target="_blank" rel="noopener">GitHub</a> &middot; <a href="https://www.linkedin.com/in/minhyekjeon" target="_blank" rel="noopener">LinkedIn</a> &middot; <a href="https://scholar.google.com/citations?user=hk0FmXQAAAAJ&hl=ko" target="_blank" rel="noopener">Google Scholar</a></p>
+      <p class="footer-meta">Visual Geometry Group, Department of Engineering Science<br>University of Oxford, Parks Road, Oxford OX1 3PJ, UK</p>
+      <p class="footer-meta">
+        <a href="https://github.com/mhj0326" target="_blank" rel="noopener">GitHub</a> &middot;
+        <a href="https://www.linkedin.com/in/minhyekjeon" target="_blank" rel="noopener">LinkedIn</a> &middot;
+        <a href="https://scholar.google.com/citations?user=hk0FmXQAAAAJ&hl=ko" target="_blank" rel="noopener">Google Scholar</a>
+      </p>
       <p class="copyright">&copy; 2026 Minhyek Jeon</p>
     </div>
   </footer>
