@@ -1,475 +1,273 @@
 <!DOCTYPE html>
-
-
 <html lang="en">
-    <head>
-        <!-- Document Title -->      
-        <title>Minhyek Jeon | Portfolio </title>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Minhyek Jeon</title>
+  <meta name="description" content="Minhyek Jeon — DPhil student in the Visual Geometry Group, Department of Engineering Science, University of Oxford, working on generative models for computer vision and computational biology.">
+  <link rel="icon" type="image/png" href="assets/favicon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700&subset=latin,latin-ext" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
 
-        <!-- Metas -->      
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta name="author" content="CaliberThemes" />
+  <nav id="topnav">
+    <div class="nav-inner">
+      <a class="nav-name" href="#top"><img src="assets/favicon.png" alt="Minhyek Jeon" class="nav-logo"></a>
+      <ul class="nav-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#education">Education</a></li>
+        <li><a href="#publications">Publications</a></li>
+        <li><a href="#awards">Awards</a></li>
+        <li><a href="#teaching">Teaching</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+      <button id="nav-toggle" aria-label="Toggle menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
 
-        <!-- Favicon -->      
-        <link rel="icon" type="image/png" href="assets\I made it\logo_mj.png" />
+  <main id="top">
 
-        <!-- Links -->      
-        <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700&subset=latin,latin-ext" rel="stylesheet" type="text/css" />
-        <link rel='stylesheet' id='bootstrap-css'  href='assets/lib/bootstrap/css/bootstrap.min.css' type='text/css' media='all' />
-        <link rel='stylesheet' id='font-awesome-css'  href='assets/css/icons/font-awesome.min.css' type='text/css' media='all' />       
-        <link rel='stylesheet' id='swiper-css' href='assets/lib/swiper/css/swiper.min.css' type='text/css' media='all' />
-        <link rel='stylesheet' id='cubeportfolio-css'  href='assets/lib/cubeportfolio/css/cubeportfolio.min.css' type='text/css' media='all' />     
+    <!-- Header / About -->
+    <header class="hero" id="about">
+      <div class="hero-photo">
+        <img src="assets/img/profile.jpg" alt="Portrait of Minhyek Jeon" id="profile-photo">
+      </div>
+      <div class="hero-text">
+        <h1>Minhyek Jeon</h1>
+        <ul class="quick-links">
+          <li>
+            <a href="https://scholar.google.com/citations?user=hk0FmXQAAAAJ&hl=ko" target="_blank" rel="noopener" aria-label="Google Scholar" title="Google Scholar">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M5.242 13.769 0 9.5 12 0l12 9.5-5.242 4.269C17.548 11.249 14.978 9.5 12 9.5c-2.977 0-5.548 1.748-6.758 4.269zM12 10a7 7 0 1 0 0 14 7 7 0 0 0 0-14z"/></svg>
+            </a>
+          </li>
+          <li>
+            <a href="https://github.com/mhj0326" target="_blank" rel="noopener" aria-label="GitHub" title="GitHub">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 .5C5.73.5.5 5.73.5 12c0 5.1 3.29 9.4 7.86 10.93.57.1.78-.25.78-.56 0-.27-.01-1-.02-1.96-3.2.7-3.88-1.54-3.88-1.54-.52-1.33-1.28-1.68-1.28-1.68-1.04-.72.08-.7.08-.7 1.16.08 1.76 1.19 1.76 1.19 1.03 1.76 2.7 1.25 3.36.96.1-.74.4-1.25.73-1.54-2.56-.29-5.25-1.28-5.25-5.7 0-1.26.45-2.29 1.19-3.09-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.18 1.18a11 11 0 0 1 5.79 0c2.21-1.49 3.18-1.18 3.18-1.18.63 1.59.23 2.76.11 3.05.74.8 1.19 1.83 1.19 3.09 0 4.43-2.69 5.41-5.26 5.7.42.36.78 1.07.78 2.15 0 1.55-.01 2.8-.01 3.18 0 .31.21.67.79.56A10.5 10.5 0 0 0 23.5 12c0-6.27-5.23-11.5-11.5-11.5z"/></svg>
+            </a>
+          </li>
+          <li>
+            <a href="https://www.linkedin.com/in/minhyekjeon" target="_blank" rel="noopener" aria-label="LinkedIn" title="LinkedIn">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.5 2h-17A1.5 1.5 0 0 0 2 3.5v17A1.5 1.5 0 0 0 3.5 22h17a1.5 1.5 0 0 0 1.5-1.5v-17A1.5 1.5 0 0 0 20.5 2zM8 19H5.5v-9H8zM6.75 8.5a1.45 1.45 0 1 1 0-2.9 1.45 1.45 0 0 1 0 2.9zM19 19h-2.5v-4.6c0-1.1-.02-2.5-1.52-2.5-1.52 0-1.76 1.19-1.76 2.42V19H10.7v-9h2.4v1.23h.03c.34-.64 1.17-1.3 2.4-1.3 2.57 0 3.47 1.69 3.47 3.89z"/></svg>
+            </a>
+          </li>
+          <li class="copy-email-item">
+            <a href="mailto:minhyek.jeon@cs.ox.ac.uk" id="email-link" data-email="minhyek.jeon@cs.ox.ac.uk" aria-label="Email (click to copy)" title="Click to copy email">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22 6 12 13 2 6"/></svg>
+            </a>
+            <span class="copy-feedback" aria-live="polite">Copied</span>
+          </li>
+        </ul>
+        <p class="affiliation">
+        <a href="https://www.robots.ox.ac.uk/~vgg/" target="_blank" rel="noopener">Visual Geometry Group</a> <br>
+         
+         DPhil Student, Department of Engineering Science &middot; University of Oxford
+          
+        </p>
+        <p class="bio">
+          I'm a DPhil researcher at VGG, advised by <a href="https://www.robots.ox.ac.uk/~joao/" target="_blank" rel="noopener">João F. Henriques</a> and <a href="https://www.robots.ox.ac.uk/~az/" target="_blank" rel="noopener">Andrew Zisserman</a>,
+          where I develop generative models for synthetic data generation in the medical imaging
+          domain. Previously, I completed my Master's at
+          Carnegie Mellon University, where I was part of the
+          <a href="https://www.cmu.edu/cs/humansensing/" target="_blank" rel="noopener">Human Sensing Lab</a>
+          at the Robotics Institute, advised by <a href="https://www.cs.cmu.edu/~ftorre/" target="_blank" rel="noopener">Fernando De la Torre</a>.
+          There, I collaborated with the U.S. Army's DEVCOM Army Research Laboratory on domain
+          adaptation and data augmentation for satellite imagery. Earlier, at Korea University,
+          I conducted research on multimodal diagnosis models and cohort studies in reproductive
+          health, advised by <a href="https://scholar.google.com/citations?user=r6OBQqgAAAAJ&hl=en" target="_blank" rel="noopener">Yoonjung Yoonie Joo</a>.
+          I'm broadly interested in making generative models more reliable and trustworthy for
+          clinical use.
+        </p>
+      </div>
+    </header>
 
-        <link rel='stylesheet' id='main-css'  href='style.css' type='text/css' media='all' />
+    <!-- News -->
+    <section class="section" id="news">
+      <h2>News</h2>
+      <div class="timeline-scroll">
+        <div class="timeline-track">
+          <div class="timeline-item">
+            <div class="timeline-content"><span class="date">2024</span><span class="news-text">2 papers published</span></div>
+            <span class="dot"></span>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-content"><span class="date">2025</span><span class="news-text">Graduated from CMU</span></div>
+            <span class="dot"></span>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-content"><span class="date">2025</span><span class="news-text">Selected for Fulbright Scholarship</span></div>
+            <span class="dot"></span>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-content"><span class="date">2025</span><span class="news-text">ICCV paper accepted</span></div>
+            <span class="dot"></span>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-content"><span class="date">2025</span><span class="news-text">Started DPhil in CS at Oxford</span></div>
+            <span class="dot"></span>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-content"><span class="date">2025</span><span class="news-text">Awarded Mogam Science Scholarship</span></div>
+            <span class="dot"></span>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-content"><span class="date">2026</span><span class="news-text">ECCV paper accepted</span></div>
+            <span class="dot"></span>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-content"><span class="date">2026</span><span class="news-text">Joined VGG</span></div>
+            <span class="dot"></span>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-content"><span class="date">2026</span><span class="news-text">Started as Lecturer, St Anne's College</span></div>
+            <span class="dot"></span>
+          </div>
+        </div>
+      </div>
+    </section>
 
-    </head>
+    <!-- Education -->
+    <section class="section" id="education">
+      <h2>Education</h2>
+      <div class="entry">
+        <div class="entry-head">
+          <span class="entry-title">University of Oxford</span>
+          <span class="entry-date">Oct. 2025 &ndash; Present</span>
+        </div>
+        <div class="entry-sub">DPhil in Engineering Science &middot;<br> Advised by João F. Henriques and Andrew Zisserman</div>
+      </div>
+      <div class="entry">
+        <div class="entry-head">
+          <span class="entry-title">Carnegie Mellon University</span>
+          <span class="entry-date">Aug. 2023 &ndash; May 2025</span>
+        </div>
+        <div class="entry-sub">M.S. in Computational Biology, School of Computer Science &middot; <br> Advised by Fernando De la Torre <br>Graduated with Honors in Academic Achievement and Research Excellence</div>
+      </div>
+      <div class="entry">
+        <div class="entry-head">
+          <span class="entry-title">Korea University</span>
+          <span class="entry-date">Mar. 2017 &ndash; Aug. 2023</span>
+        </div>
+        <div class="entry-sub">B.Eng. in Artificial Intelligence &middot;<br> B.S. in Biotechnology &middot; <br> Advised by Yoonjung Yoonie Joo</div>
+      </div>
+    </section>
 
+    <!-- Publications -->
+    <section class="section" id="publications">
+      <h2>Publications</h2>
 
-    <body>
-        
+      <h3 class="pub-year">2026</h3>
+      <div class="pub">
+        <img src="assets/img/project-satellite.png" alt="" class="pub-fig">
+        <div class="pub-body">
+          <div class="pub-title"><a href="https://scholar.google.com/citations?view_op=view_citation&hl=ko&user=hk0FmXQAAAAJ&citation_for_view=hk0FmXQAAAAJ:uWQEDVKXjbEC" target="_blank" rel="noopener">Diagnosing Aerial-View Object Detectors with Foundational Image Generative Models</a></div>
+          <div class="pub-authors">Stanislav Panev, <strong>Minhyek Jeon</strong>, Celso de Melo, Shen-Yi Hu, Supriyo Chakraborty, Fernando De la Torre</div>
+          <div class="pub-venue">European Conference on Computer Vision (ECCV)</div>
+        </div>
+      </div>
 
-        <!-- Page Wrapper -->
-        <div id="page" class="site">
-            <header id="masthead" class="site-header   left-sidebar " role="banner">
-                <div class="container-fluid">
-                    
-                    <div id="site-branding">			
-                        <a class="logo-brand" href="index.html">
-                            <img class="logo" src="assets\I made it\logo_mj.png" alt="Logo">					                            
-                            <img class="retina-logo" src="assets\I made it\logo_mj.png" alt="Retina Logo">
-                            
-                            					                            
-                        </a>	
-                    </div><!-- .site-branding -->
-                    <span id="ham-trigger-wrap">
-                        <span class="ham-trigger">
-                            <span></span>                            
-                        </span>                            
-                    </span>
-                    
-                   
-                      
-                    
-                    <nav id="site-navigation" class="main-navigation" role="navigation" aria-label="Top Menu">
-                        <head>
-                            <meta charset="UTF-8">
-                            <meta name="viewport" content="width=device-width, initial-scale=1.0">
-                            <title>Copy Phone Number</title>
-                            <script>
-                                function copyPhoneNumber() {
-                                    const phoneNumber = "+1 412-251-4176";
-                                    navigator.clipboard.writeText(phoneNumber).then(() => {
-                                        alert("Phone number copied to clipboard!");
-                                    }).catch(err => {
-                                        console.error('Failed to copy: ', err);
-                                    });
-                                }
+      <h3 class="pub-year">2025</h3>
+      <div class="pub">
+        <img src="assets/img/pub-vehicle-aerial.png" alt="" class="pub-fig">
+        <div class="pub-body">
+          <div class="pub-title"><a href="https://scholar.google.com/citations?view_op=view_citation&hl=ko&user=hk0FmXQAAAAJ&citation_for_view=hk0FmXQAAAAJ:UxriW0iASnsC" target="_blank" rel="noopener">Adapting Vehicle Detectors for Aerial Imagery to Unseen Domains with Weak Supervision</a></div>
+          <div class="pub-authors">Xiaoyang Fang, <strong>Minhyek Jeon</strong>, Zeyu Qin, Stanislav Panev, Celso de Melo, Shen-Yi Hu, Supriyo Chakraborty, Fernando De la Torre</div>
+          <div class="pub-venue">IEEE/CVF International Conference on Computer Vision (ICCV)</div>
+        </div>
+      </div>
 
-                                function copyEmail() {
-                                    const email = "minhyekj@andrew.cmu.edu";
-                                    navigator.clipboard.writeText(email).then(() => {
-                                        alert("Email copied to clipboard!");
-                                    }).catch(err => {
-                                        console.error('Failed to copy: ', err);
-                                    });
-                                }
+      <div class="pub">
+        <img src="assets/img/pub-md-water.png" alt="" class="pub-fig">
+        <div class="pub-body">
+          <div class="pub-title"><a href="https://scholar.google.com/citations?view_op=view_citation&hl=ko&user=hk0FmXQAAAAJ&citation_for_view=hk0FmXQAAAAJ:KxtntwgDAa4C" target="_blank" rel="noopener">Models Trained with Unnormalized Density Functions: A Need for a Course Correction</a></div>
+          <div class="pub-authors">Rishal Aggarwal, Diego Peñaherrera, Jiarui Shao, <strong>Minhyek Jeon</strong>, David Koes</div>
+          <div class="pub-venue">ICLR Blogposts Track</div>
+        </div>
+      </div>
 
-                                function copyAddress() {
-                                    const address = "Pittsburgh, PA 15203";
-                                    navigator.clipboard.writeText(address).then(() => {
-                                        alert("Address copied to clipboard!");
-                                    }).catch(err => {
-                                        console.error('Failed to copy: ', err);
-                                    });
-                                }
-                            </script>
-                        </head>
-                        
-                        <ul id="top-menu" class="menu">
-                            
-                            <li class="has-children"><a href="#">Menu</a>
-                                <ul class="sub-menu" id="sub-menu2">
-                                    <li class="has-children"><li><a href="publication.html">Publication</a></li></li>
-                                    <li class="has-children"><li><a href="experience.html">Experience</a></li></li>
-                                    <li class="has-children"><li><a href="project.html">Project</a></li></li>
-                                    <li class="has-children"><li><a href="awards.html">Awards, Skills, Interviews</a></li></li>
-                                    
-                                </ul>
-                            </li>
-                        
-                        <li class="top-menu"><a href="assets/I made it/2024_CV.pdf" target="_blank">CV</a></li></li>
-                        <li class="top-menu"><a href="https://scholar.google.com/citations?user=hk0FmXQAAAAJ&hl=ko&oi=ao" target="_blank">Google Scholar</a></li></li>
-                        <li class="top-menu"><a href="https://www.linkedin.com/in/minhyekjeon" target="_blank">LinkedIn</a></li></li>
-                        <li class="top-menu"><a href="https://github.com/mhj0326" target="_blank">GitHub</a></li></li>
-                        <li class="has-children"><a href="#">Contact</a>
-                            <ul class="sub-menu">
-                                <li><a href="#" onclick="copyPhoneNumber(); return false;">Phone: +1 412-251-4176</a></li>
-                                <li><a href="#" onclick="copyEmail(); return false;">Email: minhyekj@andrew.cmu.edu</a></li>
-                                <li><a href="#" onclick="copyAddress(); return false;">Address: Pittsburgh, PA 15203</a></li>
-                                
-                                
+      <h3 class="pub-year">2024</h3>
+      <div class="pub">
+        <img src="assets/img/pub-pcos.png" alt="" class="pub-fig">
+        <div class="pub-body">
+          <div class="pub-title"><a href="https://jkms.org/DOIx.php?id=10.3346/jkms.2024.39.e284" target="_blank" rel="noopener">Similar but Distinct Comorbidity Patterns Between Polycystic Ovary Syndrome and Endometriosis in Korean Women: A Nationwide Cohort Study</a></div>
+          <div class="pub-authors">Hye Gyeong Jeong*, <strong>Minhyek Jeon*</strong>, Ki-Jin Ryu, Jina Kim, Byeol yi Choe, Yoonjung Yoonie Joo, Hyuntae Park</div>
+          <div class="pub-venue">Journal of Korean Medical Science &middot; Co-first author</div>
+        </div>
+      </div>
 
-                            </ul>
-                        
-                        </li>
-                        </ul>	
-                    </nav>                            
-                    <ul class="social-links-menu">					
-                        <li>
-					
-                        </li>			
-                        <li>
-     				
-                        </li>			
-                        <li>
-    			
-                        </li>			
-                    </ul>
-                </div><!-- .wrap -->		
-            </header><!-- #masthead -->
-            
+      <div class="pub">
+        <img src="assets/img/project-multimodal.png" alt="" class="pub-fig pub-fig--contain">
+        <div class="pub-body">
+          <div class="pub-title"><a href="https://www.sciencedirect.com/science/article/pii/S0022395624001006" target="_blank" rel="noopener">Multimodal Integration of Neuroimaging and Genetic Data for the Diagnosis of Mood Disorders Based on Computer Vision Models</a></div>
+          <div class="pub-authors">Seungeun Lee, Yongwon Cho, Yuyoung Ji, <strong>Minhyek Jeon</strong>, Aram Kim, Yoonjung Yoonie Joo</div>
+          <div class="pub-venue">Journal of Psychiatric Research</div>
+        </div>
+      </div>
 
-            <div class="site-content-contain">
-                
+      <h3 class="pub-year">2023</h3>
+      <div class="pub">
+        <img src="assets/img/pub-knowledgegraph.png" alt="" class="pub-fig">
+        <div class="pub-body">
+          <div class="pub-title"><a href="https://osf.io/preprints/biohackrxiv/k4rh6" target="_blank" rel="noopener">Biomedical Data Management, Knowledge Graphs, and Deep Learning</a></div>
+          <div class="pub-authors">Jędrzej Kubica, Rachit Kumar, Glenda Hui-En Tan, Van Q. Truong, David Enoma, Nicholas Cooley, <strong>Minhyek Jeon</strong>, et al.</div>
+          <div class="pub-venue">OSF</div>
+        </div>
+      </div>
 
-                <div id="content" class="site-content">
-                    <div id="primary" class="content-area">
-                        <main id="main" class="site-main" role="main">
-                            <article class="page">                                
-                                <div class="entry-content">                                        
-                                    <div class="container-fluid p-10"> 
-                                        <div class="row"> 
-                                            <div class="col-sm-12">
-                                                <div class="portfolio-wrap">
-                                                    
-                                                    <div class="site-content-contain">
-                                                        <div id="content" class="site-content">              
-                                                            <div id="primary" class="content-area">
-                                                                <main id="main" class="site-main" role="main">
-                                                                    <div class="container">
-                                                                        <div class="row">                                    
-                                                                            <div class="col-sm-12 col-lg-9 p-r-55 post-container"> 
-                                        
-                                                                                <article id="post-1" class="post format-standard">
-                                                                                    <div class="post-wrap">
-                                                                                        <div class="post-media">  
-                                                                                            <div class="entry-video" >
+      <div class="pub">
+        <img src="assets/img/pub-un.png" alt="" class="pub-fig">
+        <div class="pub-body">
+          <div class="pub-title"><a href="https://kiss.kstudy.com/Detail/Ar?key=4033470" target="_blank" rel="noopener">Modeling of Metabolic Syndrome Outbreaks Due to Climate Crisis and Reconsidering the Direction of International Development Cooperation in Eritrea</a></div>
+          <div class="pub-authors">Yeeun Kim*, Yeeun Lim*, <strong>Minhyek Jeon*</strong>, Seongju Kim, Kieun Kwon, Sooseong Hwang, Jinsang Lee</div>
+          <div class="pub-venue">Journal of Africa Future Society &middot; Co-first author</div>
+        </div>
+      </div>
+    </section>
 
-                                                                                                <iframe width="560" height="315" src="https://www.youtube.com/embed/i294a-Byo8A?si=u2vz1XZMJC0vDMEO&autoplay=1&mute=1&vq=hd1080" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    <!-- Awards & Skills -->
+    <section class="section" id="awards">
+      <h2>Awards &amp; Honors</h2>
+      <ul class="plain-list">
+        <li><span class="date">2026</span> Graduate Development Scholarship, St Anne's College, University of Oxford (&pound;7,864)</li>
+        <li><span class="date">2025</span> Overseas Student Scholarship, Mogam Science Scholarship Foundation ($10,000)</li>
+        <li><span class="date">2025</span> 2026 Fulbright Scholarship for Advanced STEM Fields, KAEC ($90,000) &mdash; selected as principal candidate; declined to pursue the DPhil at the University of Oxford</li>
+        <li><span class="date">2025</span> Certificate of Excellence in Research, Carnegie Mellon University</li>
+        <li><span class="date">2025</span> Certificate of Excellence in Academic Achievement, Carnegie Mellon University</li>
+        <li><span class="date">2020, 2022</span> Semester High Honors, Division of Biotechnology, Korea University (Spring 2020, Spring &amp; Fall 2022)</li>
+        <li><span class="date">2022</span> Future Leaders Scholarship, Korea University ($2,650)</li>
+        <li><span class="date">2019</span> Award Certificate, Seoul Metropolitan Police Agency</li>
+        <li><span class="date">2015</span> KAIST Presidential Award, 12th Chemistry Frontier Festival</li>
+      </ul>
+    </section>
 
+    <!-- Teaching -->
+    <section class="section" id="teaching">
+      <h2>Teaching</h2>
+      <ul class="plain-list">
+        <li><span class="date">2026</span> Lecturer, St Anne's College, University of Oxford, Discrete Mathematics and Functional Programming</li>
+        <li><span class="date">2026</span> Internal Supervisor, Group Design Practical for Computer Science &amp; Mathematics Undergraduates, University of Oxford</li>
+        <li><span class="date">2026</span> Practical Demonstrator, Artificial Intelligence, University of Oxford</li>
+        <li><span class="date">2026</span> Course Tutor, Artificial Intelligence &amp; Computer Science, Oxford Scholar Programme (Summer School)</li>
+        <li><span class="date">2025</span> Class Tutor, Computer Vision, University of Oxford</li>
+        <li><span class="date">2025</span> Teaching Assistant, Machine Learning for Scientists, Carnegie Mellon University</li>
+      </ul>
+    </section>
 
+  </main>
 
+  <footer id="contact">
+    <div class="footer-inner">
+      <h2>Contact</h2>
+      <p><a href="mailto:minhyek.jeon@cs.ox.ac.uk">minhyek.jeon@cs.ox.ac.uk</a></p>
+      <p class="footer-meta">Oxford, UK &middot; <a href="https://github.com/mhj0326" target="_blank" rel="noopener">GitHub</a> &middot; <a href="https://www.linkedin.com/in/minhyekjeon" target="_blank" rel="noopener">LinkedIn</a> &middot; <a href="https://scholar.google.com/citations?user=hk0FmXQAAAAJ&hl=ko" target="_blank" rel="noopener">Google Scholar</a></p>
+      <p class="copyright">&copy; 2026 Minhyek Jeon</p>
+    </div>
+  </footer>
 
-
-                                                                                            </div>	                                                    
-                                                                                        </div>
-                                                                                        <div class="post-content">
-                                                                                            <header class="entry-header">
-                                                                                                <h2 class="widget-title"><span>Machine Learning for Healthcare Applications</span></h2>
-                                                                                      
-                                                
-                                                                                    
-                                                                                            <div class="entry-content">
-                                                                                                <p>Hello, my name is Minhyek Jeon. I earned my bachelor's degree in <b>Artificial Intelligence</b> and <b>Biotechnology</b> from <b>Korea University</b>. 
-													Currently, I am pursuing a master’s degree in <b>Computational Biology</b> at <b>Carnegie Mellon University</b>, where I am working with <b>Professor Fernando De La Torre</b> in the <b>Human Sensing Lab</b> at the <b>Robotics Institute</b>. 
-													My primary focus has been on applying deep learning techniques to analyze medical data, aiming to uncover causal relationships and enhance clinical diagnostic workflows. 
-													Specifically, I have explored the use of text-to-image generative models for medical imaging data to strengthen model robustness. 
-													
-                                                                                                </p>
-                                                                                            
-                                                   
-                                                                                            </div><!-- .entry-content -->	
-                                                                                        
-                                                                                    </div>
-                                                                                </article>
-                                        
-                                                                                
-                                                                            </div>                                                                            
-                                                                            <div class="col-sm-12 col-lg-3 pl-lg-0">                                         
-                                                                                <aside id="secondary" class="widget-area clearfix" role="complementary" aria-label="Blog Sidebar">
-                                                                                    <section id="recent-posts-3" class="widget widget_recent_entries">
-                                                                                        <h2 class="widget-title"><span>Education</span></h2>    
-                                                                                        <ul>
-                                                                                            <li>
-                                                                                                <a href="https://www.cmu.edu/"><strong>Carnegie Mellon University</strong></a><br>
-                                                                                                <a style="font-size: 0.8em;">(Aug.2023 - May.2025)</a>
-                                                                                                <ul>
-                                                                                                    <li>
-                                                                                                        <a href="https://www.cs.cmu.edu/academics/masters/programs" style="font-size: 0.8em;"><strong>MS in Computational Biology</strong></a>
-                                                                                                            <br><a style="font-size: 0.8em;">• GPA : 4.08/4.33</a>
-                                                                                                    </li>
-                                                                                                    <li>
-                                                                                                        <a href="javascript:void(0);" style="font-size: 0.8em;" onclick="toggleCourses('courseListCMU')">&rarr; Click to view relevant courses</a>
-                                                                                                        <div id="courseListCMU" style="display:none; font-size: 0.8em;">
-                                                                                                            <ul>
-                                                                                                                <li><strong>Computer Vision & Machine Learning</strong>
-                                                                                                                    <ul>
-                                                                                                                        <li>- Learning Based Image Synthesis (A)</li>
-                                                                                                                        <li>- Machine Learning for Scientist (A+)</li>
-                                                                                                                        <li>- Bioimage Informatics (A+)</li>
-                                                                                                                        <li>- Computer Vision (2024 spring)</li>
-                                                                                                                        <li>- Medical Image Analysis (2024 spring)</li>
-                                                                                                                        <li>- Learning for 3D Vision (2024 spring)</li>
-                                                                                                                        <li>- Generative AI (Audit)</li>
-                                                                                                                    </ul>
-                                                                                                                </li>
-                                                                                                                <li><strong>Computational Biology</strong>
-                                                                                                                    <ul>
-                                                                                                                        <li>- Computational Genomics (A)</li>
-                                                                                                                        <li>- Computational Medicine (A)</li>
-                                                                                                                        <li>- Computational Methods for Biological &nbsp;&nbsp;&nbsp;Modelling and Simulation (A)</li>
-                                                                                                                    </ul>
-                                                                                                                </li>
-                                                                                                                <li><strong>Math & Programming</strong>
-                                                                                                                    <ul>
-                                                                                                                        <li>- Programming for Scientist (A)</li>
-                                                                                                                        <li>- Essential Mathematics and Statistics (A-)</li>
-                                                                                                                        <li>- Algorithms and Data Structures (B+)</li>
-                                                                                                                    </ul>
-                                                                                                                </li>
-                                                                                                            </ul>
-                                                                                                        </div>
-                                                                                                    </li>
-                                                                                                </ul>
-                                                                                            </li>
-                                                                                            <li>
-                                                                                                <a href="https://www.korea.ac.kr/index.jsp"><strong>Korea University</strong></a><br>
-                                                                                                <a style="font-size: 0.8em;">(Mar.2017 - Aug.2023)</a>
-                                                                                                <ul>
-                                                                                                    <li>
-                                                                                                        <a href="https://info.korea.ac.kr/info/index.do" style="font-size: 0.8em;"><strong>BEng in Artificial Intelligence</strong></a>
-                                                                                                    </li>
-                                                                                                    <li>
-                                                                                                        <a href="https://lifesci.korea.ac.kr/lifesci/index.do" style="font-size: 0.8em;"><strong>BS in Biotechnology</strong></a>
-                                                                                                    </li>
-                                                                                                </ul>
-                                                                                                <ul>
-                                                                                                    <li><a style="font-size: 0.8em;">
-                                                                                                        • GPA : 4.04/4.5 <br>
-                                                                                                        • Left for military service <br>(Apr.2018 - Dec.2019) 
-                                                                                                    </a></li>
-                                                                                                </ul>
-                                                                                                <ul>
-                                                                                                    <li>
-                                                                                                        <a href="javascript:void(0);" style="font-size: 0.8em;" onclick="toggleCourses('courseListKU')">&rarr; Click to view relevant courses</a>
-                                                                                                        <div id="courseListKU" style="display:none; font-size: 0.8em;">
-                                                                                                            <ul>
-                                                                                                                <li><strong>Artificial Intelligence</strong>
-                                                                                                                    <ul>
-                                                                                                                        <li>Deep Learning (A+)</li>
-                                                                                                                        <li>Data Science and Artificial Intelligence (A+)</li>
-                                                                                                                        <li>Natural Language Process (A+)</li>
-                                                                                                                        <li>Brain and Machine Learning (A+)</li>
-                                                                                                                        <li>Ethics of Artificial Intelligence (A+)</li>
-                                                                                                                        <li>Artificial Intelligence (A)</li>
-                                                                                                                        <li>Pattern Recognition (A)</li>
-
-                                                                                                                    </ul>
-                                                                                                                </li>
-                                                                                                                
-                                                                                                                <li><strong>Computational Biology</strong>
-                                                                                                                    <ul>
-                                                                                                                        <li>Bioinformatics (A)</li>
-                                                                                                                        <li>Introduction to Brain and Cognitive Sciences (A+)</li>
-                                                                                                                        <li>Biochemistry (A)</li>
-                                                                                                                        <li>Enzymology (A+)</li>
-                                                                                                                        <li>Cell Biology (A+)</li>
-                                                                                                                        <li>General Biology and Practice (A+)</li>
-                                                                                                                        <li>Biotechnology of Biomass and Bioenergy (A+)</li>
-                                                                                                                        <li>Animal Physiology (A)</li>
-                                                                                                                        <li>Biomedical Signals and Systems (B+)</li>
-
-                                                                                                                    </ul>
-                                                                                                                </li>
-                                                                                                                
-                                                                                                            
-                                                                                                                <li><strong>Math & Programming</strong>
-                                                                                                                    <ul>                                                                                                                        
-                                                                                                                        <li>Linear Algebra (A)</li>
-                                                                                                                        <li>Engineering Mathematics (A)</li>                                                                                                                       
-                                                                                                                        <li>Computer Programming II (A)</li>
-                                                                                                                        <li>Hypertext and Computability (A)</li>
-                                                                                                                        <li>Probability and Random Processes (B+)</li>
-                                                                                                                        <li>Biostatistics (A)</li>
-                                                                                                                        <li>Calculus I (B+)</li>
-                                                                                                                        <li>Algorithms and Data Structures (B+)</li>
-                                                                                                                    </ul>
-                                                                                                                </li>
-                                                                                                            </ul>
-                                                                                                        </div>
-                                                                                                    </li>
-                                                                                                </ul>
-                                                                                            </li>
-                                                                                        </ul>
-                                                                                    </section>
-                                                                                </aside>      
-                                                                            </div>
-                                                                            
-                                                                            <script>
-                                                                            function toggleCourses(id) {
-                                                                                var courseList = document.getElementById(id);
-                                                                                if (courseList.style.display === "none") {
-                                                                                    courseList.style.display = "block";
-                                                                                } else {
-                                                                                    courseList.style.display = "none";
-                                                                                }
-                                                                            }
-                                                                            </script>
-                                                                            
-
-                                                                                            
-                                                                                        </ul>
-                                                                                    </section>
-
-                                                                                    
-                                                                                </aside>      
-                                                                            </div>                                                                            
-                                                                        </div>                                
-                                                                    </div>
-                                                                </main><!-- #main -->
-                                                            </div><!-- #primary -->           
-                                                    
-                                                    <div id="portfolio-container-grid" class="cbp cbp-caption-ribbon cbp-ribbon-alignCenter" 
-                                                         data-loadmoreaction="click" data-loadnoofitems="1" data-layoutmode="grid" data-captionanimation="fadeIn" data-animationtype="fadeOut" 
-                                                         data-gaphorizontal="10" data-gapvertical="10" data-displaytype="default" data-large-desktop="4" data-tablet-landscape="3" data-tablet-portrait="2" data-mobile="1" 
-                                                         data-defaultfilter="*" >
-
-                                                         <div class="cbp-item  art graphic illustration">                                                           
-                                                            <a class="cbp-caption" href="publication.html">
-                                                                <div class="cbp-caption-defaultWrap">							                                                                           
-                                                                    <img src="assets\I made it\Publication.png" class="portfolio-thumbnail" alt="Catalogue" >
-                                                                </div>
-                                                                <div class="cbp-caption-activeWrap">
-                                                                    <div class="cbp-l-caption-alignCenter">
-                                                                        <div class="cbp-l-caption-body">
-                                                                            <div class="cbp-l-caption-title">Publication</div>
-                                                                            <div class="cbp-l-caption-desc"></div>
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                            </a>                                                           
-                                                        </div>
-
-                                                          
-
-                                           
-                                                         
-                                                        <div class="cbp-item  branding logo">
-                                                            <a class="cbp-caption" href="experience.html">
-                                                                <div class="cbp-caption-defaultWrap">							                                                                            
-                                                                    <img src="assets\I made it\Experience2.png" class="portfolio-thumbnail" alt="Cosmetic"  >
-                                                                </div>
-                                                                <div class="cbp-caption-activeWrap">
-                                                                    <div class="cbp-l-caption-alignCenter">
-                                                                        <div class="cbp-l-caption-body">
-                                                                            <div class="cbp-l-caption-title">Experience</div>
-                                                                            <div class="cbp-l-caption-desc"></div>
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                            </a>                                                            
-                                                        </div>
-
-                                                        <div class="cbp-item  branding">                                                            
-                                                            <a class="cbp-caption" href="project.html">
-                                                                <div class="cbp-caption-defaultWrap">							                                                                            
-                                                                    <img src="assets\I made it\Project2.png" class="portfolio-thumbnail" alt="Headphone" >
-                                                                </div>
-                                                                <div class="cbp-caption-activeWrap">
-                                                                    <div class="cbp-l-caption-alignCenter">
-                                                                        <div class="cbp-l-caption-body">
-                                                                            <div class="cbp-l-caption-title">Projects</div>
-                                                                            <div class="cbp-l-caption-desc"></div>
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                            </a>                                                            
-                                                        </div>
-                                                       
-                                              
-                                                                                      
-
-                                                        
-
-
-                                                        
-
-                                                        <div class="cbp-item logo">                                                           
-                                                            <a class="cbp-caption" href="awards.html">
-                                                                <div class="cbp-caption-defaultWrap">							                                                                            
-                                                                    <img src="assets\I made it\Awards2.png" class="portfolio-thumbnail" alt="Jar" >
-                                                                </div>
-                                                                <div class="cbp-caption-activeWrap">
-                                                                    <div class="cbp-l-caption-alignCenter">
-                                                                        <div class="cbp-l-caption-body">
-                                                                            <div class="cbp-l-caption-title">Awards, Skills, Interviews</div>
-                                                                            <div class="cbp-l-caption-desc"></div>
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                            </a>                                                            
-                                                        </div>
-
-                                                        
-
-
-
-
-                                        
- 
-                                                        
-
-
-                                                    </div><!--End #grid-container-->
-
-                                                </div>                                               
-                                            </div>
-                                        </div>
-                                    </div> <!--End container-->
-
-                                </div>    
-                            </article>    
-                        </main><!-- #main -->
-                    </div><!-- #primary -->
-
-                
-
-                    <a id="gotoTop" href="#" class="scroll-top-link" data-easing="easeOutQuad" data-speed="700" ><i class="fa fa-angle-up"></i></a>
-                </div><!-- #content -->
-
-                <footer id="footer" class="site-footer standard" role="contentinfo">
-                    <div class="container">
-                        <div class="site-info">			
-                            <p class="copyright">
-
-                            </p>
-                        </div>                          
-                    </div>            
-                </footer>
-            </div> <!-- .site-content-contain -->  
-            <footer id="footer" class="site-footer standard" role="contentinfo">
-                <div class="container">
-                    <div class="site-info">			
-                        <p class="copyright">
-                            © 2024 Minhyek Jeon	
-                        </p>
-                    </div>   
-                    
-                </div>            
-            </footer>      
-        </div>    
-        <!-- Page Wrapper Ends -->
-
-        <!--  Scripts -->
-        <script type='text/javascript' src='assets/js/vendor/jquery-1.12.4.min.js'></script>
-        <script type='text/javascript' src='assets/js/vendor/TweenMax.min.js'></script>        
-        <script type='text/javascript' src='assets/js/vendor/headsup.min.js'></script>        
-        <script type='text/javascript' src='assets/js/vendor/jquery.easing.min.1.3.js'></script>        
-        <script type='text/javascript' src='assets/lib/cubeportfolio/js/jquery.cubeportfolio.min.js'></script>
-        <script type='text/javascript' src='assets/lib/swiper/js/swiper.min.js'></script>       
-
-        <script type='text/javascript' src='assets/js/main.js'></script>       
-        <!--  Scripts Ends -->
-    </body>
+  <script src="script.js"></script>
+</body>
 </html>
